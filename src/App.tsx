@@ -1,20 +1,22 @@
-import './App.css';
+import { useEffect } from "react";
+import Router from "./routes";
+import { useAuth } from "./context/AuthContext";
+import { useIdleTimer } from "react-idle-timer";
 
 function App() {
-  return (
-    <div className="App">
-      <div className="mt-5">
-          <div className="container-fluid">
-            <div className="d-flex flex-row">
-              <div className="col-sm-12">
-                 Build somethin awesome
-              </div>
-            </div>
-          </div>
+  // const { loadAuthUser, logout } = useAuth();
 
-      </div>
-    </div>
-  );
+  // useEffect(() => {
+  //   loadAuthUser();
+  // }, []);
+
+  // const onIdle = () => {
+  //   logout();
+  // };
+
+  // useIdleTimer({ onIdle, timeout: 1000 * 60 * 5 });
+
+  return <Router />;
 }
 
 export default App;

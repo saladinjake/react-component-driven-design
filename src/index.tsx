@@ -1,18 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import './index.css';
-import './styles/app.css';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import "./assets/css/modern-normalize.css";
+import { GlobalStyles } from "./theme/globalStyles";
+import Theme from "./theme";
+import { AuthProvider } from "./context/AuthContext";
 
-import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: true,
+    },
+    mutations: {
+      retry: 2,
+    },
+  },
+});
+
+const RenderDevTool = () => {
+  if (process.env.NODE_ENV === "development") {
+    return <ReactQueryDevtools initialIsOpen={false} />;
+  }
+  return null;
+};
+root.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <Router>
+          <Theme>
+            <GlobalStyles />
+            <App />
+          </Theme>
+        </Router>
+      </AuthProvider>
+      <RenderDevTool />
+    </QueryClientProvider>
+  </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
