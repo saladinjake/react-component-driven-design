@@ -9,26 +9,10 @@ const axiosInstance = axios.create({
   },
 });
 
-const setApprovalConfig = (config) => {
-  const { auditLogData, approvalMeta, ...rest } = config.data;
-
-  config.url = "/approvalms/api/v1/Approval/LogApproval";
-  config.data = {
-    auditLogData,
-    dataToApprove: JSON.stringify(rest),
-    executingAssemblyFullName:
-      "Kuda.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-    functionName: approvalMeta.functionName,
-    initiatorUserID: approvalMeta.userId,
-  };
-};
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    if (config.data && config.data.approvalMeta) {
-      setApprovalConfig(config);
-    }
-
+   
     return config;
   },
   (error) => {
