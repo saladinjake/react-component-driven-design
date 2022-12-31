@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 import Text from "components/shared/library/components/Text-v1";
-import Flex from "components/shared/library/components/Flex-v1";
-import Box from "components/shared/library/components/Box-v1";
+import Flex from "components/shared/library/components/Flex";
+import Box from "components/shared/library/components/Box";
 import { useAuth } from "context/AuthContext";
 import styled from "styled-components";
 import { Svg } from "assets/svg";
@@ -14,7 +14,7 @@ const pageMap = {
 };
 
 const NavBar = () => {
-  const { googleProfile } = useAuth();
+  const { userProfile } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -64,7 +64,7 @@ const NavBar = () => {
           >
             <Box
               as="img"
-              src={googleProfile?.picture}
+              src={userProfile?.picture}
               alt=""
               height="100%"
               rounded="100%"

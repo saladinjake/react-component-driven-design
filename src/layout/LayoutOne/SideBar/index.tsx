@@ -7,7 +7,7 @@ import SearchInput from "components/shared/SearchInput";
 import SideBarGroup from "./components/SideBarGroup";
 import SideBarItem from "./components/SideBarItem";
 import Box from "components/shared/library/components/Box-v1";
-import Flex from "components/shared/library/components/Flex-v1";
+import Flex from "components/shared/library/components/Flex";
 import { useQuery } from "@tanstack/react-query";
 
 type SideBarProps = {
@@ -26,13 +26,9 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   const getRoleId = () =>
     JSON.parse(localStorage.getItem("sampleAppUserData")).userRoleID;
 
-  const { data: response, isLoading } = useQuery([queryKeys.getSiteMap], () =>
-    getSiteMapByRoleID(getRoleId())
-  );
+  
 
-  const sitemap = response?.data?.siteMap
-    ? JSON.parse(response?.data?.siteMap)
-    : null;
+ 
 
     const Menus = [
       {
@@ -50,7 +46,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
       Menus?.filter((menu) =>
         menu.name.toLowerCase().includes(searchValue.toLowerCase())
       ),
-    [searchValue, sitemap]
+    [searchValue]
   );
 
   
@@ -114,7 +110,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
               name="Quick Service"
               menuItems={frontOffice}
               searchQuery={searchValue}
-              isLoading={isLoading}
+              isLoading={false}
             />
           </Box>
 

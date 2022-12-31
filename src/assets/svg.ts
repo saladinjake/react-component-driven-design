@@ -1,4 +1,4 @@
-import { ReactComponent as SampleNerveLogo } from "./img/svg/Sample-nerve.svg";
+import { ReactComponent as SampleNerveLogo } from "./img/svg/samplelogo.svg";
 import successAnimation from "./img/svg/success-animation.svg";
 import errorAnimation from "./img/svg/error-animation.svg";
 import attentionIcon from "./img/svg/attention-icon.svg";

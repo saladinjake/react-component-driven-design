@@ -1,4 +1,4 @@
-import { Flex } from "kuda-component-library";
+import { Flex } from "components/shared/library";
 
 import {
   DatePickerLabel,

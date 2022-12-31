@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import StyledError from "./NotFound.styles";
 import questionGuy from "../assets/img/svg/question-guy.svg";
-import SampleNerveLogo from "../assets/img/svg/sample-nerve.svg";
+import SampleNerveLogo from "../assets/img/svg/samplelogo.svg";
 import Button from "../components/shared/library/components/Button";
 
 export default function NotFound() {

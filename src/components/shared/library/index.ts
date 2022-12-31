@@ -9,10 +9,8 @@ import Radio from "./components/Radio";
 import SearchField from "./components/SearchField";
 import DatePicker from "./components/DatePicker";
 // import Status from "./components/Status";
-import MultiSelect from "./components/MultiSelect";
-import Select2 from "./components/Select2";
 import Textarea from "./components/Textarea";
-import Flex from "./components/Flex-v1";
+import Flex from "./components/Flex";
 export {
   Avatar,
   Button,
@@ -26,7 +24,6 @@ export {
   Radio,
   SearchField,
   DatePicker,
-  MultiSelect,
-  Select2,
+ 
   Textarea,
 };

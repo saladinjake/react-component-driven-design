@@ -1,5 +1,4 @@
-const getRoleService = () =>{
+export const getRoleService = () =>{
 
 }
 
-export default getRoleService

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../../theme";
+import libraryConfig from "../../libraryConfig";
 
 const StyledStatus = styled.div<{
   spaceBetweenTextAndIcon?: string;
@@ -17,11 +17,11 @@ const StyledStatus = styled.div<{
   }
 
   .status-icon--active {
-    color: ${(props) => theme.colors.Green};
+    color: ${(props) => libraryConfig.colors.Green};
   }
 
   .status-icon--inactive {
-    color: ${(props) => theme.colors.Red};
+    color: ${(props) => libraryConfig.colors.Red};
   }
 `;
 

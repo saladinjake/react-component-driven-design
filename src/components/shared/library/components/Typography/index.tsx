@@ -1,3 +1,5 @@
 import Heading from "./Heading";
+import Typography from "./Typography";
 
-export default { Heading };
+export { Heading };
+export default Typography;

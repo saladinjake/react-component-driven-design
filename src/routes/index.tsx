@@ -4,7 +4,7 @@ import ErrorBoundary from "../layout/ErrorBoundary";
 import PrivateRoute from "./PrivateRoute";
 import Fallback from "../views/Fallback";
 import { useQuery } from "@tanstack/react-query";
-import { getPagesByRoleId } from "api/services/Page";
+
 
 const pageMap = {
   "charges-management": lazy(() => import("modules/TestModule")),
@@ -19,7 +19,7 @@ const routes = [
     component: lazy(() => import("modules/TestModule")),
   },
   {
-    path: "/charges-management/:id",
+    path: "/sample-management/:id",
     component: lazy(() => import("modules/TestModule/Test")),
   },
  
@@ -49,7 +49,7 @@ function DefaultLayout() {
           <Route path="/login/*" element={<Login />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-      {/* <Route element={<PrivateRoute />}> */}
+      <Route element={<PrivateRoute />}> 
             <Route path="/dashboard/*" element={<UserDashboard />} />
 
             {isLoading ? (
@@ -59,7 +59,7 @@ function DefaultLayout() {
                 <Route path={route.path} element={<route.component />} />
               ))
             )}
-          {/* </Route> */}
+          </Route> 
 
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
