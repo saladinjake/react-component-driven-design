@@ -24,6 +24,5 @@ export {
   Radio,
   SearchField,
   DatePicker,
- 
   Textarea,
 };

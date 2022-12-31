@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Skeleton from "components/shared/Skeleton";
-import Box from "components/shared/library/components/Box-v1/Box";
+import Box from "components/shared/library/components/Box";
 
 function SideBarItem(props) {
   const { name, link, isLoading, menuItem } = props;

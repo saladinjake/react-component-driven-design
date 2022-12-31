@@ -6,7 +6,7 @@ import comparator from "utils/comparator";
 import SearchInput from "components/shared/SearchInput";
 import SideBarGroup from "./components/SideBarGroup";
 import SideBarItem from "./components/SideBarItem";
-import Box from "components/shared/library/components/Box-v1";
+import Box from "components/shared/library/components/Box";
 import Flex from "components/shared/library/components/Flex";
 import { useQuery } from "@tanstack/react-query";
 

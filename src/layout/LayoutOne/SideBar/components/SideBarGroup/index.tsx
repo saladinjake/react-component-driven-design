@@ -4,7 +4,7 @@ import { Svg } from "assets/svg";
 import SideBarItem from "../SideBarItem";
 import useContainerDimensions from "utils/hooks/useContainerDimensions";
 import Text from "components/shared/library/components/Text-v1";
-import Box from "components/shared/library/components/Box-v1";
+import Box from "components/shared/library/components/Box";
 import { Flex } from "components/shared/library"
 
 function constructNavUrl(navName: string): string {

@@ -21,7 +21,7 @@ Primary.args = {
   rounded: ["sm", "md", "lg"],
   px: ["5", "10"],
   py: ["5", "10"],
-  backgroundColor: ["Purple"],
-  color: ["White"],
+  backgroundColor: ["kudaPurple"],
+  color: ["kudaWhite"],
   opacity: ["0.5"],
 };
