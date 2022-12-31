@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "kuda-component-library";
+import { Flex } from "components/shared/library";
 
 import { Plus } from "components/basic/SvgPack";
 import Icon from "components/shared/Icons/Icon";

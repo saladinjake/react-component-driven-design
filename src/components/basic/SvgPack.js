@@ -910,7 +910,7 @@ export const LoginMessageIcon = `
     </svg>
 `;
 
-export const LoginKudaGirl = `
+export const LoginGirl = `
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="217"
@@ -1023,7 +1023,7 @@ export const LoginKudaGirl = `
       </g>
     </svg>`;
 
-export const LoginKudaBoy = `<svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169" fill="none">
+export const LoginBoy = `<svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169" fill="none">
     <circle cx="84.5" cy="84.5" r="84.5" fill="#DFE3FF"/>
     <mask id="mask0_40627_14176" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="169" height="169">
     <circle cx="84.5" cy="84.5" r="84.5" fill="#DFE3FF"/>
@@ -1048,7 +1048,7 @@ export const LoginKudaBoy = `<svg xmlns="http://www.w3.org/2000/svg" width="169"
     </g>
     </svg>`;
 
-export const LoginKudaLocation = `<svg xmlns="http://www.w3.org/2000/svg" width="225" height="225" viewBox="0 0 225 225" fill="none">
+export const LoginLocation = `<svg xmlns="http://www.w3.org/2000/svg" width="225" height="225" viewBox="0 0 225 225" fill="none">
 <circle cx="112.03" cy="112.031" r="57.299" transform="rotate(-75.3913 112.03 112.031)" fill="#FFF5DB"/>
 <mask id="mask0_40627_14302" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="54" y="54" width="116" height="116">
 <circle cx="112.031" cy="112.032" r="57.299" transform="rotate(-75.3913 112.031 112.032)" fill="#DFE3FF"/>
@@ -1066,7 +1066,7 @@ export const LoginKudaLocation = `<svg xmlns="http://www.w3.org/2000/svg" width=
 </defs>
 </svg>`;
 
-export const LoginKudaBoyLocs = `<svg xmlns="http://www.w3.org/2000/svg" width="301" height="229" viewBox="0 0 301 229" fill="none">
+export const LoginBoyLocs = `<svg xmlns="http://www.w3.org/2000/svg" width="301" height="229" viewBox="0 0 301 229" fill="none">
 <path d="M195.882 40.4803C142.199 23.8672 85.3796 50.5034 63.0249 100.592L32.5563 105.081L55.1631 125.996C45.2993 180.017 77.1602 234.03 130.843 250.643C188.837 268.591 250.458 236.115 268.439 178.013C286.419 119.911 253.937 58.4465 195.882 40.4803Z" fill="#DFE3FF"/>
 <path d="M73.4666 208.976C86.9482 228.199 106.696 243.301 130.865 250.78C156.128 258.598 182.09 256.843 204.795 247.554C187.554 234.027 166.811 221.281 146.617 212.567C123.213 207.989 96.6485 206.96 73.4666 208.976Z" fill="#40196D"/>
 <path d="M198.971 121.89C197.685 106.907 192.618 91.8867 181.71 81.1189C179.41 78.8753 176.306 76.6494 173.275 77.8425C170.702 78.8445 169.626 82.1076 170.168 84.8725C170.728 87.5766 172.486 89.8522 174.202 92.0481C167.763 86.1928 159.066 82.902 150.382 83.0115C148.25 83.0179 145.669 83.6176 145.048 85.6232C144.541 87.2641 145.561 88.9119 146.676 90.2558C149.091 93.201 152.022 95.7729 155.262 97.7745C148.239 96.6001 140.947 96.9407 134.068 98.7411C131.309 99.4856 128.536 100.492 126.527 102.468C124.518 104.443 123.419 107.566 124.54 110.177C125.895 113.327 129.739 114.45 133.131 115.1C146.802 117.799 155.422 114.673 172.49 107.901C176.438 106.326 183.183 118.935 187.458 119.526C189.738 119.898 196.902 121.05 198.971 121.89Z" fill="#5F36A8"/>
@@ -1104,7 +1104,7 @@ export const LoginScrewIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="13
 <path fill-rule="evenodd" clip-rule="evenodd" d="M63.2734 45.4415C72.6647 44.3884 81.2101 51.2106 82.2631 60.602C83.3162 69.9933 76.4939 78.5387 67.1026 79.5917C57.7113 80.6447 49.1659 73.8225 48.1129 64.4312C47.0598 55.0399 53.882 46.4945 63.2734 45.4415Z" fill="#FDFDFE"/>
 </svg>`;
 
-export const LoginKudaGirlAfro = `<svg xmlns="http://www.w3.org/2000/svg" width="317" height="317" viewBox="0 0 317 317" fill="none">
+export const LoginGirlAfro = `<svg xmlns="http://www.w3.org/2000/svg" width="317" height="317" viewBox="0 0 317 317" fill="none">
 <circle cx="158.109" cy="158.108" r="130.353" transform="rotate(14.0554 158.109 158.108)" fill="#DFE3FF"/>
 <mask id="mask0_40627_14153" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="27" y="27" width="262" height="262">
 <circle cx="158.109" cy="158.109" r="130.353" transform="rotate(14.0554 158.109 158.109)" fill="#DFE3FF"/>

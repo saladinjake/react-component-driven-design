@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import styled from "styled-components"
-import { Input,  } from "components/shared/library";
-import {
-  Flex,
-  Box
-} from "kuda-component-library"
+import { Input,  Flex,
+    Box  } from "components/shared/library";
+
 import StyledDate from "./styles/style"
 
 let oneDay = 60 * 60 * 24 * 1000;
