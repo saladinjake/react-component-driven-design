@@ -17,7 +17,7 @@ export default styled.div`
 
     .info-text {
         font-weight: 900;
-        color: ${(props) => props.theme.colors.Purple};
+        color: ${(props:any) => props.theme.colors.Purple};
     }
 
     .info-text--title {
