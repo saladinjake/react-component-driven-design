@@ -3,22 +3,22 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
-      kudaWhite: string;
-      kudaBlue: string;
-      kudaYellow: string;
-      kudaGreen: string;
-      kudaPurple: string;
-      kudaDarkPurple: string;
-      kudaBlack: string;
-      kudaRed: string;
-      kudaDarkRed: string;
-      kudaGrey: string;
-      kudaDarkGrey: string;
-      kudaLightGrey: string;
-      kudaLighterGrey: string;
-      kudaLightPurple: string;
-      kudaInactivePurple: string;
-      kudaLightBlue: string;
+      White: string;
+      Blue: string;
+      Yellow: string;
+      Green: string;
+      Purple: string;
+      DarkPurple: string;
+      Black: string;
+      Red: string;
+      DarkRed: string;
+      Grey: string;
+      DarkGrey: string;
+      LightGrey: string;
+      LighterGrey: string;
+      LightPurple: string;
+      InactivePurple: string;
+      LightBlue: string;
     };
     fontSizes: {
       small: string;

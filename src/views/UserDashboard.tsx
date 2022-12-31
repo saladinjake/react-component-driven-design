@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../layout/LayoutOne";
-import UserDashboardHome from "../modules/UserDashboard/UserDashboardHome";
+// import UserDashboardHome from "../modules/UserDashboard/UserDashboardHome";
 
 function UserDashboard() {
   return (
@@ -8,7 +8,7 @@ function UserDashboard() {
 
    
     <Routes>
-      <Route index element={<UserDashboardHome />} />
+      {/* <Route index element={<UserDashboardHome />} /> */}
     </Routes>
     </Dashboard>
   );
