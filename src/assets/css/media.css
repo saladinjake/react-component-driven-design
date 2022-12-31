@@ -7,12 +7,12 @@
         font-size: 1.28rem;
     }
 
-    .kuda-preview, .kuda-header--wrap, .kuda-layout---card, .auth-layout--header+.kuda-preview, .auth-wrap, .phoneupdate-wrap, footer .container {
+    .sample-preview, .sample-header--wrap, .sample-layout---card, .auth-layout--header+.sample-preview, .auth-wrap, .phoneupdate-wrap, footer .container {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         padding-bottom: 35px;
     }
 
@@ -20,11 +20,11 @@
         margin-left: 0
     }
 
-    .kuda-header {
+    .sample-header {
         height: 64px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         display: block;
         padding-top: 30px;
     }
@@ -33,16 +33,16 @@
         font-size: 1.6rem;
     }
 
-    .kuda-cta {
+    .sample-cta {
         font-size: 14px;
         height: 48px;
     }
 
-    .kuda-account--summary .addAction {
+    .sample-account--summary .addAction {
         height: 44px;
     }
 
-    .kuda-brand svg {
+    .sample-brand svg {
         height: 16px;
     }
 
@@ -60,11 +60,11 @@
         margin-top: 0px;
     }
 
-    .kuda-cta-lg {
+    .sample-cta-lg {
         max-width: 240px;
     }
 
-    .kuda-cta-long {
+    .sample-cta-long {
         max-width: 240px;
     }
 
@@ -72,7 +72,7 @@
         font-size: 0.78rem;
     }
 
-    .kuda-account--summary .addAction {
+    .sample-account--summary .addAction {
         margin-bottom: 2px;
     }
 
@@ -85,7 +85,7 @@
         padding-right: 0px;
     }
 
-    .kuda-transaction--details {
+    .sample-transaction--details {
         height: 100%;
     }
 
@@ -109,15 +109,15 @@
         margin-top: 6px;
     }
 
-    .kuda-transaction--tabs>li {
+    .sample-transaction--tabs>li {
         font-size: 12px;
     }
 
-    .kuda-menu--wrap {
+    .sample-menu--wrap {
         display: none !important;
     }
 
-    .auth-layout--header+.kuda-preview {
+    .auth-layout--header+.sample-preview {
         align-items: flex-start;
     }
 
@@ -132,12 +132,12 @@
         /* top: -0.55px; */
     }
 
-    .kuda-layout---card .back {
+    .sample-layout---card .back {
         top: 25px;
         left: 20px;
     }
 
-    .kuda-account {
+    .sample-account {
         min-width: auto;
     }
 
@@ -145,11 +145,11 @@
         display: none;
     }
 
-    .kuda-inner--heading {
+    .sample-inner--heading {
         font-size: 1.55rem;
     }
 
-    .kuda-layout---card {
+    .sample-layout---card {
         padding-bottom: 30px;
     }
 
@@ -159,7 +159,7 @@
         padding-bottom: 20px;
     }
 
-    .kuda-deposit--wrap, .kuda-card--wrap, .payment-wrap .kuda-card--wrap, .payment-wrap .kuda-card--wrap.kuda-bill--wrap, .kuda-card--wrap.payment-wrap {
+    .sample-deposit--wrap, .sample-card--wrap, .payment-wrap .sample-card--wrap, .payment-wrap .sample-card--wrap.sample-bill--wrap, .sample-card--wrap.payment-wrap {
         padding-left: 22px !important;
         padding-right: 22px !important;
         padding-bottom: 40px !important;
@@ -180,11 +180,11 @@
         margin-top: 30px;
     }
 
-    .kuda-savings .kuda-card--wrap {
+    .sample-savings .sample-card--wrap {
         padding: 40px 22px;
     }
 
-    .kuda-heading--illustration svg {
+    .sample-heading--illustration svg {
         width: 86px;
         height: 86px;
     }
@@ -194,11 +194,11 @@
         height: 44px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         padding-top: 30px;
     }
 
-    .kuda-add--cardForm {
+    .sample-add--cardForm {
         margin-bottom: 35px !important;
     }
 
@@ -212,14 +212,14 @@
         height: 54px;
     }
 
-    .kuda-transaction--tabs {
+    .sample-transaction--tabs {
         overflow-y: hidden;
         border-radius: 0;
         overflow-x: scroll;
         margin-top: 22px;
     }
 
-    .kuda-payment--tabs li {
+    .sample-payment--tabs li {
         min-width: 33.33%
     }
 
@@ -251,7 +251,7 @@
         padding-bottom: 40px;
     }
 
-    .kuda-cta-md {
+    .sample-cta-md {
         max-width: 115px
     }
 
@@ -269,11 +269,11 @@
         padding-right: 10px;
     }
 
-    .kuda-savings--header {
+    .sample-savings--header {
         margin-bottom: 40px !important;
     }
 
-    .kuda-card--wrap {
+    .sample-card--wrap {
         margin-top: 25px
     }
 
@@ -281,16 +281,16 @@
         margin-right: 11px;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         margin-left: auto;
         margin-right: auto;
     }
 
-    .kuda-account--summary>div, .kuda-block--nav {
+    .sample-account--summary>div, .sample-block--nav {
         width: 100%;
     }
 
-    .kuda-account--summary, .kuda-block--navWrapper {
+    .sample-account--summary, .sample-block--navWrapper {
         flex-direction: column;
     }
 
@@ -298,18 +298,18 @@
         margin-bottom: 15px;
     }
 
-    .kuda-bills--nav {
+    .sample-bills--nav {
         margin-bottom: -23px;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         margin-left: auto;
         margin-right: auto;
         padding-left: 22px !important;
         padding-right: 22px !important
     }
 
-    .kuda-share--earn {
+    .sample-share--earn {
         margin-top: 30px;
     }
 
@@ -324,17 +324,17 @@
         margin-left: 20px;
     }
 
-    .kuda-invite--cta {
+    .sample-invite--cta {
         font-size: 12px;
         height: 42px;
         margin-top: 15px;
     }
 
-    .profile-account+.kuda-share--earn {
+    .profile-account+.sample-share--earn {
         margin-top: 33px !important;
     }
 
-    .kuda-share--earn {
+    .sample-share--earn {
         padding-left: 21px;
         padding-right: 21px;
     }
@@ -357,16 +357,16 @@
         margin-bottom: 20px
     }
 
-    .transactionSummary .kuda-account--summary {
+    .transactionSummary .sample-account--summary {
         width: auto !important;
         flex-direction: row;
     }
 
-    .kuda-share--earn {
+    .sample-share--earn {
         flex-direction: column-reverse;
     }
 
-    .kuda-invite--cta, .share-earn--50 {
+    .sample-invite--cta, .share-earn--50 {
         width: 100% !important
     }
 
@@ -386,11 +386,11 @@
         font-size: 2.5rem !important;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         padding-top: 80px !important;
     }
 
-    .kuda-block--navWrapper h1 {
+    .sample-block--navWrapper h1 {
         text-align: center;
     }
 
@@ -398,11 +398,11 @@
         padding-top: 35px !important;
     }
 
-    .kuda-split--wrap .card-group {
+    .sample-split--wrap .card-group {
         width: 100%
     }
 
-    .kuda-split--wrap {
+    .sample-split--wrap {
         flex-direction: column;
         margin-bottom: 28px
     }
@@ -414,11 +414,11 @@
         left: 22px
     }
 
-    .kuda-cards .kuda-cta-lg {
+    .sample-cards .sample-cta-lg {
         max-width: 100%;
     }
 
-    .kuda-radio--wrapper {
+    .sample-radio--wrapper {
         width: calc(50% - 10px);
     }
 
@@ -432,7 +432,7 @@
         height: 11px;
     }
 
-    .kuda-limit--pad {
+    .sample-limit--pad {
         padding-left: 0;
         padding-right: 0;
     }
@@ -443,7 +443,7 @@
         padding-bottom: 14px;
     }
 
-    .kuda-prev span {
+    .sample-prev span {
         line-height: 1.4;
     }
 
@@ -455,7 +455,7 @@
         align-items: flex-start !important;
     }
 
-    .kuda-add--money .card-fields>div {
+    .sample-add--money .card-fields>div {
         align-items: center !important
     }
 
@@ -467,7 +467,7 @@
         line-height: 1.45;
     }
 
-    .kuda-margin--form .edit-account--wrap {
+    .sample-margin--form .edit-account--wrap {
         margin-top: 0 !important;
     }
 
@@ -492,7 +492,7 @@
         margin-top: 20px;
     }
 
-    .kuda-transaction--tabs::-webkit-scrollbar {
+    .sample-transaction--tabs::-webkit-scrollbar {
         display: none;
     }
 
@@ -509,7 +509,7 @@
         align-items: center
     }
 
-    .kuda-mobile--menu {
+    .sample-mobile--menu {
         position: fixed;
         z-index: 99999;
         height: 100%;
@@ -521,7 +521,7 @@
         background: rgba(64, 25, 109, 0.2);
     }
 
-    .kuda-mobile--menu ul.kuda-menu--wrap {
+    .sample-mobile--menu ul.sample-menu--wrap {
         width: 100%;
         background: #fff;
         display: flex !important;
@@ -561,15 +561,15 @@
         }
     }
 
-    .kuda-mobile--menu .kuda-nav--icon {
+    .sample-mobile--menu .sample-nav--icon {
         width: 100%;
     }
 
-    .kuda-mobile--menu .kuda-nav--icon svg {
+    .sample-mobile--menu .sample-nav--icon svg {
         width: 20px;
     }
 
-    .kuda-mobile--menu .kuda-nav--icon a, .kuda-mobile--menu .kuda-nav--icon p {
+    .sample-mobile--menu .sample-nav--icon a, .sample-mobile--menu .sample-nav--icon p {
         font-size: 14px !important;
         align-items: center;
         display: flex;
@@ -577,20 +577,20 @@
         padding-top: 18px
     }
 
-    .kuda-mobile--menu .kuda-nav--icon:not(:first-child) a {
+    .sample-mobile--menu .sample-nav--icon:not(:first-child) a {
         margin-right: 0;
     }
 
-    .kuda-mobile--menu .member-profile {
+    .sample-mobile--menu .member-profile {
         width: 20px;
         height: 20px;
     }
 
-    .kuda-account--summary .kuda-cta-lg {
+    .sample-account--summary .sample-cta-lg {
         max-width: 115px !important;
     }
 
-    .kuda-account--summary .addAction {
+    .sample-account--summary .addAction {
         margin-bottom: 0 !important
     }
 
@@ -603,23 +603,23 @@
         margin-right: 12px;
     }
 
-    .kuda-transaction--details {
+    .sample-transaction--details {
         padding-right: 10px;
     }
 
-    .kuda-search--field, .kuda-searchbox input {
+    .sample-search--field, .sample-searchbox input {
         font-size: 16px;
     }
 
-    .flex.justify-between .kuda-cta-md {
+    .flex.justify-between .sample-cta-md {
         max-width: calc(50% - 8px) !important;
     }
 
-    .flex.justify-between .kuda-cta-lg-sm {
+    .flex.justify-between .sample-cta-lg-sm {
         max-width: calc(50% - 8px) !important;
     }
 
-    .kuda-search--bank+.displayResults .kuda-result--item {
+    .sample-search--bank+.displayResults .sample-result--item {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -628,7 +628,7 @@
         margin-bottom: 35px;
     }
 
-    .kuda-search--bank+.displayResults .kuda-result--heading {
+    .sample-search--bank+.displayResults .sample-result--heading {
         padding-left: 10px
     }
 
@@ -650,7 +650,7 @@
         top: 4px !important;
     }
 
-    .goal-actions .kuda-cta:not(:last-child) {
+    .goal-actions .sample-cta:not(:last-child) {
         margin-right: 15px;
     }
 
@@ -658,7 +658,7 @@
         align-items: center !important;
     }
 
-    .kuda-account--summary {
+    .sample-account--summary {
         margin-bottom: 30px;
     }
 
@@ -671,11 +671,11 @@
         padding-right: 20px;
     }
 
-    .kuda-set--status .addAction {
+    .sample-set--status .addAction {
         max-width: 120px;
     }
 
-    .kuda-set--status .addAction {
+    .sample-set--status .addAction {
         max-width: 120px;
     }
 
@@ -685,23 +685,23 @@
         white-space: normal;
     }
 
-    .kuda-referral--card .empty-summary {
+    .sample-referral--card .empty-summary {
         padding-left: 0;
         padding-right: 0
     }
 
-    .kuda-referral--card .kuda-transaction--details, .kuda-referral--card .kuda-transaction--details .transaction-title {
+    .sample-referral--card .sample-transaction--details, .sample-referral--card .sample-transaction--details .transaction-title {
         width: 100% !important;
         max-width: 100%;
         padding-right: 0;
     }
 
-    .kuda-referral--card .kuda-result--heading {
+    .sample-referral--card .sample-result--heading {
         padding-left: 10px;
         padding-right: 10px
     }
 
-    .kuda-referral--card .kuda-result--item {
+    .sample-referral--card .sample-result--item {
         width: 100% !important;
         padding-left: 10px;
         padding-right: 10px
@@ -711,7 +711,7 @@
         height: auto;
     }
 
-    .kuda-home-loader--wrap {
+    .sample-home-loader--wrap {
         margin-bottom: 21px
     }
 
@@ -723,7 +723,7 @@
         height: 50px !important
     }
 
-    .icons--kuda a:not(:last-child), .icons--kuda span:not(:last-child) {
+    .icons--sample a:not(:last-child), .icons--sample span:not(:last-child) {
         margin-right: 10px !important
     }
 
@@ -731,7 +731,7 @@
         margin-right: 10px !important;
     }
 
-    .icons--kuda span {
+    .icons--sample span {
         width: 44px;
         height: 44px
     }
@@ -750,7 +750,7 @@
         margin-bottom: 7px !important;
     }
 
-    .kuda-budget--filter {
+    .sample-budget--filter {
         flex-wrap: wrap;
     }
 
@@ -832,7 +832,7 @@
         margin-right: 15px;
     }
 
-    .DateRangePicker, .kuda-budget--filter .DateRangePickerInput {
+    .DateRangePicker, .sample-budget--filter .DateRangePickerInput {
         width: 100% !important;
     }
 
@@ -854,25 +854,25 @@
         min-height: 310px;
     }
 
-    .kuda-budgeting .kuda-result--item {
+    .sample-budgeting .sample-result--item {
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
 
-    .kuda-budgeting:not(.category-budget) .transaction-price {
+    .sample-budgeting:not(.category-budget) .transaction-price {
         height: 32px;
     }
 
-    .kuda-budgeting:not(.category-budget) .transaction-name {
+    .sample-budgeting:not(.category-budget) .transaction-name {
         margin-top: -3px;
         margin-bottom: 0px;
     }
 
-    .kuda-item--chart .savings-progress {
+    .sample-item--chart .savings-progress {
         width: calc(100% - 55px);
     }
 
-    .kuda-budget--excerpt .transaction-price {
+    .sample-budget--excerpt .transaction-price {
         position: static;
     }
 
@@ -880,7 +880,7 @@
         display: none;
     }
 
-    .kuda-budget--excerpt .transaction-percentage {
+    .sample-budget--excerpt .transaction-percentage {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -890,7 +890,7 @@
         padding-left: 64px;
     }
 
-    .kuda-budget--excerpt {
+    .sample-budget--excerpt {
         padding-bottom: 40px;
     }
 
@@ -923,16 +923,16 @@
         width: 105px !important;
     }
 
-    .kuda-wrap--wrap--holder>div {
+    .sample-wrap--wrap--holder>div {
         width: 100%;
         margin-bottom: 25px
     }
 
-    .kuda-wrap--wrap--holder {
+    .sample-wrap--wrap--holder {
         flex-wrap: wrap;
     }
 
-    .kuda-wrap--wrap--holder {
+    .sample-wrap--wrap--holder {
         flex-wrap: wrap;
         padding-left: 20px;
         padding-right: 20px
@@ -950,7 +950,7 @@
         margin-bottom: 25px;
     }
 
-    .kuda-history--items .kuda-transaction--tabs {
+    .sample-history--items .sample-transaction--tabs {
         margin-right: 0;
     }
 
@@ -971,7 +971,7 @@
         margin-bottom: 20px;
     }
 
-    .budgetTab+.tabs .kuda-search.kuda-search--bank {
+    .budgetTab+.tabs .sample-search.sample-search--bank {
         margin-top: 0;
     }
 
@@ -987,27 +987,27 @@
         padding-top: 33px;
     }
 
-    .kuda-budget--form {
+    .sample-budget--form {
         height: calc(100vh - 306px) !important;
     }
 
-    .backdrop-init .kuda-entry {
+    .backdrop-init .sample-entry {
         overflow: hidden
     }
 
-    .edit--budget .kuda-cta {
+    .edit--budget .sample-cta {
         max-width: 100% !important;
     }
 
-    .kuda-budget--form+.block-buttons {
+    .sample-budget--form+.block-buttons {
         margin-top: 20px !important
     }
 
-    .kuda-wrap--wrap--holder:last-child {
+    .sample-wrap--wrap--holder:last-child {
         margin-top: -5px;
     }
 
-    .kuda-wrap--wrap--holder:last-child {
+    .sample-wrap--wrap--holder:last-child {
         margin-top: -5px;
     }
 
@@ -1020,27 +1020,27 @@
         margin-bottom: 5px;
     }
 
-    .edit--budget .kuda-cta:not(:last-child) {
+    .edit--budget .sample-cta:not(:last-child) {
         margin-right: 20px;
     }
 
-    .kuda-dayLight--toggle {
+    .sample-dayLight--toggle {
         left: -30px;
     }
 
-    .kuda-header--actions .kuda-dayLight--toggle {
+    .sample-header--actions .sample-dayLight--toggle {
         left: -35px;
     }
 
-    .kuda-tran--items {
+    .sample-tran--items {
         max-width: 157px;
     }
 
-    .kuda-tran--items .kuda-quick--statement {
+    .sample-tran--items .sample-quick--statement {
         margin-bottom: 0
     }
 
-    .kuda-quick--statement svg {
+    .sample-quick--statement svg {
         width: 32px;
         height: 32px;
     }
@@ -1068,18 +1068,18 @@
         margin-bottom: 0 !important;
     }
 
-    .kuda-page--loader {
+    .sample-page--loader {
         margin-left: 30px;
         margin-bottom: 40%;
     }
 
-    .kuda-page--loader img, .kuda-page--loader svg {
+    .sample-page--loader img, .sample-page--loader svg {
         width: 190px !important;
         height: auto !important;
         margin-left: 0px;
     }
 
-    .kuda-404--wrap {
+    .sample-404--wrap {
         padding: 50px 40px 40px;
     }
 
@@ -1106,16 +1106,16 @@
         display: block;
     }
 
-    .account-skeleton .kuda-account--summary {
+    .account-skeleton .sample-account--summary {
         margin-bottom: 20px;
         flex-direction: column
     }
 
-    .account-skel--items .kuda-skeleton-span:last-child {
+    .account-skel--items .sample-skeleton-span:last-child {
         display: none
     }
 
-    .kuda-footer--conditions p {
+    .sample-footer--conditions p {
         font-size: 10.5px;
     }
 
@@ -1146,7 +1146,7 @@
         margin-right: 2px;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 14px;
         height: 42px;
         width: 150px;
@@ -1157,7 +1157,7 @@
         padding-bottom: 22px;
     }
 
-    .kuda-form--ussd {
+    .sample-form--ussd {
         margin-bottom: 0;
     }
 
@@ -1173,11 +1173,11 @@
         display: none !important;
     }
 
-    .kuda-share--earnAlt {
+    .sample-share--earnAlt {
         margin-top: 20px;
     }
 
-    .share-header--wrap .kuda-share--earn {
+    .share-header--wrap .sample-share--earn {
         padding-bottom: 25px !important;
     }
 
@@ -1193,11 +1193,11 @@
         margin-top: 10px;
     }
 
-    .kuda-referral--card .edit-account--wrap {
+    .sample-referral--card .edit-account--wrap {
         margin-top: 0;
     }
 
-    .kuda-balance--wrap {
+    .sample-balance--wrap {
         width: 100%;
         min-height: 100%;
     }
@@ -1207,16 +1207,16 @@
         margin-bottom: 27px;
     }
 
-    .revoke-content .kuda-modal-illustration svg, .kuda-budget--illustration svg {
+    .revoke-content .sample-modal-illustration svg, .sample-budget--illustration svg {
         width: 65px !important;
         height: 65px !important;
     }
 
-    .product-skeleton .kuda-account--summary>div {
+    .product-skeleton .sample-account--summary>div {
         width: 100% !important
     }
 
-    .product-skeleton .kuda-account--summary {
+    .product-skeleton .sample-account--summary {
         margin-bottom: 20px;
     }
 
@@ -1224,7 +1224,7 @@
         margin-bottom: 20px;
     }
 
-    .kuda-share--earn {
+    .sample-share--earn {
         margin-top: 20px;
     }
 
@@ -1232,7 +1232,7 @@
         padding-top: 25px;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         padding-bottom: 25px !important;
     }
 
@@ -1240,11 +1240,11 @@
         margin-bottom: 0px !important;
     }
 
-    .share-header--wrap .kuda-share--earn {
+    .share-header--wrap .sample-share--earn {
         padding-bottom: 30px !important;
     }
 
-    .share-header--wrap .kuda-share--earnAlt {
+    .share-header--wrap .sample-share--earnAlt {
         padding-bottom: 27px !important;
     }
 
@@ -1254,11 +1254,11 @@
         margin-right: auto;
     }
 
-    .kuda-auth--layout {
+    .sample-auth--layout {
         margin-top: -25px;
     }
 
-    .kuda-announcement--card {
+    .sample-announcement--card {
         padding: 14px 20px
     }
 
@@ -1266,11 +1266,11 @@
         padding: 12px 15px;
     }
 
-    .auth-layout--header+.kuda-preview {
+    .auth-layout--header+.sample-preview {
         min-height: calc(100vh - 88px) !important;
     }
 
-    .kuda-page--transition .kuda-preview {
+    .sample-page--transition .sample-preview {
         min-height: calc(100vh - 80px);
     }
 
@@ -1278,7 +1278,7 @@
         padding: 15px 5px 10px;
     }
 
-    .request-wrap .kuda-cta-lg, .saveFields {
+    .request-wrap .sample-cta-lg, .saveFields {
         max-width: 205px !important;
     }
 
@@ -1290,11 +1290,11 @@
         margin-top: 0;
     }
 
-    .linked-active .kuda-cta-lg {
+    .linked-active .sample-cta-lg {
         max-width: 175px
     }
 
-    .personal-form .login-button.kuda-cta-md {
+    .personal-form .login-button.sample-cta-md {
         max-width: 170px !important;
     }
 
@@ -1313,7 +1313,7 @@
         height: 100vh;
     }
 
-    .modal-overdraft .kuda-budget--form {
+    .modal-overdraft .sample-budget--form {
         height: calc(100vh - 170px) !important;
     }
 
@@ -1351,45 +1351,45 @@
         height: auto;
     }
 
-    .flex.justify-between>.kuda-cta-lg-md {
+    .flex.justify-between>.sample-cta-lg-md {
         width: calc(50% - 8px);
         padding-left: 7px;
         padding-right: 7px;
     }
 
-    .kuda__button--next {
+    .sample__button--next {
         left: auto !important;
         right: 0px !important;
     }
 
-    .kuda__button--next {
+    .sample__button--next {
         left: auto !important;
         right: 0px !important;
     }
 
-    .carousel-pagination--wrap .kuda__button {
+    .carousel-pagination--wrap .sample__button {
         left: 0px;
     }
 
-    .kuda-full--slide {
+    .sample-full--slide {
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
 
-    .kuda-no-sidePadding {
+    .sample-no-sidePadding {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    .kuda__button {
+    .sample__button {
         display: none;
     }
 
-    .kuda-no--bg {
+    .sample-no--bg {
         padding: 0 !important;
     }
 
-    .kuda-no--bg.flex.justify-between .kuda-cta {
+    .sample-no--bg.flex.justify-between .sample-cta {
         max-width: 130px !important;
     }
 
@@ -1439,11 +1439,11 @@
         right: 3px;
     }
 
-    .payment-wrap .kuda-card--wrap {
+    .payment-wrap .sample-card--wrap {
         padding-top: 34px;
     }
 
-    .kuda-no--bg .kuda-cta {
+    .sample-no--bg .sample-cta {
         height: 44px;
     }
 
@@ -1456,15 +1456,15 @@
         min-height: 57px !important;
     }
 
-    .kuda-borrow-card--content {
+    .sample-borrow-card--content {
         margin-top: 0;
     }
 
-    .kuda-reset--card {
+    .sample-reset--card {
         padding: 35px 20px 49px;
     }
 
-    .kuda-input--slider {
+    .sample-input--slider {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1494,7 +1494,7 @@
         height: 52px;
     }
 
-    .select-card--request .request-edge--fix>div, .kuda-request--wrap.select-card--request {
+    .select-card--request .request-edge--fix>div, .sample-request--wrap.select-card--request {
         padding-left: 22px !important;
         padding-right: 22px !important;
     }
@@ -1571,18 +1571,18 @@
 }
 
 @media only screen and (max-width: 375px) {
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 13px;
         width: 140px;
     }
 
-    .kuda-header--actions .kuda-dayLight--toggle {
+    .sample-header--actions .sample-dayLight--toggle {
         left: -33px;
     }
 }
 
 @media only screen and (max-width: 320px) {
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 12px;
         width: 131px;
         margin-top: 15px;
@@ -1592,34 +1592,34 @@
         height: 110px;
     }
 
-    .auth-layout--header .kuda-header--wrap {
+    .auth-layout--header .sample-header--wrap {
         flex-direction: column;
         align-items: start !important;
     }
 
-    .auth-layout--header .kuda-header--actions .kuda-dayLight--toggle {
+    .auth-layout--header .sample-header--actions .sample-dayLight--toggle {
         left: auto;
         right: 20px;
         top: 17px
     }
 
-    .auth-layout--header .kuda-header--actions {
+    .auth-layout--header .sample-header--actions {
         position: static;
     }
 
-    .auth-layout--header+.kuda-preview {
+    .auth-layout--header+.sample-preview {
         margin-top: 115px;
     }
 
-    .auth-layout--header+.kuda-preview {
+    .auth-layout--header+.sample-preview {
         min-height: calc(100vh - 135px) !important;
     }
 
-    .kuda-header--actions {
+    .sample-header--actions {
         width: 100%;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         max-width: 100%;
     }
 }
@@ -1629,33 +1629,33 @@
         font-size: 14.5px
     }
 
-    .kuda-nav--icon a, .kuda-nav--icon p {
+    .sample-nav--icon a, .sample-nav--icon p {
         margin-right: 34px;
     }
 
-    .kuda-nav--icon svg {
+    .sample-nav--icon svg {
         width: 19px
     }
 
-    .kuda-dayLight--toggle svg {
+    .sample-dayLight--toggle svg {
         width: 18px
     }
 
-    .kuda-dayLight--toggle {
+    .sample-dayLight--toggle {
         left: -30px;
     }
 
-    .kuda-header--wrap, footer .container {
+    .sample-header--wrap, footer .container {
         padding-left: 40px;
         padding-right: 40px
     }
 
-    .kuda-brand svg {
+    .sample-brand svg {
         height: 18px;
         width: auto;
     }
 
-    .kuda-payments .card-summary-text p {
+    .sample-payments .card-summary-text p {
         font-size: 15px
     }
 
@@ -1663,13 +1663,13 @@
         margin-right: 12px;
     }
 
-    .kuda-skeleton-span+.budget-heading--summary {
+    .sample-skeleton-span+.budget-heading--summary {
         margin-bottom: 45px;
     }
 }
 
 @media only screen and (max-width: 575px) {
-    .kuda-transaction--tabs {
+    .sample-transaction--tabs {
         overflow-y: hidden;
         margin-left: -20px;
         margin-right: -20px;
@@ -1697,39 +1697,39 @@
         font-size: 1rem;
     }
 
-    .kuda-auth--illustration {
+    .sample-auth--illustration {
         display: none
     }
 
-    .kuda-auth--wrap {
+    .sample-auth--wrap {
         max-width: 100%;
     }
 
-    .kuda-auth--wrap-ext {
+    .sample-auth--wrap-ext {
         max-width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .kuda-hamburger {
+    .sample-hamburger {
         display: none !important
     }
 
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         min-width: 700px;
     }
 
-    .kuda-search--bank+.displayResults .displayWrap>* {
+    .sample-search--bank+.displayResults .displayWrap>* {
         padding-left: 0px;
         padding-right: 0px;
     }
 
-    .kuda-search--bank+.displayResults .kuda-result--item {
+    .sample-search--bank+.displayResults .sample-result--item {
         padding-left: 30px;
         padding-right: 30px;
     }
 
-    .kuda-search--bank+.displayResults .kuda-result--heading {
+    .sample-search--bank+.displayResults .sample-result--heading {
         padding-left: 31px
     }
 
@@ -1776,7 +1776,7 @@
         margin-bottom: 0 !important;
     }
 
-    .skeleton-card--top .kuda-card--wrap {
+    .skeleton-card--top .sample-card--wrap {
         padding-bottom: 57px !important
     }
 
@@ -1784,17 +1784,17 @@
         margin-top: 8px;
     }
 
-    .kuda-add--active .kuda-preview {
+    .sample-add--active .sample-preview {
         max-width: 959px;
     }
 
-    .kuda-add--active .kuda-add--options {
+    .sample-add--active .sample-add--options {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap
     }
 
-    .kuda-add--active .kuda-add--options>* {
+    .sample-add--active .sample-add--options>* {
         width: calc(50% - 10px);
         max-width: 100%;
         margin-right: 0;
@@ -1805,7 +1805,7 @@
         margin-top: -4px;
     }
 
-    .modal-overdraft .kuda-budget--form+.block-buttons .kuda-cta {
+    .modal-overdraft .sample-budget--form+.block-buttons .sample-cta {
         max-width: 175px !important;
     }
 }
@@ -1815,7 +1815,7 @@
         width: calc(100% - 420px);
     }
 
-    .auth-layout--header+.kuda-preview {
+    .auth-layout--header+.sample-preview {
         min-height: calc(100vh - 100px);
     }
 }
@@ -1825,17 +1825,17 @@
         font-size: 13px;
     }
 
-    .kuda-preview, .kuda-header--wrap, .kuda-layout---card, .auth-layout--header+.kuda-preview, .auth-wrap, .phoneupdate-wrap, .modal-content, footer .container {
+    .sample-preview, .sample-header--wrap, .sample-layout---card, .auth-layout--header+.sample-preview, .auth-wrap, .phoneupdate-wrap, .modal-content, footer .container {
         padding-left: 14px;
         padding-right: 14px;
     }
 
-    .kuda-cta {
+    .sample-cta {
         font-size: 13px;
         height: 44px;
     }
 
-    .kuda-transaction--details {
+    .sample-transaction--details {
         padding-right: 10px;
     }
 
@@ -1852,18 +1852,18 @@
         padding-bottom: 25px;
     }
 
-    .kuda-budget--form {
+    .sample-budget--form {
         height: calc(100vh - 298px) !important;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .kuda-account--wrap {
+    .sample-account--wrap {
         max-width: 100%;
         padding: 40px 30px !important;
     }
 
-    .kuda-block--nav {
+    .sample-block--nav {
         width: calc(50% - 10px);
     }
 
@@ -1883,12 +1883,12 @@
         width: 100% !important
     }
 
-    .kuda-add--active .kuda-layout---card {
+    .sample-add--active .sample-layout---card {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         margin-left: -65px;
         margin-right: -65px;
     }
@@ -1910,7 +1910,7 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         min-width: 700px;
     }
 
@@ -1966,15 +1966,15 @@
         font-size: 1.10rem;
     }
 
-    .kuda-budget--filter .DateRangePickerInput {
+    .sample-budget--filter .DateRangePickerInput {
         width: 308px !important;
     }
 
-    .kuda-wrap--wrap--holder>div {
+    .sample-wrap--wrap--holder>div {
         width: 100%
     }
 
-    .kuda-wrap--wrap--holder>div:not(:last-child) {
+    .sample-wrap--wrap--holder>div:not(:last-child) {
         margin-bottom: 25px;
     }
 }
@@ -2011,7 +2011,7 @@
         font-size: 14.8px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         padding: 48px 40px 60px;
     }
 
@@ -2019,7 +2019,7 @@
         margin-top: 6px
     }
 
-    .kuda-transaction--tabs {
+    .sample-transaction--tabs {
         margin-top: 30px
     }
 }
@@ -2047,7 +2047,7 @@
 }
 
 @media only screen and (max-width: 350px) {
-    .kuda-cta {
+    .sample-cta {
         font-size: 12.5px;
         height: 46px;
     }
@@ -2065,18 +2065,18 @@
         height: 39px;
     }
 
-    .kuda-quick--statement svg {
+    .sample-quick--statement svg {
         width: 30px;
         height: 30px;
         margin-right: 6px;
     }
 
-    .kuda-account--summary .kuda-cta-lg {
+    .sample-account--summary .sample-cta-lg {
         max-width: 105px !important;
         min-width: 105px !important;
     }
 
-    .kuda-tran--items {
+    .sample-tran--items {
         max-width: 142px;
     }
 
@@ -2084,7 +2084,7 @@
         margin-bottom: 3px;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 13px;
         height: 42px;
         width: 100%;
@@ -2092,23 +2092,23 @@
 }
 
 @media only screen and (min-height: 799px) and (min-width: 768px) {
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         min-width: 820px;
     }
 
-    .justify-between>.kuda-cta-md {
+    .justify-between>.sample-cta-md {
         max-width: 152px;
     }
 }
 
 @media only screen and (min-height: 799px) and (min-width: 768px) and (max-width: 1280px) {
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         min-width: 750px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1300px) {
-    .kuda-auth--wrap {
+    .sample-auth--wrap {
         max-width: 410px;
         width: 100%;
     }
@@ -2117,11 +2117,11 @@
         padding: 35px 42px 45px;
     }
 
-    .kuda-form--layout {
+    .sample-form--layout {
         margin-top: 25px;
     }
 
-    .kuda-auth--wrap p {
+    .sample-auth--wrap p {
         font-size: 0.9rem;
     }
 }
@@ -2149,26 +2149,26 @@
         max-width: 410px;
     }
 
-    .kuda-cta {
+    .sample-cta {
         font-size: 14px;
         height: 45px
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 13.5px;
         height: 43px;
     }
 
-    .kuda-result--item {
+    .sample-result--item {
         padding-top: 15px;
         padding-bottom: 15px;
     }
 
-    .kuda-search--field, .kuda-transaction--tabs {
+    .sample-search--field, .sample-transaction--tabs {
         height: 47px !important
     }
 
-    .kuda-transaction--details {
+    .sample-transaction--details {
         height: 37px;
     }
 
@@ -2178,11 +2178,11 @@
         min-width: 40px;
     }
 
-    .kuda-nav--icon svg {
+    .sample-nav--icon svg {
         width: 23px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         padding: 48px 40px 60px;
     }
 
@@ -2190,11 +2190,11 @@
         margin-top: 6px
     }
 
-    .kuda-transaction--tabs {
+    .sample-transaction--tabs {
         margin-top: 20px
     }
 
-    .kuda-search {
+    .sample-search {
         margin-top: 20px
     }
 
@@ -2202,7 +2202,7 @@
         margin-top: 9px;
     }
 
-    .kuda-account--summary {
+    .sample-account--summary {
         margin-bottom: 30px;
     }
 
@@ -2210,7 +2210,7 @@
         margin-top: 0;
     }
 
-    .payment-wrap .kuda-card--wrap {
+    .payment-wrap .sample-card--wrap {
         max-width: 480px;
     }
 
@@ -2222,11 +2222,11 @@
         margin-bottom: 24px;
     }
 
-    .kuda-dropdown-header {
+    .sample-dropdown-header {
         height: 44px
     }
 
-    .kuda-add--cardForm {
+    .sample-add--cardForm {
         margin-bottom: 44px;
     }
 
@@ -2238,19 +2238,19 @@
         margin-top: 10px
     }
 
-    .kuda-searchbox {
+    .sample-searchbox {
         padding: 4px 15px
     }
 
-    .kuda-dropdown-list {
+    .sample-dropdown-list {
         padding-top: 48px;
     }
 
-    .kuda-dropdown-item {
+    .sample-dropdown-item {
         padding: 13px 0 12px !important;
     }
 
-    .payment-wrap .kuda-card--wrap.kuda-bill--wrap {
+    .payment-wrap .sample-card--wrap.sample-bill--wrap {
         padding-left: 65px;
         padding-right: 65px;
     }
@@ -2259,20 +2259,20 @@
         height: 52px
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         padding: 45px 62px 40px !important;
     }
 
-    .kuda-invite--cta {
+    .sample-invite--cta {
         font-size: 11px;
         height: 20px;
     }
 
-    .kuda-header {
+    .sample-header {
         height: 65px
     }
 
-    .kuda-preview {
+    .sample-preview {
         margin-top: 65px
     }
 
@@ -2326,16 +2326,16 @@
         transform: translateX(22px);
     }
 
-    .kuda-brand svg {
+    .sample-brand svg {
         height: 18px;
         width: auto;
     }
 
-    .kuda-add--options>* {
+    .sample-add--options>* {
         max-width: 330px;
     }
 
-    .kuda-deposit--wrap, .kuda-card--wrap {
+    .sample-deposit--wrap, .sample-card--wrap {
         max-width: 380px;
     }
 
@@ -2347,15 +2347,15 @@
         margin-bottom: 30px;
     }
 
-    .kuda-budgeting:not(.category-budget) .transaction-price {
+    .sample-budgeting:not(.category-budget) .transaction-price {
         height: 34px;
     }
 
-    .kuda-budget--filter .DateRangePickerInput {
+    .sample-budget--filter .DateRangePickerInput {
         height: 46px;
     }
 
-    .kuda-calendar--control {
+    .sample-calendar--control {
         min-height: 46px
     }
 
@@ -2379,7 +2379,7 @@
         max-width: 410px;
     }
 
-    .kuda-footer--conditions p {
+    .sample-footer--conditions p {
         font-size: 10.5px;
     }
 
@@ -2387,11 +2387,11 @@
         max-width: 1050px;
     }
 
-    .inactivity-buttons .kuda-cta-lg {
+    .inactivity-buttons .sample-cta-lg {
         max-width: 146px;
     }
 
-    .kuda-auth--wrap {
+    .sample-auth--wrap {
         max-width: 370px;
     }
 
@@ -2407,11 +2407,11 @@
         padding-top: 2px;
     }
 
-    .kuda-page--loader img, .kuda-page--loader svg {
+    .sample-page--loader img, .sample-page--loader svg {
         width: 190px !important
     }
 
-    .kuda-modal-illustration {
+    .sample-modal-illustration {
         margin: 35px auto 30px;
     }
 
@@ -2431,11 +2431,11 @@
         margin-bottom: 40px;
     }
 
-    .kuda-cta-lg {
+    .sample-cta-lg {
         max-width: 142px;
     }
 
-    .kuda-tran--items {
+    .sample-tran--items {
         max-width: 192px;
     }
 
@@ -2444,11 +2444,11 @@
         top: -2px;
     }
 
-    .kuda-login--wrap .formInput {
+    .sample-login--wrap .formInput {
         font-size: 14.5px
     }
 
-    .kuda-home-loader--wrap:last-child {
+    .sample-home-loader--wrap:last-child {
         display: none;
     }
 
@@ -2460,7 +2460,7 @@
         max-width: 550px !important;
     }
 
-    .kuda-budget--form {
+    .sample-budget--form {
         height: calc(100vh - 420px) !important;
     }
 
@@ -2468,11 +2468,11 @@
         height: 40px
     }
 
-    .create-budget--modal .kuda-result--heading {
+    .create-budget--modal .sample-result--heading {
         margin-top: 25px
     }
 
-    .kuda-budget--filter .DateRangePickerInput {
+    .sample-budget--filter .DateRangePickerInput {
         width: 300px !important;
     }
 
@@ -2511,7 +2511,7 @@
         background-size: 24px 24px;
     }
 
-    .skeleton-card--top .kuda-activate--wrap {
+    .skeleton-card--top .sample-activate--wrap {
         max-width: 420px;
         padding-left: 50px !important;
         padding-right: 50px !important;
@@ -2521,11 +2521,11 @@
         max-width: 380px !important;
     }
 
-    .kuda-balance--wrap .add-icon {
+    .sample-balance--wrap .add-icon {
         margin-bottom: 9px;
     }
 
-    .kuda-balance--wrap {
+    .sample-balance--wrap {
         min-height: 140px;
     }
 
@@ -2538,7 +2538,7 @@
         max-width: 195px;
     }
 
-    .kuda-add--active .kuda-preview {
+    .sample-add--active .sample-preview {
         max-width: 860px;
     }
 
@@ -2555,41 +2555,41 @@
         margin-bottom: 30px;
     }
 
-    .kuda-cta-long {
+    .sample-cta-long {
         width: 100%;
         max-width: 208px;
     }
 
-    .kuda-dropdown-list {
+    .sample-dropdown-list {
         max-height: 320px;
     }
 
-    .kuda-cta-xl {
+    .sample-cta-xl {
         max-width: 210px;
     }
 
-    .product-skeleton .kuda-account--summary {
+    .product-skeleton .sample-account--summary {
         margin-bottom: 20px;
     }
 
-    .kuda-auth--wrap p {
+    .sample-auth--wrap p {
         font-size: 0.845rem;
     }
 
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         max-height: 520px;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         width: 158px;
         max-width: 158px;
     }
 
-    .kuda-small--modal-lg {
+    .sample-small--modal-lg {
         max-width: 450px !important;
     }
 
-    .kuda-cta-lg-md {
+    .sample-cta-lg-md {
         max-width: 160px;
     }
 
@@ -2620,26 +2620,26 @@
         max-width: 390px;
     }
 
-    .kuda-cta {
+    .sample-cta {
         font-size: 12.5px;
         height: 42px;
     }
 
-    .formCard, .kuda-deposit--wrap, .kuda-card--wrap {
+    .formCard, .sample-deposit--wrap, .sample-card--wrap {
         max-width: 330px;
     }
 
-    .kuda-result--item {
+    .sample-result--item {
         padding-top: 14px;
         padding-bottom: 14px;
     }
 
-    .kuda-search--field, .kuda-transaction--tabs {
+    .sample-search--field, .sample-transaction--tabs {
         height: 44px !important;
         min-height: 44px !important
     }
 
-    .kuda-transaction--details {
+    .sample-transaction--details {
         height: 33px;
     }
 
@@ -2649,11 +2649,11 @@
         min-width: 40px;
     }
 
-    .kuda-nav--icon svg {
+    .sample-nav--icon svg {
         width: 20px;
     }
 
-    .kuda-preview {
+    .sample-preview {
         padding: 40px 40px 55px;
     }
 
@@ -2661,11 +2661,11 @@
         margin-top: 8px;
     }
 
-    .kuda-transaction--tabs {
+    .sample-transaction--tabs {
         margin-top: 20px
     }
 
-    .kuda-account--summary {
+    .sample-account--summary {
         margin-bottom: 30px;
     }
 
@@ -2673,7 +2673,7 @@
         margin-top: 0;
     }
 
-    .payment-wrap .kuda-card--wrap {
+    .payment-wrap .sample-card--wrap {
         margin-top: 30px;
         padding-left: 46px;
         max-width: 420px;
@@ -2689,11 +2689,11 @@
         margin-bottom: 24px;
     }
 
-    .kuda-dropdown-header {
+    .sample-dropdown-header {
         height: 40px;
     }
 
-    .kuda-add--cardForm {
+    .sample-add--cardForm {
         margin-bottom: 40px;
     }
 
@@ -2705,19 +2705,19 @@
         margin-top: 10px
     }
 
-    .kuda-searchbox {
+    .sample-searchbox {
         padding: 4px 15px
     }
 
-    .kuda-dropdown-list {
+    .sample-dropdown-list {
         padding-top: 48px;
     }
 
-    .kuda-dropdown-item {
+    .sample-dropdown-item {
         padding: 13px 0 12px !important;
     }
 
-    .payment-wrap .kuda-card--wrap.kuda-bill--wrap {
+    .payment-wrap .sample-card--wrap.sample-bill--wrap {
         padding-left: 57px;
         padding-right: 57px;
     }
@@ -2726,22 +2726,22 @@
         height: 50px;
     }
 
-    .kuda-account--wrap {
+    .sample-account--wrap {
         padding: 45px 45px 30px !important;
         min-width: 655px;
     }
 
-    .kuda-invite--cta {
+    .sample-invite--cta {
         font-size: 10px;
         height: 20px;
         width: 98px;
     }
 
-    .kuda-header {
+    .sample-header {
         height: 58px
     }
 
-    .kuda-preview {
+    .sample-preview {
         margin-top: 58px;
     }
 
@@ -2796,16 +2796,16 @@
         transform: translateX(22px);
     }
 
-    .kuda-brand svg {
+    .sample-brand svg {
         height: 16px;
         width: auto;
     }
 
-    .kuda-add--options>* {
+    .sample-add--options>* {
         max-width: 300px;
     }
 
-    .kuda-deposit--wrap, .kuda-card--wrap {
+    .sample-deposit--wrap, .sample-card--wrap {
         max-width: 350px;
         padding-bottom: 38px;
     }
@@ -2818,16 +2818,16 @@
         margin-bottom: 30px;
     }
 
-    .kuda-budgeting:not(.category-budget) .transaction-price {
+    .sample-budgeting:not(.category-budget) .transaction-price {
         height: 34px;
     }
 
-    .kuda-budget--filter .DateRangePickerInput {
+    .sample-budget--filter .DateRangePickerInput {
         height: 44px;
         width: 280px !important;
     }
 
-    .kuda-calendar--control {
+    .sample-calendar--control {
         min-height: 44px;
     }
 
@@ -2851,7 +2851,7 @@
         max-width: 380px;
     }
 
-    .kuda-footer--conditions p {
+    .sample-footer--conditions p {
         font-size: 11px;
     }
 
@@ -2863,20 +2863,20 @@
         margin-left: 20px
     }
 
-    .kuda-cta-lg {
+    .sample-cta-lg {
         max-width: 130px
     }
 
-    .kuda-tran--items {
+    .sample-tran--items {
         max-width: 172px;
     }
 
-    .kuda-quick--statement svg {
+    .sample-quick--statement svg {
         width: 32px;
         height: 32px;
     }
 
-    .kuda-quick--statement {
+    .sample-quick--statement {
         margin-bottom: 4px;
     }
 
@@ -2898,7 +2898,7 @@
         margin-top: 40px
     }
 
-    .kuda-cta-long {
+    .sample-cta-long {
         width: 100%;
         max-width: 190px;
     }
@@ -2919,16 +2919,16 @@
         padding-right: 38px;
     }
 
-    .kuda-heading--illustration svg {
+    .sample-heading--illustration svg {
         width: 78px;
         height: 78px;
     }
 
-    .kuda-card--wrap {
+    .sample-card--wrap {
         margin-top: 30px;
     }
 
-    .denomination, .kuda-dropdown-icon {
+    .denomination, .sample-dropdown-icon {
         width: 38px
     }
 
@@ -2941,12 +2941,12 @@
         max-width: 160px
     }
 
-    .kuda-history--items .kuda-transaction--tabs {
+    .sample-history--items .sample-transaction--tabs {
         height: 37px !important;
         min-height: 37px !important;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         font-size: 12.5px;
         height: 40px;
         width: 125px;
@@ -2956,15 +2956,15 @@
         padding: 30px 40px 40px;
     }
 
-    .kuda-auth--wrap {
+    .sample-auth--wrap {
         max-width: 345px;
     }
 
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         max-height: 480px;
     }
 
-    .kuda-savings .kuda-card--wrap, .kuda-cards .kuda-card--wrap {
+    .sample-savings .sample-card--wrap, .sample-cards .sample-card--wrap {
         max-width: 470px;
         padding: 45px 77px;
     }
@@ -2973,15 +2973,15 @@
         padding-top: 2px;
     }
 
-    .kuda-page--loader img, .kuda-page--loader svg {
+    .sample-page--loader img, .sample-page--loader svg {
         width: 170px !important
     }
 
-    .kuda-modal-illustration {
+    .sample-modal-illustration {
         margin: 35px auto 30px;
     }
 
-    .inactivity-buttons .kuda-cta-lg {
+    .inactivity-buttons .sample-cta-lg {
         max-width: 135px;
     }
 
@@ -3000,7 +3000,7 @@
         font-size: 11.5px;
     }
 
-    .kuda-budget--form {
+    .sample-budget--form {
         height: calc(100vh - 405px) !important;
     }
 
@@ -3021,11 +3021,11 @@
         margin-top: 25px;
     }
 
-    .kuda-login--wrap .formInput {
+    .sample-login--wrap .formInput {
         font-size: 14px;
     }
 
-    .kuda-login--wrap .formInput {
+    .sample-login--wrap .formInput {
         padding-top: 12px;
         padding-bottom: 10px;
     }
@@ -3035,7 +3035,7 @@
         width: 17px;
     }
 
-    .kuda-form--layout {
+    .sample-form--layout {
         margin-top: 25px;
     }
 
@@ -3047,19 +3047,19 @@
         max-width: 186px;
     }
 
-    .kuda-add--active .kuda-preview {
+    .sample-add--active .sample-preview {
         max-width: 800px;
     }
 
-    .product-skeleton .kuda-account--summary:last-child {
+    .product-skeleton .sample-account--summary:last-child {
         display: none !important;
     }
 
-    .kuda-auth--illustration svg {
+    .sample-auth--illustration svg {
         min-width: 650px;
     }
 
-    .kuda-header--wrap .kuda-cta {
+    .sample-header--wrap .sample-cta {
         width: 142px;
         max-width: 142px;
     }
@@ -3070,7 +3070,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 820px) {
-    .kuda-account--wrap {
+    .sample-account--wrap {
         margin-left: -58px;
         margin-right: -58px;
     }

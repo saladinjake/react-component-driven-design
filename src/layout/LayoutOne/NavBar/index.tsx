@@ -9,25 +9,8 @@ import { Svg } from "assets/svg";
 
 const pageMap = {
   dashboard: "Dashboard",
-  "charges-management": "Charges Management",
-  "customer-information-management": "Customer Information Management",
-  "fees-management": "Fees Management",
-  "general-ledger-(gl)-management": "General Ledger (GL) Management",
-  "interests-management": "Interests Management",
-  "lien-management": "Lien Management", //leave this lien management for aramide
-  "loan-account-management": "Loan Account Management", //leave this loan account management for aramide
-  "postings-management": "Postings Management", //leave this postings management for aramide
-  "product-management": "Product Management", //leave product management for aramide
-  "approval-management": "Approval Management",
-  "audit-trail-management": "Audit Trail Management",
-  "branch-management": "Branch Management",
-  "business-operations-management": "Business Operations Management",
-  "menu-management": "Menu Management",
-  "page-management": "Page Management",
-  "region-management": "Region Management",
-  "system-setup-management": "System Setup Management",
-  "user-function-management": "User Function Management",
-  "user-role-management": "User Role Management",
+  "sample1": "sample1",
+
 };
 
 const NavBar = () => {
@@ -57,7 +40,7 @@ const NavBar = () => {
           </StyledButtonWrapper>
         ) : null}
 
-        <Text color="kudaWhite" fontWeight="900" fontSize="17px">
+        <Text color="sampleWhite" fontWeight="900" fontSize="17px">
           {pageMap[splitLocationPathName[1]]}
         </Text>
       </Flex>

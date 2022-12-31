@@ -25,6 +25,6 @@ export const StyledNav = styled.div`
     background: #ffffff;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
-    color: ${({ theme }) => theme.colors.kudaPurple};
+    color: ${({ theme }) => theme.colors.Purple};
   }
 `;

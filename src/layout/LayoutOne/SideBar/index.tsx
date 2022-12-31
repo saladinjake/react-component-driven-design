@@ -24,7 +24,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   const refSideBar = useRef<HTMLDivElement>();
 
   const getRoleId = () =>
-    JSON.parse(localStorage.getItem("KudaAppUserData")).userRoleID;
+    JSON.parse(localStorage.getItem("sampleAppUserData")).userRoleID;
 
   const { data: response, isLoading } = useQuery([queryKeys.getSiteMap], () =>
     getSiteMapByRoleID(getRoleId())
@@ -36,26 +36,13 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
 
     const Menus = [
       {
-       name: "Send Money"
+       name: "Sample 1"
       },{
-        name: "Order Groceries"
+        name: "Sample 1"
       },{
-        name: "Kuda Card"
-      },{
-        name: "Help"
-      },{
-        name: "Collection Points"
-      },{
-        name: "Order Groceries"
-      },{
-        name: "Order Hiistory"
-      },{
-        name: "My Receipients"
-      },{
-        name: "My Account"
-      },{
-        name: "Refer A Friend"
+        name: "sample Card"
       }
+      
     ]
 
   const frontOffice = useMemo(
@@ -85,7 +72,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
       >
         <Box height="90px" width="90%" mx="auto">
           <Flex justifyContent="between" alignItems="center" height="100%">
-            <>Sample UI</>
+            <>My Sample UI</>
             <div>
               <Flex
                 as="button"

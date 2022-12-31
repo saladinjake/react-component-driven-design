@@ -1,4 +1,4 @@
-import { ReactComponent as KudaNerveLogo } from "./img/svg/kuda-nerve.svg";
+import { ReactComponent as SampleNerveLogo } from "./img/svg/Sample-nerve.svg";
 import successAnimation from "./img/svg/success-animation.svg";
 import errorAnimation from "./img/svg/error-animation.svg";
 import attentionIcon from "./img/svg/attention-icon.svg";
@@ -13,7 +13,7 @@ import { ReactComponent as BackArrow } from "./img/svg/back-arrow.svg";
 import { ReactComponent as Chevron } from "./img/svg/chevron.svg";
 
 export const Svg = {
-  KudaNerveLogo,
+  SampleNerveLogo,
   successAnimation,
   errorAnimation,
   attentionIcon,
