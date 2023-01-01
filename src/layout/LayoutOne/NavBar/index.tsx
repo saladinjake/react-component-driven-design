@@ -6,6 +6,7 @@ import Box from "components/shared/library/components/Box";
 import { useAuth } from "context/AuthContext";
 import styled from "styled-components";
 import { Svg } from "assets/svg";
+import {  SearchField } from "components/shared/library";
 
 const pageMap = {
   dashboard: "Dashboard",
@@ -32,7 +33,29 @@ const NavBar = () => {
     >
       <Flex height="100%" alignItems="center">
         <Text color="#000" fontWeight="900" fontSize="17px">
-          {pageMap[splitLocationPathName[1]]}
+        <div className="filter-global-search-container">
+          <form
+            onSubmit={(e) => {
+             
+            }}
+          >
+            <SearchField
+              withBtn
+              placeholder="Search"
+              btnText="Search"
+              width="100%"
+              height="48px"
+              value={"sample"}
+              searchColumns={[]}
+              onChange={(e) => {
+                
+              }}
+              onResetSearch={() =>{
+                
+              }}
+            />
+          </form>
+        </div>
         </Text>
       </Flex>
 
