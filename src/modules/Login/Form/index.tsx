@@ -190,7 +190,7 @@ const loginUser =() =>{}
               />
            <Box ml="5">
                 <Button width="100%" type="submit" disabled={invalid} onClick={() => navigate("/dashboard")}>
-                  {id === "create" ? "Create Account" : "Login"}
+                  {"Login"}
                 </Button>
               </Box>
         

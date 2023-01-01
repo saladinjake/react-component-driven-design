@@ -18,8 +18,13 @@ const LeftSection = () => {
         position="relative"
         justifyContent="between"
         alignItems="center"
-      ></Flex>
-      {/* <Svg.SampleLogo /> */}
+      >
+         <Svg.SampleLogo /> 
+      </Flex>
+      <div style={{marginTop:"200px"}}>
+     
+      </div>
+     
       <StyledIllustration>
         <div className="illustration-wrapper">
           <Svg.Pablo></Svg.Pablo>

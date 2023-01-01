@@ -14,6 +14,7 @@ export const LoginWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top:20px;
+  
   top:20px;
 `;
 
