@@ -30,7 +30,7 @@ const Content = styled.button`
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: #979797;
+  color: #b1c9f8;
   padding: 12px;
   margin-bottom: 12px;
   transition: all 0.6s;
@@ -39,10 +39,13 @@ const Content = styled.button`
   background-color: transparent;
   cursor: pointer;
 
+ 
+
   &:hover {
-    background: #ffffff;
+    background: #39CDCC;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
-    opacity: 0.9;
+   
+    color: #213F7D;
   }
 `;

@@ -26,13 +26,11 @@ const NavBar = () => {
       mx="auto"
       justifyContent="between"
       style={{
-     
         boxShadow:
           "box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
       }}
     >
       <Flex height="100%" alignItems="center">
-        
         <Text color="sampleWhite" fontWeight="900" fontSize="17px">
           {pageMap[splitLocationPathName[1]]}
         </Text>
