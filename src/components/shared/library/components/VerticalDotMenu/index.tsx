@@ -6,31 +6,31 @@ export const VerticalDotMenu = ({
   handleViewDetail,
 }) => {
 
-//   function showDropdown() {
-//     document.getElementById("myDropdown").classList.toggle("show");
-//   }
-//   useEffect(() => {
-//     // Close the dropdown if the user clicks outside of it
-//     window.onclick = function (event) {
-//       if (!event.target.matches(".dropbtn")) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//           var openDropdown = dropdowns[i];
-//           if (openDropdown.classList.contains("show")) {
-//             openDropdown.classList.remove("show");
-//           }
-//         }
-//       }
-//     };
-//   }, []);
+  function showDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  useEffect(() => {
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+  }, []);
   return (
     <ActionBtnStyled>
       <div className="headerx">
         <div className="dropdown">
           <ul
             className="dropbtn icons btn-right showLeft"
-            onClick={handleDropdown}
+            onClick={showDropdown}
           >
             <li></li>
             <li></li>
@@ -52,11 +52,11 @@ export const VerticalDotMenu = ({
 
 const ActionBtnStyled=styled.div`
   .showLeft {
-    /* background-color: black !important;
-    border: 1px solid black !important;
-    text-shadow: black !important;
-    color: black !important;
-    padding: 10px; */
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    text-shadow: #fff !important;
+    color: #fff !important;
+    padding: 2px;
   }
   .icons li {
     background: none repeat scroll 0 0 black;
