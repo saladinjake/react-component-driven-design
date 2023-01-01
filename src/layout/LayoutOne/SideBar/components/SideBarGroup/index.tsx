@@ -71,6 +71,7 @@ function SideBarGroup(props) {
                   key={i}
                   name={navElementName}
                   index={i}
+                  Icon={menuItem?.icon}
                   menuItem={menuItem}
                   link={constructNavUrl(navElementName)}
                 />

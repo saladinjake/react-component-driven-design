@@ -4,7 +4,7 @@ import Skeleton from "components/shared/Skeleton";
 import Box from "components/shared/library/components/Box";
 
 function SideBarItem(props) {
-  const { name, link, isLoading, menuItem, Icon =null } = props;
+  const { name, link, isLoading, menuItem, Icon} = props;
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ function SideBarItem(props) {
   }
 
   return <Content onClick={handleClick}>
-    <span>{Icon!==null && Icon}</span>
+    <span className="icon-set">{Icon}</span>
        {name}
     </Content>;
 }
@@ -28,8 +28,8 @@ function SideBarItem(props) {
 export default SideBarItem;
 
 const Content = styled.button`
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
   display: flex;
   align-items: center;
@@ -41,7 +41,12 @@ const Content = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-family:"Work Sans";
 
+  .icon-set{
+     margin-right:10px;
+     font-size:16px;
+  }
  
 
   &:hover {

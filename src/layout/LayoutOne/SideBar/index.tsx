@@ -23,82 +23,124 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   const [searchValue, setSearchValue] = useState("");
   const refSideBar = useRef<HTMLDivElement>();
 
+  const {
+    Briefcase,
+    Dashboard,
+    Decision,
+    Guarantor,
+    Loan,
+    Savings,
+    Users,
+    LoanRequest,
+    Whitelist,
+    Karma,
+    FeeNPricing,
+    FeeNCharge,
+    Pref,
+    Reports,
+    SavingsProduct,
+    ServiceACC,
+    Services,
+    Settlement,
+    Transaction,
+  } = Svg;
+
   const getRoleId = () =>
     JSON.parse(localStorage.getItem("sampleAppUserData")).userRoleID;
 
   const Menus = [
     {
       name: "Users",
+      icon: <Users />,
     },
     {
       name: "Guarantors",
+      icon: <Guarantor />,
     },
     {
       name: "Loans",
+      icon: <Loan />,
     },
     {
       name: "Decision Model",
+      icon: <Decision />,
     },
     {
       name: "Savings",
+      icon: <Savings />,
     },
 
     {
       name: "Loans Request",
+      icon: <LoanRequest />,
     },
 
     {
       name: "WhiteList",
+      icon: <Whitelist />,
     },
 
     {
       name: "Karma",
+      icon: <Karma />,
     },
   ];
 
   const MenuBack = [
     {
       name: "Organization",
+      icon: <Briefcase/>,
     },
     {
       name: "Loan Products",
+      icon: <Loan />,
     },
     {
       name: "Savings Product",
+      icon: <Savings/>,
     },
     {
       name: "Fees And Charges",
+      icon: <FeeNCharge/>,
     },
     {
       name: "Transactions",
+      icon: <Transaction />,
     },
 
     {
       name: "Services",
+      icon: <Services />,
     },
 
     {
       name: "Service Account",
+      icon: <ServiceACC/>,
     },
 
     {
       name: "Settlements",
+      icon: <Settlement />,
     },
 
     {
       name: "Reports",
+      icon: <Reports />,
     },
   ];
 
   const settingMaps = [
     {
       name: "Prefrences",
+      icon: <Pref/>,
     },
     {
       name: "Fees And Pricing",
+      icon: <FeeNPricing />,
     },
     {
       name: "Audit Logs",
+      icon: <Users />,
     },
   ];
 
@@ -150,11 +192,11 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
 
       <Wrapper>
         <Box width="90%" mx="auto">
-
-        <Box mt="5" mb="4">
+          <Box mt="5" mb="4">
             <SideBarItem
               name="Switch Organization"
               link="/dashboard"
+              Icon={<Briefcase />}
               menuItem={dashboardMenuItem}
             />
           </Box>
@@ -163,6 +205,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             <SideBarItem
               name="Dashboard"
               link="/dashboard"
+              Icon={<Dashboard />}
               menuItem={dashboardMenuItem}
             />
           </Box>

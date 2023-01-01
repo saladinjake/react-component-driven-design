@@ -13,7 +13,45 @@ import { ReactComponent as BackArrow } from "./img/svg/back-arrow.svg";
 import { ReactComponent as Chevron } from "./img/svg/chevron.svg";
 import { ReactComponent as Pablo } from "./img/svg/pablo.svg";
 import { ReactComponent as SampleLogo } from "./img/svg/zlogo.svg";
+
+
+import { ReactComponent as Briefcase } from "./img/svg/briefcase.svg";
+import { ReactComponent as Dashboard } from "./img/svg/dashboard.svg";
+import { ReactComponent as Decision} from "./img/svg/decision.svg";
+
+import { ReactComponent as Guarantor } from "./img/svg/guarantor.svg";
+import { ReactComponent as Loan} from "./img/svg/loan.svg";
+import { ReactComponent as Savings} from "./img/svg/savings.svg";
+
+import { ReactComponent as Users } from "./img/svg/users.svg";
+import { ReactComponent as LoanRequest } from "./img/svg/loanrequest.svg";
+import { ReactComponent as Whitelist } from "./img/svg/whitelist.svg";
+import { ReactComponent as Karma } from "./img/svg/karma.svg";
+
+
+import { ReactComponent as FeeNPricing } from "./img/svg/feenpricing.svg";
+import { ReactComponent as FeeNCharge} from "./img/svg/feesncharge.svg";
+import { ReactComponent as Pref} from "./img/svg/pref.svg";
+
+import { ReactComponent as Reports } from "./img/svg/reports.svg";
+import { ReactComponent as SavingsProduct } from "./img/svg/savingsProduct.svg";
+import { ReactComponent as ServiceACC } from "./img/svg/serviceacc.svg";
+import { ReactComponent as Services } from "./img/svg/karma.svg";
+import { ReactComponent as Settlement } from "./img/svg/settlement.svg";
+import { ReactComponent as Transaction } from "./img/svg/transaction.svg";
+
+
 export const Svg = {
+  FeeNPricing,
+  FeeNCharge,
+  Pref,
+  Reports,
+  SavingsProduct,
+  ServiceACC,
+  Services,
+  Settlement,
+  Transaction,
+
   SampleNerveLogo,
   successAnimation,
   errorAnimation,
@@ -28,5 +66,15 @@ export const Svg = {
   BackArrow,
   Chevron,
   Pablo,
-  SampleLogo
+  SampleLogo,
+  Briefcase,
+  Dashboard,
+  Decision,
+  Guarantor,
+  Loan,
+  Savings,
+  Users,
+  LoanRequest,
+  Whitelist,
+  Karma
 };
