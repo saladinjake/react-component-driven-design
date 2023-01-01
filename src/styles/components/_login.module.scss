@@ -1,0 +1,29 @@
+.leftside {
+    background: #fff;
+  }
+  .rightside {
+    background: #fff;
+  }
+  .leftside, .rightside {
+    color: rgba(255,255,255,.4);
+    padding: 2%;
+    text-align: left;
+  }
+  
+  @media ( min-width : 600px ){
+    body {
+      background: #fff;
+    }
+      .flexbox {
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: flex;
+      }
+    .leftside,
+    .rightside {
+      -webkit-flex: 1;
+      flex: 1;
+      background: none;
+    }
+  }
