@@ -13,6 +13,7 @@ import { mainHeaderLink } from "./utilities/headerLinks";
 import ArrowSets from "components/shared/BackButton/ArrowSets";
 import Indicator from "components/shared/Indicator";
 import { isValidV4UUID, reGroup } from "utils";
+import { Svg } from "assets/svg";
 
 import { Success, Error } from "components/shared/Modal";
 import useSendToAPI from "utils/hooks/useSendToApi";
@@ -46,6 +47,12 @@ function Home() {
   const [errorMessage, setErrorMessage] = useState(defaultErrorMessage);
   const [successTitle, setSuccessTitle] = useState(defaultSuccessTitle);
   const [successMessage, setSuccessMessage] = useState(defaultSuccessMessage);
+  const {
+    AllUsers,
+    ActiveUsers,
+    UserWithLoan,
+    UserWithSavings,
+  } = Svg
 
   const [initialValues, setInitialValues] = useState({
     name: "",
@@ -81,7 +88,9 @@ function Home() {
     return (
       <div className="basic-column w-col w-col-3">
         <div className="tag-wrapper">
+         
           <div className="number-card number-card-content1">
+          <props.Icon></props.Icon>
             <div className="number-card-dollars">{props?.title}</div>
             <h1 className="number-card-number">{props?.value}</h1>
 
@@ -186,10 +195,10 @@ function Home() {
     >
       <CardInfo>
         <div className="row w-row">
-          <Card title="USERS" value="1200" />
-          <Card title="ACTIVE USER" value="13000" />
-          <Card title="USER WITH LOANS" value="13000" />
-          <Card title="USER WITH SAVINGS" value="13000" />
+          <Card title="USERS" value="1200"  Icon={AllUsers}/>
+          <Card title="ACTIVE USER" value="13000" Icon={ActiveUsers} />
+          <Card title="USER WITH LOANS" value="13000"  Icon={UserWithLoan}/>
+          <Card title="USER WITH SAVINGS" value="13000"  Icon={UserWithSavings}/>
         </div>
       </CardInfo>
 
@@ -354,7 +363,7 @@ const CardInfo = styled.div`
   }
   .number-card-dollars {
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
   }
   .number-card-progress {

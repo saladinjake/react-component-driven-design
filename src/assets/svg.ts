@@ -41,7 +41,17 @@ import { ReactComponent as Settlement } from "./img/svg/settlement.svg";
 import { ReactComponent as Transaction } from "./img/svg/transaction.svg";
 
 
+import { ReactComponent as AllUsers } from "./img/svg/euser.svg";
+import { ReactComponent as ActiveUsers } from "./img/svg/eactiveuser.svg";
+import { ReactComponent as UserWithLoan } from "./img/svg/euserloan.svg";
+import { ReactComponent as UserWithSavings } from "./img/svg/eusersavings.svg";
+// import { ReactComponent as Transaction } from "./img/svg/transaction.svg";
+
 export const Svg = {
+  AllUsers,
+  ActiveUsers,
+  UserWithLoan,
+  UserWithSavings,
   FeeNPricing,
   FeeNCharge,
   Pref,
