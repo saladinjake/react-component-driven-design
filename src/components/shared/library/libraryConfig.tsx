@@ -17,6 +17,7 @@ export default {
       LightPurple: "#8369A0",
       InactivePurple: "#EFF1FF",
       LightBlue: "#DBF8FF",
+      Text: "#213F7D",
     },
   
     fontSizes: {

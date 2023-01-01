@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Router from "./routes";
 import { useAuth } from "./context/AuthContext";
 import { useIdleTimer } from "react-idle-timer";
-
+import "./styles/main.scss"
 function App() {
   // const { loadAuthUser, logout } = useAuth();
 

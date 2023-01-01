@@ -1,34 +1,49 @@
-const RightSection = () =>{
-    return (
-    <div className="rightside">
-    <h1>The Tale of the Heike</h1>
-    <p>
-      The sound of the Gion Shōja bells echoes the impermanence of all things; the color of the sāla flowers reveals the truth that the prosperous must decline. The proud do not endure, they are like a dream on a spring night; the mighty fall at last, they are as dust before the wind.
-    </p>
- 
-  </div>
-    )
+import React from "react";
+import { Svg } from "assets/svg";
+import FormSection from "./Form";
+import styled from "styled-components";
+import { Flex } from "components/shared/library";
 
-}
+export const StyledIllustration = styled.div`
+  margin-top: 300px;
+  width: 50vmin;
+  margin-left: 10%;
+`;
 
-const LeftSection = () =>{
-return(
+const LeftSection = () => {
+  return (
     <div className="leftside">
-    <h1>The Tale of the Heike</h1>
-    <p>
-      The sound of the Gion Shōja bells echoes the impermanence of all things; the color of the sāla flowers reveals the truth that the prosperous must decline. The proud do not endure, they are like a dream on a spring night; the mighty fall at last, they are as dust before the wind.
-    </p>
+      <Flex
+        style={{ top: "10vmin" }}
+        position="relative"
+        justifyContent="between"
+        alignItems="center"
+      ></Flex>
+      {/* <Svg.SampleLogo /> */}
+      <StyledIllustration>
+        <div className="illustration-wrapper">
+          <Svg.Pablo></Svg.Pablo>
+        </div>
+      </StyledIllustration>
+    </div>
+  );
+};
 
-  </div>
-)
-}
+const RightSection = () => {
+  return (
+    <div className="leftside">
+      <FormSection />
+    </div>
+  );
+};
 
+const Login = () => {
+  return (
+    <div className="flexbox">
+      <LeftSection />
+      <RightSection />
+    </div>
+  );
+};
 
-const Login = () =>{
-  <div className="flexbox">
-    <LeftSection/>
-    <RightSection/>
-  </div>
-}
-
-export default Login
+export default Login;

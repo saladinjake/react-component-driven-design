@@ -19,7 +19,8 @@ const colors = {
   LighterGrey: "#F4F4F4",
   LightPurple: "#8369A0",
   InactivePurple: "#EFF1FF",
-  LightBlue: "#DBF8FF",
+  LightBlue: "#39CDCC",
+  Text: "#213F7D",
 };
 
 // /**

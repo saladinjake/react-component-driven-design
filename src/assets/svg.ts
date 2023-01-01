@@ -11,8 +11,8 @@ import { ReactComponent as CogWheel } from "./img/svg/cog-wheel.svg";
 import { ReactComponent as NotificationBell } from "./img/svg/notification-bell.svg";
 import { ReactComponent as BackArrow } from "./img/svg/back-arrow.svg";
 import { ReactComponent as Chevron } from "./img/svg/chevron.svg";
-
 import { ReactComponent as Pablo } from "./img/svg/pablo.svg";
+import { ReactComponent as SampleLogo } from "./img/svg/zlogo.svg";
 export const Svg = {
   SampleNerveLogo,
   successAnimation,
@@ -27,4 +27,6 @@ export const Svg = {
   NotificationBell,
   BackArrow,
   Chevron,
+  Pablo,
+  SampleLogo
 };

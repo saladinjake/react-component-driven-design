@@ -28,7 +28,7 @@ export const StyledButton = styled.button<ButtonProps>`
       : ""};
   background: ${(props) =>
     props.color === "primary"
-      ? theme.colors.Purple
+      ? theme.colors.LightBlue
       : props.color === "secondary"
       ? "rgba(239, 241, 255, 0.5)"
       : props.color === "danger"

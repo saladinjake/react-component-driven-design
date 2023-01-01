@@ -1,13 +1,13 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import LoginLayout from "modules/Login";
+import Login from "modules/Login/index";
 
-function Login() {
+function LoginPage() {
   return (
       <Routes>
-            <Route index element={<LoginLayout />} />
+            <Route index element={<Login />} />
             <Route path="/*" element={<Navigate to="/login" replace />} />
       </Routes>
   );
 }
 
-export default Login;
+export default LoginPage;
