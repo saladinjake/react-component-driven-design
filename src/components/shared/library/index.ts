@@ -11,6 +11,7 @@ import DatePicker from "./components/DatePicker";
 // import Status from "./components/Status";
 import Textarea from "./components/Textarea";
 import Flex from "./components/Flex";
+import { VerticalDotMenu  } from "./components/VerticalDotMenu"
 export {
   Avatar,
   Button,
@@ -25,4 +26,5 @@ export {
   SearchField,
   DatePicker,
   Textarea,
+  VerticalDotMenu
 };
