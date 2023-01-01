@@ -21,7 +21,9 @@ import useForm, { hasError } from "utils/hooks/useForm";
 import {
   getUsersByFilter
 } from "api/services/User"
-
+import {
+  IoMdFunnel
+} from "react-icons/io"
 const InformationTip = ({status, message,ref}) => (
 <div className="centered box" ref={ref}>
   <h6 className="statusInfo">{status}</h6>
@@ -80,25 +82,52 @@ function Home() {
         sortOrder,
       })
   );
+
+
+  const Card = (props) =>{
+    return (
+
+     
+    <div className="basic-column w-col w-col-3">
+        <div className="tag-wrapper">
+            <div className="number-card number-card-content1">
+               <div className="number-card-dollars">{props?.title}</div>
+                <h1 className="number-card-number">{props?.value}</h1>
+              
+                <div className="number-card-divider"></div>
+            </div>
+          
+        </div>
+    </div>
+    )
+  }
  
 
   const columns = [
     {
-      Header: "Mock 1",
+      Header: "ORGANIZATION",
       accessor: "name",
     },
     {
-      Header: "Moc2",
+      Header: "USERNAME",
       accessor: "",
     },
 
     {
-      Header: "Address",
+      Header: "EMAIL",
+      accessor: "",
+    },
+    {
+      Header: "PHONE NUMBER",
+      accessor: "",
+    },
+    {
+      Header: "DATE JOINED",
       accessor: "",
     },
 
     {
-      Header: "Status",
+      Header: "STATUS",
       accessor: "",
       Cell: (data) => {
         if (data.cell.row.original.isActive == true)
@@ -158,6 +187,15 @@ function Home() {
         </Button>
       }
     >
+
+      <CardInfo>
+          <div className="row w-row">
+              <Card title="USERS" value="1200"/>
+              <Card title="ACTIVE USER"  value="13000"/>
+              <Card title="USER WITH LOANS"  value="13000"/>
+              <Card title="USER WITH SAVINGS"  value="13000"/>
+          </div>
+      </CardInfo>
      
 
       <Table
@@ -224,7 +262,7 @@ h1{
     padding-right:10px;
 }
  .w-col-3{
-    width:15%;
+    width:24%;
 }
  @media screen and (max-width:767px){
      .w-row{
@@ -245,7 +283,7 @@ h1{
  h1{
     margin-top:15px;
     margin-bottom:15px;
-    font-size:42px;
+    font-size:24px;
     line-height:54px;
     font-weight:400;
 }
@@ -274,17 +312,19 @@ h1{
  .number-card-number{
     margin-top:0px;
     margin-bottom:0px;
-    color:#fff;
+    color:#545F7D;
     font-weight:300;
 }
  .tagline{
-    font-size:12px;
+    /* font-size:12px;
     font-weight:500;
     letter-spacing:2px;
-    text-transform:uppercase;
+    text-transform:uppercase; */
 }
  .tagline.number-card-currency{
-    color:#fff;
+    color:#213F7D;
+    font-size:14px;
+    font-weight:600px;
 }
  .basic-column{
     padding-right:5px;
@@ -293,26 +333,14 @@ h1{
  .number-card{
     padding:22px 30px;
     border-radius:8px;
-    background-image:-webkit-linear-gradient(270deg, #1991eb, #1991eb);
-    background-image:linear-gradient(180deg, #1991eb, #1991eb);
+    
 }
- .number-card.number-card-content3{
-    background-image:-webkit-linear-gradient(270deg, #ed629a, #c850c0);
-    background-image:linear-gradient(180deg, #ed629a, #c850c0);
-}
- .number-card.number-card-content4{
-    background-image:-webkit-linear-gradient(270deg, #ff8308, #fd4f00);
-    background-image:linear-gradient(180deg, #ff8308, #fd4f00);
-}
- .number-card.number-card-content2{
-    display:block;
-    background-image:-webkit-linear-gradient(270deg, #17cec4, #17cec4 0%, #08aeea);
-    background-image:linear-gradient(180deg, #17cec4, #17cec4 0%, #08aeea);
-    color:#333;
-}
+ 
  .number-card.number-card-content1{
-    background-image:-webkit-linear-gradient(270deg, #7042bf, #3023ae);
-    background-image:linear-gradient(180deg, #7042bf, #3023ae);
+    background:#fff;
+    box-shadow: -8px 2px 26px 3px rgba(161,144,144,0.68);
+-webkit-box-shadow: -8px 2px 26px 3px rgba(161,144,144,0.68);
+-moz-box-shadow: -8px 2px 26px 3px rgba(161,144,144,0.68);
 }
  .number-card-progress-wrapper{
     display:-webkit-box;
@@ -331,12 +359,12 @@ h1{
     background-color:hsla(0, 0%, 100%, .15);
 }
  .number-card-dollars{
-    color:hsla(0, 0%, 100%, .8);
+    color:#000;
     font-size:16px;
     line-height:24px;
 }
  .number-card-progress{
-    color:#fff;
+    color:#000;
     text-align:right;
 }
  @media (max-width: 991px){

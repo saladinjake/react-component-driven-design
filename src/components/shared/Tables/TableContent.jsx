@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import {
+ IoMdFunnel
+} from "react-icons/io"
+import {
+  Box 
+} from "components/shared/library"
 
 const StyledeNotification=styled.div`
   display:flex;
@@ -29,10 +35,14 @@ export const TableContent = ({
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column, index) => {
               return (
-              <th  id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                
+                 <th  id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render("Header")}
-                <span>{column.isSorted? (column.isSortedDesc? '': '' ): ''}</span>
+                <span>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
               </th>
+              
+             
+             
             )})}
           </tr>
         ))}

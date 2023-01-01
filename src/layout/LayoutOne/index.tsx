@@ -4,7 +4,7 @@ import Grid from "components/shared/library/components/Grid-v1";
 
 const Layout = ({ children }) => {
   return (
-    <div style={{background:"#E5E5E5"}}>
+    <div style={{background:""}}>
     <Grid  gridTemplateColumn="330px 1fr" gridTemplateRow="56px 1fr">
       <Grid.Item
         as="nav"
