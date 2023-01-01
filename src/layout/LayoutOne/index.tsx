@@ -4,7 +4,8 @@ import Grid from "components/shared/library/components/Grid-v1";
 
 const Layout = ({ children }) => {
   return (
-    <Grid gridTemplateColumn="330px 1fr" gridTemplateRow="56px 1fr">
+    <div style={{background:"#E5E5E5"}}>
+    <Grid  gridTemplateColumn="330px 1fr" gridTemplateRow="56px 1fr">
       <Grid.Item
         as="nav"
         gridColumn="2 / span 2"
@@ -12,7 +13,9 @@ const Layout = ({ children }) => {
         top="0"
         position="sticky"
         zIndex="1"
-      
+        height="80px"
+       
+     
       >
         <NavBar />
       </Grid.Item>
@@ -21,10 +24,11 @@ const Layout = ({ children }) => {
         <SideBar />
       </Grid.Item>
 
-      <Grid.Item as="section" gridColumn="2 / span 2">
+      <Grid.Item   as="section" gridColumn="2 / span 2">
         {children}
       </Grid.Item>
     </Grid>
+    </div>
   );
 };
 

@@ -38,11 +38,6 @@ const NavBar = () => {
 
       <Flex height="100%" alignItems="center">
         <Svg.NotificationBell />
-
-        <Box ml="8" style={{ marginTop: "2.5px" }}>
-          <Svg.CogWheel />
-        </Box>
-
         <Flex alignItems="center" ml="8">
           <Flex
             height="32px"
@@ -60,7 +55,8 @@ const NavBar = () => {
               height="100%"
               rounded="100%"
               cursor="pointer"
-            />
+            /><p>Adedeji</p>
+
           </Flex>
 
           <Svg.Chevron />

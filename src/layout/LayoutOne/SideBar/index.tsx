@@ -28,19 +28,99 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
 
   const Menus = [
     {
-      name: "Sample 1",
+      name: "Users",
     },
     {
-      name: "Sample 1",
+      name: "Guarantors",
     },
     {
-      name: "sample Card",
+      name: "Loans",
+    },
+    {
+      name: "Decision Model",
+    },
+    {
+      name: "Savings",
+    },
+
+    {
+      name: "Loans Request",
+    },
+
+    {
+      name: "WhiteList",
+    },
+
+    {
+      name: "Karma",
+    },
+  ];
+
+  const MenuBack = [
+    {
+      name: "Organization",
+    },
+    {
+      name: "Loan Products",
+    },
+    {
+      name: "Savings Product",
+    },
+    {
+      name: "Fees And Charges",
+    },
+    {
+      name: "Transactions",
+    },
+
+    {
+      name: "Services",
+    },
+
+    {
+      name: "Service Account",
+    },
+
+    {
+      name: "Settlements",
+    },
+
+    {
+      name: "Reports",
+    },
+  ];
+
+  const settingMaps = [
+    {
+      name: "Prefrences",
+    },
+    {
+      name: "Fees And Pricing",
+    },
+    {
+      name: "Audit Logs",
     },
   ];
 
   const office = useMemo(
     () =>
       Menus?.filter((menu) =>
+        menu.name.toLowerCase().includes(searchValue.toLowerCase())
+      ),
+    [searchValue]
+  );
+
+  const business = useMemo(
+    () =>
+      MenuBack?.filter((menu) =>
+        menu.name.toLowerCase().includes(searchValue.toLowerCase())
+      ),
+    [searchValue]
+  );
+
+  const settings = useMemo(
+    () =>
+      settingMaps?.filter((menu) =>
         menu.name.toLowerCase().includes(searchValue.toLowerCase())
       ),
     [searchValue]
@@ -63,13 +143,10 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
       >
         <Box height="90px" width="90%" mx="auto">
           <Flex justifyContent="between" alignItems="center" height="100%">
-           <Svg.SampleLogo/>
-           
+            <Svg.SampleLogo />
           </Flex>
         </Box>
       </Box>
-
-      
 
       <Wrapper>
         <Box width="90%" mx="auto">
@@ -81,16 +158,32 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             />
           </Box>
 
-          {
-            <Box mb="7">
-              <SideBarGroup
-                name="CUSTOMERS"
-                menuItems={office}
-                searchQuery={searchValue}
-                isLoading={false}
-              />
-            </Box>
-          }
+          <Box mb="7">
+            <SideBarGroup
+              name="CUSTOMERS"
+              menuItems={office}
+              searchQuery={searchValue}
+              isLoading={false}
+            />
+          </Box>
+
+          <Box mb="7">
+            <SideBarGroup
+              name="BUSINESS"
+              menuItems={business}
+              searchQuery={searchValue}
+              isLoading={false}
+            />
+          </Box>
+
+          <Box mb="7">
+            <SideBarGroup
+              name="SETTINGS"
+              menuItems={settings}
+              searchQuery={searchValue}
+              isLoading={false}
+            />
+          </Box>
         </Box>
       </Wrapper>
     </StyledSidebar>
