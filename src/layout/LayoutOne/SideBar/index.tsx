@@ -158,7 +158,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             />
           </Box>
 
-          <Box mb="7">
+          <Box mb="1">
             <SideBarGroup
               name="CUSTOMERS"
               menuItems={office}
@@ -167,7 +167,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             />
           </Box>
 
-          <Box mb="7">
+          <Box mb="1">
             <SideBarGroup
               name="BUSINESS"
               menuItems={business}
@@ -176,7 +176,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             />
           </Box>
 
-          <Box mb="7">
+          <Box mb="1">
             <SideBarGroup
               name="SETTINGS"
               menuItems={settings}

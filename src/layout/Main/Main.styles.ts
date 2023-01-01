@@ -28,6 +28,7 @@ const StyledMain = styled.main`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
   }
 
   .main-header__sub-route {
@@ -61,6 +62,7 @@ const StyledMain = styled.main`
   @media only screen and (max-width: 1024px) {
     .main-header__action-area {
       margin-top: 8px;
+      
     }
   }
 `;

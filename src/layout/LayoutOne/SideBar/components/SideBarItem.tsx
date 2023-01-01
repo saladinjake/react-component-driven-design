@@ -31,8 +31,8 @@ const Content = styled.button`
   display: flex;
   align-items: center;
   color: #b1c9f8;
-  padding: 12px;
-  margin-bottom: 12px;
+  padding: 5px;
+  margin-bottom: 5px;
   transition: all 0.6s;
   width: 100%;
   border: none;
