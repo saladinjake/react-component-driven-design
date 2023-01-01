@@ -9,7 +9,7 @@ import SideBarItem from "./components/SideBarItem";
 import Box from "components/shared/library/components/Box";
 import Flex from "components/shared/library/components/Flex";
 import { useQuery } from "@tanstack/react-query";
-
+import styled from "styled-components";
 type SideBarProps = {
   width?: string;
   toggleSideBar?: (val: boolean) => void;
@@ -176,6 +176,25 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
     SubMenus: [],
   };
 
+  const Organizations = () =>{
+    return(
+      <StyledDropdowns>
+          <div className="dropdown-form">
+          <Briefcase />
+      <select name="hockeyList">
+        <option>Switch Organization</option>
+        <option value="a">Rangers</option>
+        <option value="b">Islanders</option>
+        <option value="c">Penguins</option>
+      </select>
+    </div>
+
+      </StyledDropdowns>
+    
+      
+    )
+  }
+
   return (
     <StyledSidebar ref={refSideBar}>
       <Box
@@ -193,12 +212,8 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
       <Wrapper>
         <Box width="90%" mx="auto">
           <Box mt="5" mb="4">
-            <SideBarItem
-              name="Switch Organization"
-              link="/dashboard"
-              Icon={<Briefcase />}
-              menuItem={dashboardMenuItem}
-            />
+          <Organizations/>
+           
           </Box>
 
           <Box mt="5" mb="4">
@@ -241,5 +256,22 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
     </StyledSidebar>
   );
 }
+
+const StyledDropdowns=styled.div`
+.dropdown-form, .dropdown-options {
+  border:none;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  border:none;
+}
+
+.dropdown-options {
+  font-family: Arial;
+}
+`
 
 export default Sidebar;

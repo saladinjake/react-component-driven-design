@@ -112,6 +112,27 @@ function Home() {
       phone:"helldd",
       date:"never leave",
       status:"pro"
+    },
+    {
+      name:"Victor juwa",
+      email:"juwavictor@gmail.com",
+      phone:"helldd",
+      date:"never leave",
+      status:"pro"
+    },
+    {
+      name:"Victor juwa",
+      email:"juwavictor@gmail.com",
+      phone:"helldd",
+      date:"never leave",
+      status:"pro"
+    },
+    {
+      name:"Victor juwa",
+      email:"juwavictor@gmail.com",
+      phone:"helldd",
+      date:"never leave",
+      status:"pro"
     }
   ]
 

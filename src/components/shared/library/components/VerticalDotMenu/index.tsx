@@ -75,7 +75,7 @@ const ActionBtnStyled=styled.div`
   }
   .btn-right {
     right: 30px;
-    margin-top:-20px;
+    margin-top:-35px;
   }
   .btn-left,
   .btn-right {
