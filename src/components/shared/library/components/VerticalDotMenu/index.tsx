@@ -1,29 +1,53 @@
 import styled from "styled-components";
+import { useEffect } from "react";
 export const VerticalDotMenu = ({
   handleDropdown,
   handleBlackListUser,
   handleViewDetail,
 }) => {
-    return(
-  <ActionBtn>
-    <div className="header">
-      <div className="dropdown">
-        <ul
-          className="dropbtn icons btn-right showLeft"
-          onClick={handleDropdown}
-        >
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <div id="myDropdown" className="dropdown-content">
-          <a href="#home" onClick={handleBlackListUser}>Blacklist User</a>
-          <a href="#about" onClick={handleViewDetail} >View Detail</a>
+    
+  function showDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  useEffect(() => {
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches(".dropbtn")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+          }
+        }
+      }
+    };
+  }, []);
+  return (
+    <ActionBtn>
+      <div className="header">
+        <div className="dropdown">
+          <ul
+            className="dropbtn icons btn-right showLeft"
+            onClick={handleDropdown}
+          >
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div id="myDropdown" className="dropdown-content">
+            <a href="#home" onClick={handleBlackListUser}>
+              Blacklist User
+            </a>
+            <a href="#about" onClick={handleViewDetail}>
+              View Detail
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </ActionBtn>
-    )
+    </ActionBtn>
+  );
 };
 
 const ActionBtn = styled.div`

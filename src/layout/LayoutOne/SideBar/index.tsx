@@ -150,6 +150,15 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
 
       <Wrapper>
         <Box width="90%" mx="auto">
+
+        <Box mt="5" mb="4">
+            <SideBarItem
+              name="Switch Organization"
+              link="/dashboard"
+              menuItem={dashboardMenuItem}
+            />
+          </Box>
+
           <Box mt="5" mb="4">
             <SideBarItem
               name="Dashboard"

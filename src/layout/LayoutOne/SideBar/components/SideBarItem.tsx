@@ -4,7 +4,7 @@ import Skeleton from "components/shared/Skeleton";
 import Box from "components/shared/library/components/Box";
 
 function SideBarItem(props) {
-  const { name, link, isLoading, menuItem } = props;
+  const { name, link, isLoading, menuItem, Icon =null } = props;
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -19,7 +19,10 @@ function SideBarItem(props) {
     );
   }
 
-  return <Content onClick={handleClick}>{name}</Content>;
+  return <Content onClick={handleClick}>
+    <span>{Icon!==null && Icon}</span>
+       {name}
+    </Content>;
 }
 
 export default SideBarItem;
