@@ -31,7 +31,7 @@ const NavBar = () => {
       }}
     >
       <Flex height="100%" alignItems="center">
-        <Text color="sampleWhite" fontWeight="900" fontSize="17px">
+        <Text color="#000" fontWeight="900" fontSize="17px">
           {pageMap[splitLocationPathName[1]]}
         </Text>
       </Flex>
