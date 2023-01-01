@@ -5,28 +5,28 @@ export const VerticalDotMenu = ({
   handleBlackListUser,
   handleViewDetail,
 }) => {
-    
-  function showDropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  useEffect(() => {
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function (event) {
-      if (!event.target.matches(".dropbtn")) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
-        }
-      }
-    };
-  }, []);
+
+//   function showDropdown() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+//   }
+//   useEffect(() => {
+//     // Close the dropdown if the user clicks outside of it
+//     window.onclick = function (event) {
+//       if (!event.target.matches(".dropbtn")) {
+//         var dropdowns = document.getElementsByClassName("dropdown-content");
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//           var openDropdown = dropdowns[i];
+//           if (openDropdown.classList.contains("show")) {
+//             openDropdown.classList.remove("show");
+//           }
+//         }
+//       }
+//     };
+//   }, []);
   return (
-    <ActionBtn>
-      <div className="header">
+    <ActionBtnStyled>
+      <div className="headerx">
         <div className="dropdown">
           <ul
             className="dropbtn icons btn-right showLeft"
@@ -46,17 +46,17 @@ export const VerticalDotMenu = ({
           </div>
         </div>
       </div>
-    </ActionBtn>
+    </ActionBtnStyled>
   );
 };
 
-const ActionBtn = styled.div`
+const ActionBtnStyled=styled.div`
   .showLeft {
-    background-color: white !important;
-    border: 1px solid white !important;
-    text-shadow: white !important;
+    /* background-color: black !important;
+    border: 1px solid black !important;
+    text-shadow: black !important;
     color: black !important;
-    padding: 10px;
+    padding: 10px; */
   }
   .icons li {
     background: none repeat scroll 0 0 black;
@@ -74,15 +74,16 @@ const ActionBtn = styled.div`
     left: 0.4em;
   }
   .btn-right {
-    right: 0.4em;
+    right: 30px;
+    margin-top:-20px;
   }
   .btn-left,
   .btn-right {
-    position: absolute;
-    top: 0.24em;
+    /* position: absolute;
+    top: 0.24em; */
   }
   .dropbtn {
-    background-color: #4caf50;
+    background-color: #fff;
     position: fixed;
     color: white;
     font-size: 16px;
@@ -91,7 +92,7 @@ const ActionBtn = styled.div`
   }
   .dropbtn:hover,
   .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: #fff;
   }
   .dropdown {
     position: absolute;

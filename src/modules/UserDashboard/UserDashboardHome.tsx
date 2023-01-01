@@ -22,12 +22,7 @@ import useForm, { hasError } from "utils/hooks/useForm";
 import { getUsersByFilter } from "api/services/User";
 import { IoMdFunnel } from "react-icons/io";
 import { VerticalDotMenu } from "components/shared/library"
-const InformationTip = ({ status, message, ref }) => (
-  <div className="centered box" ref={ref}>
-    <h6 className="statusInfo">{status}</h6>
-    <p className="messageInfo"> {message}</p>
-  </div>
-);
+
 
 function Home() {
   const navigate = useNavigate();
@@ -103,6 +98,23 @@ function Home() {
 
   const mockFunc = () =>{}
 
+  const sampleData =[
+    {
+      name:"Victor juwa",
+      email:"juwavictor@gmail.com",
+      phone:"helldd",
+      date:"never leave",
+      status:"pro"
+    },
+    {
+      name:"Victor juwa",
+      email:"juwavictor@gmail.com",
+      phone:"helldd",
+      date:"never leave",
+      status:"pro"
+    }
+  ]
+
   
 
   const columns = [
@@ -154,7 +166,6 @@ function Home() {
       Header: "Action",
       accessor: "",
       Cell: (data) => (
-
         <VerticalDotMenu
           handleBlackListUser={mockFunc }
           handleDropdown={mockFunc }
@@ -204,7 +215,7 @@ function Home() {
 
       <Table
         tableColumns={columns}
-        tableData={[]}
+        tableData={[...sampleData]}
         isLoading={isLoading}
         pageSize={pageSize}
         gloBalFilter={searchField}
