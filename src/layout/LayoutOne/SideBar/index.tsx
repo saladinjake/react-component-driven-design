@@ -26,30 +26,25 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   const getRoleId = () =>
     JSON.parse(localStorage.getItem("sampleAppUserData")).userRoleID;
 
-  
+  const Menus = [
+    {
+      name: "Sample 1",
+    },
+    {
+      name: "Sample 1",
+    },
+    {
+      name: "sample Card",
+    },
+  ];
 
- 
-
-    const Menus = [
-      {
-       name: "Sample 1"
-      },{
-        name: "Sample 1"
-      },{
-        name: "sample Card"
-      }
-      
-    ]
-
-  const frontOffice = useMemo(
+  const office = useMemo(
     () =>
       Menus?.filter((menu) =>
         menu.name.toLowerCase().includes(searchValue.toLowerCase())
       ),
     [searchValue]
   );
-
-  
 
   const handleSearch = (value) => setSearchValue(value);
 
@@ -62,38 +57,19 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   return (
     <StyledSidebar ref={refSideBar}>
       <Box
-        borderBottomColor="#DBDCE0"
+        borderBottomColor="#fafafa"
         borderWidth="1px"
         borderBottomStyle="solid"
       >
         <Box height="90px" width="90%" mx="auto">
           <Flex justifyContent="between" alignItems="center" height="100%">
-            <>My Sample UI</>
-            <div>
-              <Flex
-                as="button"
-                backgroundColor="transparent"
-                borderStyle="none"
-                cursor="pointer"
-              >
-                <Svg.Hamburger />
-              </Flex>
-            </div>
+           <Svg.SampleLogo/>
+           
           </Flex>
         </Box>
       </Box>
 
-      <Box
-        mt="5"
-        pb="5"
-        borderWidth="1px"
-        borderBottomColor="#DBDCE0"
-        borderBottomStyle="solid"
-      >
-        <Box width="90%" mx="auto">
-          <SearchInput onChange={handleSearch} />
-        </Box>
-      </Box>
+      
 
       <Wrapper>
         <Box width="90%" mx="auto">
@@ -105,15 +81,15 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
             />
           </Box>
 
-          { <Box mb="7">
-            <SideBarGroup
-              name="Quick Service"
-              menuItems={frontOffice}
-              searchQuery={searchValue}
-              isLoading={false}
-            />
-          </Box>
-
+          {
+            <Box mb="7">
+              <SideBarGroup
+                name="CUSTOMERS"
+                menuItems={office}
+                searchQuery={searchValue}
+                isLoading={false}
+              />
+            </Box>
           }
         </Box>
       </Wrapper>

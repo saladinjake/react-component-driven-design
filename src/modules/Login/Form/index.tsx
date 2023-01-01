@@ -1,10 +1,4 @@
-
-import {
-  LoginWrapper,
-  Title,
-  
-  
-} from "./Login.styles";
+import { LoginWrapper, Title } from "./Login.styles";
 import { Svg } from "assets/svg";
 import Loader from "components/shared/Loader";
 import { useEffect, useState, useContext } from "react";
@@ -14,24 +8,17 @@ import styled from "styled-components";
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
 
-
 import { Success, Error, Alert } from "components/shared/Modal";
-import { Input,  Button } from "components/shared/library";
+import { Input, Button } from "components/shared/library";
 import validations from "./LoginTraditional/utilities/validations";
 import useForm, { hasError } from "utils/hooks/useForm";
 import useSendToAPI from "utils/hooks/useSendToApi";
 import queryKeys from "./LoginTraditional/utilities/queryKeys";
 
-
-
-
-
-
 function Login() {
   const authContext = useContext(AuthContext);
   const isLoading = authContext.isLoading;
   const isAuth = authContext.isAuth;
-
 
   const defaultErrorTitle = "Region creation failed";
   const defaultErrorMessage =
@@ -53,11 +40,9 @@ function Login() {
   const { user } = useContext(AuthContext);
 
   const [initialValues, setInitialValues] = useState({
-   
     name: "",
-    password:""
+    password: "",
   });
-
 
   const { values, handleChange, handleSubmit, invalid, errors, touched } =
     useForm({
@@ -68,13 +53,7 @@ function Login() {
       },
     });
 
-
-
-  
-const loginUser =() =>{}
- 
-
- 
+  const loginUser = () => {};
 
   const onCreateSuccess = (data) => {
     setShowInformationModal(false);
@@ -108,25 +87,17 @@ const loginUser =() =>{}
     setShowErrorModal(true);
   };
 
-  
-  
-  
   const handleSendToApi = () => {
     const payload = {
       ...values,
       isActive: values.isActive.toString() === "true",
     };
 
-   
     if (id === "create") {
       return handleCreate({
-        ...payload, 
+        ...payload,
       });
     }
-
-   
-   
-    
   };
 
   let navigate = useNavigate();
@@ -135,18 +106,12 @@ const loginUser =() =>{}
     isAuth && navigate("/dashboard");
   }, [isAuth]);
 
-  
-
   return (
     <Box border="none " height="100vh">
-
-
       <Flex justifyContent="center" pt="10">
         Sample UI
       </Flex>
 
-     
-       
       <Flex
         style={{ top: "10vmin" }}
         position="relative"
@@ -155,60 +120,57 @@ const loginUser =() =>{}
         border="none"
       >
         <LoginWrapper>
-
-       
           <Title>Welcome !</Title>
-          <p style={{color:"#545F7D"}}>Enter details to login</p>
-
+          <p style={{ color: "#545F7D" }}>Enter details to login</p>  
 
           <Input
-                required
-                width="100%"
-                label="User Name"
-                isLoading={false}
-               
-                name="name"
-                value={values.name}
-                onChangePure={handleChange}
-                error={hasError("name", touched, errors)}
-                message={hasError("name", touched, errors)}
-                placeholder="Enter User Name"
-              />
+            required
+            width="100%"
+            label="User Name"
+            isLoading={false}
+            name="name"
+            value={values.name}
+            onChangePure={handleChange}
+            error={hasError("name", touched, errors)}
+            message={hasError("name", touched, errors)}
+            placeholder="Enter User Name"
+          />
 
-<Input
-                required
-                width="100%"
-                label="password"
-                isLoading={false}
-                type="password"
-                name="password"
-                value={values.password}
-                onChangePure={handleChange}
-                error={hasError("password", touched, errors)}
-                message={hasError("password", touched, errors)}
-                placeholder="Enter Password"
-              />
-           <Box ml="5">
-                <Button width="100%" type="submit" disabled={invalid} onClick={() => navigate("/dashboard")}>
-                  {"Login"}
-                </Button>
-              </Box>
-        
+          <Input
+            required
+            width="100%"
+            label="password"
+            isLoading={false}
+            type="password"
+            name="password"
+            value={values.password}
+            onChangePure={handleChange}
+            error={hasError("password", touched, errors)}
+            message={hasError("password", touched, errors)}
+            placeholder="Enter Password"
+          />
 
-           <Flex justifyContent="center">
+<p style={{ color: "#39CDCC" }}>Forgot Password?</p>
+          <Box ml="5">
+            <Button
+              width="100%"
+              type="submit"
+              disabled={invalid}
+              onClick={() => navigate("/dashboard")}
+            >
+              {"Login"}
+            </Button>
+          </Box>
+
+          <Flex justifyContent="center">
             {isLoading && (
               <Flex alignItems="center">
                 <Loader variant={"purple"} />
               </Flex>
             )}
-
-          </Flex> 
+          </Flex>
         </LoginWrapper>
-
-     
       </Flex>
-   
-     
     </Box>
   );
 }

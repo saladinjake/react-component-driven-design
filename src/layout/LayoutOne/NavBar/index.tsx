@@ -9,8 +9,7 @@ import { Svg } from "assets/svg";
 
 const pageMap = {
   dashboard: "Dashboard",
-  "sample1": "sample1",
-
+  sample1: "sample1",
 };
 
 const NavBar = () => {
@@ -21,25 +20,19 @@ const NavBar = () => {
   const splitLocationPathName = location.pathname.split("/");
 
   return (
-    <Flex height="100%" width="95%" mx="auto" justifyContent="between" style={{
-      boxShadow:"box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;"
-    }}> 
+    <Flex
+      height="100%"
+      width="95%"
+      mx="auto"
+      justifyContent="between"
+      style={{
+     
+        boxShadow:
+          "box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
+      }}
+    >
       <Flex height="100%" alignItems="center">
-        {splitLocationPathName.length > 2 ? (
-          <StyledButtonWrapper
-            as="button"
-            backgroundColor="#4062FF"
-            width="40px"
-            height="31px"
-            alignItems="center"
-            justifyContent="center"
-            mr="3"
-            onClick={() => navigate(-1)}
-          >
-            <Svg.BackArrow />
-          </StyledButtonWrapper>
-        ) : null}
-
+        
         <Text color="sampleWhite" fontWeight="900" fontSize="17px">
           {pageMap[splitLocationPathName[1]]}
         </Text>

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <Grid.Item
         as="nav"
         gridColumn="2 / span 2"
-        backgroundColor="#4062FF"
+        backgroundColor="#fff"
         top="0"
         position="sticky"
         zIndex="1"

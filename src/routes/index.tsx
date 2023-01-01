@@ -47,9 +47,9 @@ function DefaultLayout() {
       <Suspense fallback={<Fallback />}>
         <Routes>
           <Route path="/login/*" element={<Login />} />
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
 
-      <Route element={<PrivateRoute />}> 
+      {/* <Route element={<PrivateRoute />}>  */}
             <Route path="/dashboard/*" element={<UserDashboard />} />
 
             {isLoading ? (
@@ -59,7 +59,7 @@ function DefaultLayout() {
                 <Route path={route.path} element={<route.component />} />
               ))
             )}
-          </Route> 
+          {/* </Route>  */}
 
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
