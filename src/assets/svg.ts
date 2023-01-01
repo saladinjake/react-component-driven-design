@@ -12,6 +12,7 @@ import { ReactComponent as NotificationBell } from "./img/svg/notification-bell.
 import { ReactComponent as BackArrow } from "./img/svg/back-arrow.svg";
 import { ReactComponent as Chevron } from "./img/svg/chevron.svg";
 
+import { ReactComponent as Pablo } from "./img/svg/pablo.svg";
 export const Svg = {
   SampleNerveLogo,
   successAnimation,
