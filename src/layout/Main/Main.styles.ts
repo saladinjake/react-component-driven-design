@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 const StyledMain = styled.main`
-  padding: 0px 24px;
+  padding: 40px 29px;
   width: 100%;
+  margin:20px;
 
   .main-header__main-route {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #dbdce0;
+    
     padding: 32px 0px;
     @media only screen and (max-width: 1024px) {
       .main-header__action-area {
@@ -18,7 +19,7 @@ const StyledMain = styled.main`
 
     a {
       font-weight: 800;
-      font-size: 16px;
+      font-size: 28px;
       line-height: 28px;
       color: #000000;
     }

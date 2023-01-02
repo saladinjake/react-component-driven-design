@@ -23,17 +23,21 @@ const NavBar = () => {
   return (
     <Flex
       height="100%"
-      width="95%"
+      width="100%"
       mx="auto"
       justifyContent="between"
       style={{
+        height:"90px",
+        borderBottom: "1px solid #dbdce0",
         boxShadow:
           "box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
       }}
     >
       <Flex height="100%" alignItems="center">
         <Text color="#000" fontWeight="900" fontSize="17px">
-        <div className="filter-global-search-container">
+        <div className="filter-global-search-container" style={{
+          marginLeft:"50px"
+        }}>
           <form
             onSubmit={(e) => {
              

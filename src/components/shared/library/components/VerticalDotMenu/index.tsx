@@ -51,6 +51,9 @@ export const VerticalDotMenu = ({
 };
 
 const ActionBtnStyled=styled.div`
+  .headerx{
+     position:relative;
+  }
   .showLeft {
     background-color: #fff !important;
     border: 1px solid #fff !important;
@@ -79,8 +82,8 @@ const ActionBtnStyled=styled.div`
   }
   .btn-left,
   .btn-right {
-    /* position: absolute;
-    top: 0.24em; */
+    /* position: absolute; */
+    
   }
   .dropbtn {
     background-color: #fff;

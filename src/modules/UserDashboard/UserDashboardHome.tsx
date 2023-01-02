@@ -218,14 +218,7 @@ function Home() {
       mainRoute
       links={mainHeaderLink}
       headerActions={
-        <Button
-          size="md"
-          color="secondary"
-          variant="outline"
-          onClick={() => navigate("create")}
-        >
-          Create Sample
-        </Button>
+        <></>
       }
     >
       <CardInfo>
