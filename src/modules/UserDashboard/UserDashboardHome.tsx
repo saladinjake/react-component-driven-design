@@ -91,7 +91,9 @@ function Home() {
     );
   };
 
-  const mockFunc = () => {};
+  const mockFunc = (id) => {
+   return  navigate(`manage/${id}`)
+  };
 
  
 
@@ -194,7 +196,7 @@ function Home() {
         <VerticalDotMenu
           handleBlackListUser={mockFunc}
           handleDropdown={mockFunc}
-          handleViewDetail={mockFunc}
+          handleViewDetail={data?.value}
         />
       ),
     },

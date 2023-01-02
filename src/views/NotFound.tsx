@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import StyledError from "./NotFound.styles";
 import questionGuy from "../assets/img/svg/question-guy.svg";
-import SampleNerveLogo from "../assets/img/svg/samplelogo.svg";
+import SampleNerveLogo from "../assets/img/svg/zlogo.svg";
 import Button from "../components/shared/library/components/Button";
 
 export default function NotFound() {
@@ -24,7 +24,7 @@ export default function NotFound() {
           variant="outline"
           onClick={() => history("/dashboard")}
         >
-          Go back to Nerve
+          Go back 
         </Button>
       </div>
     </StyledError>

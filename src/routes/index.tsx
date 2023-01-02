@@ -14,14 +14,14 @@ const pageMap = {
 };
 
 const routes = [
-  {
-    path: "/test-management",
-    component: lazy(() => import("modules/TestModule")),
-  },
-  {
-    path: "/sample-management/:id",
-    component: lazy(() => import("modules/TestModule/Test")),
-  },
+  // {
+  //   path: "/dashboard",
+  //   component: lazy(() => import("modules/UserDashboard/UserDashboardHome")),
+  // },
+  // {
+  //   path: "/dashboard/manage/:id",
+  //   component: lazy(() => import("modules/UserDashboard/User")),
+  // },
  
   
 ];
@@ -50,15 +50,9 @@ function DefaultLayout() {
           {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
 
       {/* <Route element={<PrivateRoute />}>  */}
-            <Route path="/dashboard/*" element={<UserDashboard />} />
-
-            {isLoading ? (
-              <Route path="*" element={<LoadingRoutes />} />
-            ) : (
-              routes.map((route) => (
-                <Route path={route.path} element={<route.component />} />
-              ))
-            )}
+            <Route   path="/dashboard" element={<UserDashboard />}  />
+           
+         
           {/* </Route>  */}
 
           <Route path="/not-found" element={<NotFound />} />
