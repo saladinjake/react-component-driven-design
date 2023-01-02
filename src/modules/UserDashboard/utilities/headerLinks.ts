@@ -10,18 +10,18 @@ export const createLinks = [
   },
   {
     url: "/dashboard/create",
-    name: "Create Branch",
+    name: "Create User",
   },
 ];
 
 export const manageLinks = (id) => [
   {
     url: "/dashboard",
-    name: "Branch Management",
+    name: "Back to users",
   },
   {
     url: `/branch-management/${id}`,
-    name: "Manage Branch",
+    name: "",
   },
 ];
 

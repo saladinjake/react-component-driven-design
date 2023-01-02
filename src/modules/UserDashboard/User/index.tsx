@@ -114,6 +114,246 @@ function UserDetail(){
         
       }
     >
+         <StyledInformationModal>
+
+<Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
+        
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Code</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+</Grid>
+         </StyledInformationModal>
+
+   <StyledInformationModal>
+
+<Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
+        <GridItem colSpan={5}>
+          <Flex justifyContent="start">
+            <Heading text="Personal Information" />
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Code</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Region</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+
+
+
+
+
+
+
+
+
+
+
+        <GridItem colSpan={5}>
+          <Flex justifyContent="start">
+            <Heading text="Education And Employment" />
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Code</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Region</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Address</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+
+
+
+
+
+        <GridItem colSpan={5}>
+          <Flex justifyContent="start">
+            <Heading text="Socials" />
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+
+
+
+
+
+
+
+        <GridItem colSpan={5}>
+          <Flex justifyContent="start">
+            <Heading text="Guarantors" />
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Branch Name</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Code</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start">
+            <DetailLabel>Region</DetailLabel>
+            <DetailValue>{"sample"}</DetailValue>
+          </Flex>
+        </GridItem>
+
+
+       
+
+       
+      </Grid>
+
+      </StyledInformationModal>
       
     </Main>
   );
@@ -126,3 +366,32 @@ export const StyledLabel = styled.div`
   line-height: 18px;
   margin-bottom: 10px;
 `;
+
+
+
+export const StyledInformationModal = styled.div`
+  text-align: start;
+ 
+  margin-bottom:20px;
+
+  padding:40px;
+  background: #FFFFFF;
+border: 1px solid rgba(33, 63, 125, 0.06);
+box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+border-radius: 4px;
+`;
+
+
+
+
+
+export const DetailLabel = styled.div`
+  font-size: 13px;
+  color: #979797;
+`;
+
+export const DetailValue = styled.div`
+  font-size: 15px;
+  color: black;
+`;
+
