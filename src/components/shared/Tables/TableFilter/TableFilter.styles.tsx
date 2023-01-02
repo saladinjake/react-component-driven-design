@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const TableFilter = styled.div`
  
   .filters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:300px;
+   
+    width:330px;
+    background:#fff; 
+    padding:10px;
+    margin:20px;
 
     p {
       font-size: 13px;

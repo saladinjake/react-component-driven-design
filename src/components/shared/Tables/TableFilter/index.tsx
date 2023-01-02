@@ -1,6 +1,6 @@
 import { Flex, Box } from "components/shared/library";
 import React, { useState, useEffect } from "react";
-import { Select, SearchField, Grid, GridItem, Input } from "../../library";
+import { Select, SearchField, Grid, GridItem, Input, DatePicker } from "../../library";
 import { TableFilter as StyledTableFilter } from "./TableFilter.styles";
 import TableFilterProps from "./TableFilter.types";
 
@@ -26,7 +26,8 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
   return (
     <StyledTableFilter>
-      <div className="filters-dropdown-container">
+      <div className="filters-dropdown-container filters">
+        <Box mb="3"></Box>
       <Box mb="3">
           <Flex direction="column" alignItems="start">
           
@@ -74,6 +75,20 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           </Flex>
         </Box>
 
+        <Box mb="3">
+          <Flex direction="column" alignItems="start">
+        <DatePicker
+          required
+          label="D.O.B"
+          date={values?.dateOfBirth || ""}
+          disabled={false}
+          setDate={(value) =>
+            handleChange({ target: { name: "dateOfBirth", value } })
+          }
+        />
+          </Flex>
+        </Box>
+
 
 
 
@@ -96,7 +111,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           <Flex direction="column" alignItems="start">
             <Select
               placeholder={"Status"}
-              width="200px"
+              width="300px"
               options={[
                 { name: "Active", id: "asc" },
                 { name: "Blocked", id: "desc" },
