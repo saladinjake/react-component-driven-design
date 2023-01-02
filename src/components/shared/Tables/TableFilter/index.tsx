@@ -1,6 +1,6 @@
 import { Flex, Box } from "components/shared/library";
 import React, { useState, useEffect } from "react";
-import { Select, SearchField } from "../../library";
+import { Select, SearchField, Grid, GridItem, Input } from "../../library";
 import { TableFilter as StyledTableFilter } from "./TableFilter.styles";
 import TableFilterProps from "./TableFilter.types";
 
@@ -17,7 +17,9 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
     withSearch = true,
     sortPlaceHolder = "Sort By",
     filterPlaceHolder = "Filter By",
-    onResetSearch = () =>{}
+    onResetSearch = () => {},
+    values,
+    handleChange,
   } = props;
 
   const [searchValue, setSearchValue] = useState("");
@@ -25,68 +27,100 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
   return (
     <StyledTableFilter>
       <div className="filters-dropdown-container">
-        <Flex>
-          {withFilter && (
-            <Box mr="2.5">
+      <Box mb="3">
+          <Flex direction="column" alignItems="start">
+          
               <Select
-                placeholder={filterPlaceHolder || "Creation Date"}
-                width="200px"
+                placeholder={"Organization"}
+                width="300px"
                 options={filterColumns || []}
                 onGetSelectValue={(item) => {
                   onSortColumn(item.id);
                 }}
                 hasShadow={false}
               />
-            </Box>
-          )}
+           
+          </Flex>
+          </Box>
 
-          {withSort && (
+          <Box mb="3">
+          <Flex direction="column" alignItems="start">
+
+            <Input
+              required
+              width="300px"
+              label="User Name"
+              isLoading={false}
+              name="name"
+              value={values?.firstName}
+              onChangePure={handleChange}
+              placeholder="Enter username"
+            />
+          </Flex>
+        </Box>
+
+        <Box mb="3">
+          <Flex direction="column" alignItems="start">
+            <Input
+              required
+              width="300px"
+              label="Email"
+              isLoading={false}
+              name="name"
+              value={values?.email}
+              onChangePure={handleChange}
+              placeholder="Enter email"
+            />
+          </Flex>
+        </Box>
+
+
+
+
+        <Box mb="3">
+          <Flex direction="column" alignItems="start">
+            <Input
+              required
+              width="300px"
+              label="Phone Number"
+              isLoading={false}
+              name="name"
+              value={values?.phoneNumber}
+              onChangePure={handleChange}
+              placeholder="Enter Phone Number"
+            />
+          </Flex>
+        </Box>
+
+        <Box mb="3">
+          <Flex direction="column" alignItems="start">
             <Select
-              placeholder={sortPlaceHolder || "Descending Order"}
+              placeholder={"Status"}
               width="200px"
               options={[
-                { name: "Ascending Order", id: "asc" },
-                { name: "Descending Order", id: "desc" },
+                { name: "Active", id: "asc" },
+                { name: "Blocked", id: "desc" },
               ]}
               onGetSelectValue={(item) => {
                 onSort(item.id);
               }}
               hasShadow={false}
             />
-          )}
-        </Flex>
+          </Flex>
+        </Box>
+
+        <GridItem colSpan={2}>
+          <Flex height="100%">
+            <div></div>
+
+            <Box ml="4"></Box>
+          </Flex>
+        </GridItem>
+
+        
 
         {children && children}
       </div>
-
-      {withSearch && (
-        <div className="filter-global-search-container">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              onSearch(searchValue);
-            }}
-          >
-            <SearchField
-              withBtn
-              placeholder="Search"
-              btnText="Search"
-              width="100%"
-              height="48px"
-              value={searchValue}
-              searchColumns={filterColumns}
-              onChange={(e) => {
-                setSearchValue(e.target.value);
-                if( setInitialGlobalFilterFunction){
-                  setInitialGlobalFilterFunction(e.target.value)
-                }
-               
-              }}
-              onResetSearch={onResetSearch}
-            />
-          </form>
-        </div>
-      )}
     </StyledTableFilter>
   );
 };

@@ -5,7 +5,6 @@ import Input from "./components/Input";
 import Heading from "./components/Typography/Heading";
 import { Grid, GridItem } from "./components/Grid";
 import Select from "./components/Select";
-import Select2 from "./components/Select2";
 import Radio from "./components/Radio";
 import SearchField from "./components/SearchField";
 import DatePicker from "./components/DatePicker";
@@ -23,7 +22,6 @@ export {
   Grid,
   GridItem,
   Select,
-  Select2,
   Radio,
   SearchField,
   DatePicker,

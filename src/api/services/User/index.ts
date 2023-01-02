@@ -11,7 +11,7 @@ import endpoints from "./endpoints";
 
 export const USER_URL = endpoints.USER_URL;
 
-interface IUser {
+export interface IUser {
   tempClearPass: string;
   firstName: string;
   lastName: string;
@@ -47,18 +47,10 @@ export const getAllUsers = (
   );
 
 export const getUsersByFilter = (data, params = null, headerConfig = null) =>
-  postCall(`${USER_URL}/SearchSorted`, data, params, headerConfig) as Promise<
+  postCall(`${USER_URL}/sample-endpoints`, data, params, headerConfig) as Promise<
     AxiosResponse<IResponse & { users: IUser[] }>
   >;
 
-export const getUsersBySearchQuery = (
-  data,
-  params = null,
-  headerConfig = null
-) =>
-  postCall(`${USER_URL}/GlobalSearch`, data, params, headerConfig) as Promise<
-    AxiosResponse<IResponse & { users: IUser[] }>
-  >;
 
 export const getUserById = (id) =>
   postCall(`${USER_URL}/${id}`, {}, null, null).then((res) => res.data);

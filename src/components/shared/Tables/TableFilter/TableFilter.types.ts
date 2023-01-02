@@ -7,14 +7,19 @@ export default interface TableFilterProps {
   onSearch: (value: string) => void;
   filterColumns?: any[];
   onChange?: (value: string) => void;
-  preGlobalFilteredRows?: any[],
-  globalFilter?: string,
+  preGlobalFilteredRows?: any[];
+  globalFilter?: string;
   setInitialGlobalFilterFunction?: (value: string) => void;
-  globalSearchEnaled?:boolean;
-  withFilter?:boolean;
-  withSort?:boolean;
+  globalSearchEnaled?: boolean;
+  withFilter?: boolean;
+  withSort?: boolean;
   withSearch?: boolean;
-  sortPlaceHolder?:string;
-  filterPlaceHolder?:string;
-  onResetSearch?:() => void;
+  sortPlaceHolder?: string;
+  filterPlaceHolder?: string;
+  onResetSearch?: () => void;
+  values?: any;
+  handleChange?: (value: any) => void;
+  errors?: any;
+  touched?: boolean;
+  hasError?: (value: any,value2: any,value3: any) => void;
 }

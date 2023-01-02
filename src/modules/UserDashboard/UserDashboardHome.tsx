@@ -15,14 +15,13 @@ import Indicator from "components/shared/Indicator";
 import { isValidV4UUID, reGroup } from "utils";
 import { Svg } from "assets/svg";
 
-
 import useSendToAPI from "utils/hooks/useSendToApi";
 import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";
 import { getUsersByFilter } from "api/services/User";
 import { IoMdFunnel } from "react-icons/io";
-import { VerticalDotMenu } from "components/shared/library"
-
+import { VerticalDotMenu } from "components/shared/library";
+import validations  from "./validations"
 
 function Home() {
   const navigate = useNavigate();
@@ -42,12 +41,7 @@ function Home() {
   const [errorMessage, setErrorMessage] = useState(defaultErrorMessage);
   const [successTitle, setSuccessTitle] = useState(defaultSuccessTitle);
   const [successMessage, setSuccessMessage] = useState(defaultSuccessMessage);
-  const {
-    AllUsers,
-    ActiveUsers,
-    UserWithLoan,
-    UserWithSavings,
-  } = Svg
+  const { AllUsers, ActiveUsers, UserWithLoan, UserWithSavings } = Svg;
 
   const [initialValues, setInitialValues] = useState({
     name: "",
@@ -83,9 +77,8 @@ function Home() {
     return (
       <div className="basic-column w-col w-col-3">
         <div className="tag-wrapper">
-         
           <div className="number-card number-card-content1">
-          <props.Icon></props.Icon>
+            <props.Icon></props.Icon>
             <div className="number-card-dollars">{props?.title}</div>
             <h1 className="number-card-number">{props?.value}</h1>
 
@@ -96,47 +89,56 @@ function Home() {
     );
   };
 
-  const mockFunc = () =>{}
+  const mockFunc = () => {};
 
-  const sampleData =[
-    {
-      name:"Victor juwa",
-      email:"juwavictor@gmail.com",
-      phone:"helldd",
-      date:"never leave",
-      status:"pro"
-    },
-    {
-      name:"Victor juwa",
-      email:"juwavictor@gmail.com",
-      phone:"helldd",
-      date:"never leave",
-      status:"pro"
-    },
-    {
-      name:"Victor juwa",
-      email:"juwavictor@gmail.com",
-      phone:"helldd",
-      date:"never leave",
-      status:"pro"
-    },
-    {
-      name:"Victor juwa",
-      email:"juwavictor@gmail.com",
-      phone:"helldd",
-      date:"never leave",
-      status:"pro"
-    },
-    {
-      name:"Victor juwa",
-      email:"juwavictor@gmail.com",
-      phone:"helldd",
-      date:"never leave",
-      status:"pro"
-    }
-  ]
+ 
 
-  
+  const { values, handleChange, handleSubmit, invalid, errors, touched } =
+    useForm({
+      initialValues,
+      validations,
+      onSubmit() {
+        setShowInformationModal(true);
+      },
+    });
+
+  const sampleData = [
+    {
+      name: "Victor juwa",
+      email: "juwavictor@gmail.com",
+      phone: "helldd",
+      date: "never leave",
+      status: "pro",
+    },
+    {
+      name: "Victor juwa",
+      email: "juwavictor@gmail.com",
+      phone: "helldd",
+      date: "never leave",
+      status: "pro",
+    },
+    {
+      name: "Victor juwa",
+      email: "juwavictor@gmail.com",
+      phone: "helldd",
+      date: "never leave",
+      status: "pro",
+    },
+    {
+      name: "Victor juwa",
+      email: "juwavictor@gmail.com",
+      phone: "helldd",
+      date: "never leave",
+      status: "pro",
+    },
+    {
+      name: "Victor juwa",
+      email: "juwavictor@gmail.com",
+      phone: "helldd",
+      date: "never leave",
+      status: "pro",
+    },
+  ];
 
   const columns = [
     {
@@ -188,11 +190,10 @@ function Home() {
       accessor: "",
       Cell: (data) => (
         <VerticalDotMenu
-          handleBlackListUser={mockFunc }
-          handleDropdown={mockFunc }
-          handleViewDetail={mockFunc }
+          handleBlackListUser={mockFunc}
+          handleDropdown={mockFunc}
+          handleViewDetail={mockFunc}
         />
-       
       ),
     },
   ];
@@ -227,12 +228,26 @@ function Home() {
     >
       <CardInfo>
         <div className="row w-row">
-          <Card title="USERS" value="1200"  Icon={AllUsers}/>
+          <Card title="USERS" value="1200" Icon={AllUsers} />
           <Card title="ACTIVE USER" value="13000" Icon={ActiveUsers} />
-          <Card title="USER WITH LOANS" value="13000"  Icon={UserWithLoan}/>
-          <Card title="USER WITH SAVINGS" value="13000"  Icon={UserWithSavings}/>
+          <Card title="USER WITH LOANS" value="13000" Icon={UserWithLoan} />
+          <Card
+            title="USER WITH SAVINGS"
+            value="13000"
+            Icon={UserWithSavings}
+          />
         </div>
       </CardInfo>
+
+      <Box mb="5">
+        <TableFilter
+          filterColumns={filterColumns}
+          onSort={handleSort}
+          onSortColumn={handleSortColumn}
+          onSearch={handleSearch}
+          setInitialGlobalFilterFunction={(val) => globalFilteration(val)}
+        />
+      </Box>
 
       <Table
         tableColumns={columns}
@@ -243,6 +258,11 @@ function Home() {
         setInitialGlobalFilterFunction={setInitialGlobalFilterFunction}
         selectedSortColumn={sortColumn}
         selectedSortOrder={sortOrder}
+        values={values}
+        handleChange={handleChange}
+        errors={errors}
+        touched={touched}
+        hasError={hasError}
       />
 
       <Box mt="10">
