@@ -19,7 +19,7 @@ function SideBarItem(props) {
     );
   }
 
-  return <Content onClick={handleClick}>
+  return <Content onClick={handleClick} className={link=="dashboard"?"baseActive":""}>
     <span className="icon-set">{Icon}</span>
        {name}
     </Content>;
@@ -49,6 +49,11 @@ const Content = styled.button`
      font-size:16px;
   }
   &:active{
+    border-left: 5px solid #39CDCC;
+    background: #39CDCC;
+  }
+
+  .baseActive{
     border-left: 5px solid #39CDCC;
     background: #39CDCC;
   }

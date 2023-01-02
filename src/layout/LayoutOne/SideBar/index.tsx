@@ -39,37 +39,45 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
     {
       name: "Users",
       icon: <Users />,
+      link:"/dashboard"
     },
     {
       name: "Guarantors",
       icon: <Guarantor />,
+      link:"/dashboard"
     },
     {
       name: "Loans",
       icon: <Loan />,
+      link:"/dashboard"
     },
     {
       name: "Decision Model",
       icon: <Decision />,
+      link:"/dashboard"
     },
     {
       name: "Savings",
       icon: <Savings />,
+      link:"/dashboard"
     },
 
     {
       name: "Loans Request",
       icon: <LoanRequest />,
+      link:"/dashboard"
     },
 
     {
       name: "WhiteList",
       icon: <Whitelist />,
+      link:"/dashboard"
     },
 
     {
       name: "Karma",
       icon: <Karma />,
+      link:"/dashboard"
     },
   ];
 
@@ -77,18 +85,22 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
     {
       name: "Organization",
       icon: <Briefcase/>,
+      link:"/dashboard"
     },
     {
       name: "Loan Products",
       icon: <Loan />,
+      link:"/dashboard"
     },
     {
       name: "Savings Product",
       icon: <Savings/>,
+      link:"/dashboard"
     },
     {
       name: "Fees And Charges",
       icon: <FeeNCharge/>,
+      link:"/dashboard"
     },
     {
       name: "Transactions",

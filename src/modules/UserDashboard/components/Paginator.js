@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import format from "date-fns/format";
 const LEFT_PAGE = "LEFT";
 const RIGHT_PAGE = "RIGHT";
 
@@ -196,7 +197,7 @@ const PaginStyles=styled.div`
   
   
   ul.pagination {
-    margin-top: 0;
+    margin-top: -40px;
     margin-bottom: 0;
     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
   }
@@ -204,7 +205,7 @@ const PaginStyles=styled.div`
     /* color: #445565 !important; */
     /* background-color: #e3e7eb !important; */
     /* border-color: #ced4da !important; */
-    background:#fff;
+    background:#FBFDFF;
     border:none;
   }
   ul.pagination a.page-link {
@@ -216,7 +217,7 @@ const PaginStyles=styled.div`
     color: #545F7D;
     font-weight: 900;
     font-size: 1rem;
-    background:#fff;
+    background:#FBFDFF;
     border:none;
   }
   ul.pagination a.page-link:hover {

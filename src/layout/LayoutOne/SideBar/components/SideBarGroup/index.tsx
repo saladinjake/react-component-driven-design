@@ -13,7 +13,7 @@ function constructNavUrl(navName: string): string {
 }
 
 function SideBarGroup(props) {
-  const { menuItems, name = "Front Office", searchQuery, isLoading } = props;
+  const { menuItems, name = "Front", searchQuery, isLoading } = props;
 
   const menuItemsContainerRef = useRef();
   const { height } = useContainerDimensions(menuItemsContainerRef, [
@@ -74,7 +74,7 @@ function SideBarGroup(props) {
                   index={i}
                   Icon={menuItem?.icon}
                   menuItem={menuItem}
-                  link={constructNavUrl(navElementName)}
+                  link={menuItem["link"] || constructNavUrl(navElementName)}
                 />
               );
             })}

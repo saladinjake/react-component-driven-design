@@ -102,6 +102,18 @@ function Home() {
   },[])
 
   const pageSizes = [1, 5, 10, 20, 50, 100];
+
+  const getReadableDate = (utcDate:string | undefined):string => {
+    if (!utcDate) {
+      return 'Invalid Date'
+    }
+  
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric' }
+    // @ts-ignore
+    return new Date(utcDate).toLocaleDateString(undefined, options)
+  }
  
   
 
@@ -205,6 +217,9 @@ function Home() {
     {
       Header: "DATE JOINED",
       accessor: "createdAt",
+      Cell:(data) =>{
+        return getReadableDate(data?.value)
+      }
     },
 
     {
