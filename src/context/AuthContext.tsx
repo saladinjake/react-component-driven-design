@@ -101,15 +101,48 @@ function AuthProvider(props) {
     name: string;
     picture: string;
     exp: string;
+    designation?:string;
+    employeeNumber?: string;
+    firstName?: string;
+    lastName?: string;
+    userRoleID?: string;
+    id?: string;
+    userName?: string;
+    password?: string;
+    isSuccessful?:boolean;
   }
+
+
+
 
   const login = async (payload) => {
     console.log(payload)
-     const apiResponseData = await postRequest({ url:"", data :payload})
-    const decoded: IDecoded = jwt_decode(apiResponseData.credential);
+
+     //fake solid login
+     const apiResponseData = {
+      credentials:"juwavictor@gmail.com",
+      data:{
+        email: "juwavictor@gmail.com",
+        family_name: "victor",
+        given_name: "victor",
+        name: "victor",
+        picture: "victor",
+        exp: "",
+        designation:"",
+        employeeNumber:"1234",
+        firstName:"victor",
+        lastName:"victor",
+        userRoleID:"Admin",
+        id:"1",
+        userName:"saladin",
+        password:"saladin",
+        isSuccessful:true
+      }
+     }
+    const decoded: IDecoded = jwt_decode(apiResponseData.credentials);
     dispatch({ type: "LOGIN_START" });
 
-    const userToken = apiResponseData.credential;
+    const userToken = apiResponseData.credentials;
     const userProfile = {
       email: decoded.email,
       family_name: decoded.family_name,
@@ -134,7 +167,7 @@ function AuthProvider(props) {
     };
 
     try {
-      const ApiResponse = await authService.loginAttempt(data);
+      
 
       const {
         email,
@@ -146,7 +179,7 @@ function AuthProvider(props) {
         id,
         userName,
         password,
-      } = ApiResponse.data.user;
+      } = apiResponseData.data
 
       let userRoleFunction = null;
 
@@ -163,7 +196,7 @@ function AuthProvider(props) {
         password,
       };
 
-      const ApiResponseStatus = ApiResponse.data.isSuccessful;
+      const ApiResponseStatus = apiResponseData.data.isSuccessful;
 
       if (ApiResponseStatus) {
         finishAuth(userToken, user, visitorId, tokenExpiry,userProfile);
