@@ -73,38 +73,6 @@ function Login() {
      
   };
 
-  const onCreateSuccess = (data) => {
-    setShowInformationModal(false);
-    setSuccessMessage(data.message);
-    setShowSuccessModal(true);
-  };
-
-  const onCreateError = (error) => {
-    setErrorMessage(error.message);
-    setShowInformationModal(false);
-    setShowErrorModal(true);
-  };
-
-  const { mutate: handleCreate, isLoading: isCreating } = useSendToAPI(
-    loginUser,
-    onCreateSuccess,
-    onCreateError
-  );
-
-  const handleSendToApi = () => {
-    const payload = {
-      ...values,
-      isActive: values.isActive.toString() === "true",
-    };
-
-    if (id === "create") {
-      return handleCreate({
-        ...payload,
-      });
-    }
-  };
-
-
 
   useEffect(() => {
     isAuth && navigate("/dashboard");
@@ -130,14 +98,14 @@ function Login() {
           <Input
             required
             width="100%"
-            label="User Name"
+            label="Email"
             isLoading={false}
             name="name"
             value={values.name}
             onChangePure={handleChange}
             error={hasError("name", touched, errors)}
             message={hasError("name", touched, errors)}
-            placeholder="Enter User Name"
+            placeholder="Enter Name / Email"
           />
 
           <Input
@@ -160,7 +128,7 @@ function Login() {
               width="100%"
               type="submit"
               disabled={invalid}
-              onClick={() => navigate("/dashboard")}
+              onClick={() => loginUser()}
             >
               {"Login"}
             </Button>

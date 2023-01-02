@@ -2,7 +2,7 @@ import { useReducer, createContext, useContext, useState } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs";
 import jwt_decode from "jwt-decode";
 import * as authService from "api/services/Auth";
-import {  postRequest} from "api/apiCalls"
+import { postRequest } from "api/apiCalls";
 
 import {
   finishAuth,
@@ -20,7 +20,7 @@ const initialState = {
   userProfile: null,
   isLoggedIn: false,
   isLoginPending: false,
-  loginError: null
+  loginError: null,
 };
 
 const AuthContext = createContext({
@@ -65,11 +65,8 @@ function authReducer(state, action) {
 function AuthProvider(props) {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
-  const [internalsState, setState] = useState(initialState)
-  console.log(initialState)
-
-  
-
+  const [internalsState, setState] = useState(initialState);
+  console.log(initialState);
 
   async function loadAuthUser() {
     try {
@@ -101,7 +98,7 @@ function AuthProvider(props) {
     name: string;
     picture: string;
     exp: string;
-    designation?:string;
+    designation?: string;
     employeeNumber?: string;
     firstName?: string;
     lastName?: string;
@@ -109,37 +106,34 @@ function AuthProvider(props) {
     id?: string;
     userName?: string;
     password?: string;
-    isSuccessful?:boolean;
+    isSuccessful?: boolean;
   }
 
-
-
-
   const login = async (payload) => {
-    console.log(payload)
+    console.log(payload);
 
-     //fake solid login
-     const apiResponseData = {
-      credentials:"juwavictor@gmail.com",
-      data:{
+    //fake solid login
+    const apiResponseData = {
+      credentials: "juwavictor",
+      data: {
         email: "juwavictor@gmail.com",
         family_name: "victor",
         given_name: "victor",
         name: "victor",
         picture: "victor",
         exp: "",
-        designation:"",
-        employeeNumber:"1234",
-        firstName:"victor",
-        lastName:"victor",
-        userRoleID:"Admin",
-        id:"1",
-        userName:"saladin",
-        password:"saladin",
-        isSuccessful:true
-      }
-     }
-    const decoded: IDecoded = jwt_decode(apiResponseData.credentials);
+        designation: "",
+        employeeNumber: "1234",
+        firstName: "victor",
+        lastName: "victor",
+        userRoleID: "Admin",
+        id: "1",
+        userName: "saladin",
+        password: "saladin",
+        isSuccessful: true,
+      },
+    };
+    const decoded: IDecoded =  apiResponseData?.data;  //jwt_decode(apiResponseData.credentials);
     dispatch({ type: "LOGIN_START" });
 
     const userToken = apiResponseData.credentials;
@@ -167,8 +161,6 @@ function AuthProvider(props) {
     };
 
     try {
-      
-
       const {
         email,
         designation,
@@ -179,7 +171,7 @@ function AuthProvider(props) {
         id,
         userName,
         password,
-      } = apiResponseData.data
+      } = apiResponseData.data;
 
       let userRoleFunction = null;
 
@@ -198,8 +190,8 @@ function AuthProvider(props) {
 
       const ApiResponseStatus = apiResponseData.data.isSuccessful;
 
-      if (ApiResponseStatus) {
-        finishAuth(userToken, user, visitorId, tokenExpiry,userProfile);
+      if (ApiResponseStatus && payload?.password=="saladin") {
+        //finishAuth(userToken, user, visitorId, tokenExpiry, userProfile);
         dispatch({
           type: "LOGIN",
           user,
@@ -240,4 +232,3 @@ function AuthProvider(props) {
 const useAuth = () => useContext(AuthContext);
 
 export { AuthContext, AuthProvider, useAuth };
-
