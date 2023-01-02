@@ -75,7 +75,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
           {
             (!touched && clicked.toString()!="true") ? (
 
-              <Button width="87px" size="md" type="submit" onClick={onButtonClick}>
+              <Button  width="87px" size="md" type="submit" onClick={onButtonClick}>
                 {btnText}
                </Button>
             ): (

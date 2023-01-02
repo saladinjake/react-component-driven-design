@@ -7,7 +7,7 @@ import { AuthContext } from "context/AuthContext";
 
 import Main from "layout/Main";
 import HeaderActions from "../components/HeaderActions";
-
+import { Svg } from "assets/svg"
 
 
 import { Input, Select, Radio, Button } from "components/shared/library";
@@ -121,7 +121,8 @@ function UserDetail(){
 
         <GridItem>
           <Flex direction="row" alignItems="start" style={{
-            borderRight:"1px solid #545F7D"
+            borderRight:"1px solid #545F7D",
+            height:"50px"
           }}>
             <Avatar 
               shape="rounded" type="text"
@@ -136,15 +137,18 @@ function UserDetail(){
 
         <GridItem>
           <Flex direction="column" alignItems="start" style={{
-            borderRight:"1px solid #545F7D"
+            borderRight:"1px solid #545F7D",
+            height:"50px"
           }}>
             <DetailLabel>User's tier</DetailLabel>
-            <DetailValue>{"sample"}</DetailValue>
+            <DetailValue><Svg.TiersStar/><Svg.TiersStar/><Svg.TiersStar/></DetailValue>
           </Flex>
         </GridItem>
 
         <GridItem>
-          <Flex direction="column" alignItems="start">
+          <Flex direction="column" alignItems="start" style={{
+            height:"50px"
+          }}>
             <DetailLabel>N200,0000.00</DetailLabel>
             <DetailValue>{"9912345678/Providus Bank"}</DetailValue>
           </Flex>
@@ -398,10 +402,12 @@ border-radius: 4px;
 export const DetailLabel = styled.div`
   font-size: 13px;
   color: #979797;
+  margin:5px;
 `;
 
 export const DetailValue = styled.div`
   font-size: 15px;
   color: black;
+  margin:7px;
 `;
 
