@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Box, Grid, GridItem, Heading, Flex } from "components/shared/library";
+import { Box, Grid, GridItem, Heading, Flex, Avatar } from "components/shared/library";
 import styled from "styled-components";
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
@@ -120,23 +120,33 @@ function UserDetail(){
         
 
         <GridItem>
-          <Flex direction="column" alignItems="start">
-            <DetailLabel>Branch Name</DetailLabel>
+          <Flex direction="row" alignItems="start" style={{
+            borderRight:"1px solid #545F7D"
+          }}>
+            <Avatar 
+              shape="rounded" type="text"
+            />
+            <Box ml="3">
+            <DetailLabel>Saladin Jake</DetailLabel>
+            <DetailValue>{"LSQFf587g90"}</DetailValue>
+            </Box>
+           
+          </Flex>
+        </GridItem>
+
+        <GridItem>
+          <Flex direction="column" alignItems="start" style={{
+            borderRight:"1px solid #545F7D"
+          }}>
+            <DetailLabel>User's tier</DetailLabel>
             <DetailValue>{"sample"}</DetailValue>
           </Flex>
         </GridItem>
 
         <GridItem>
           <Flex direction="column" alignItems="start">
-            <DetailLabel>Branch Name</DetailLabel>
-            <DetailValue>{"sample"}</DetailValue>
-          </Flex>
-        </GridItem>
-
-        <GridItem>
-          <Flex direction="column" alignItems="start">
-            <DetailLabel>Code</DetailLabel>
-            <DetailValue>{"sample"}</DetailValue>
+            <DetailLabel>N200,0000.00</DetailLabel>
+            <DetailValue>{"9912345678/Providus Bank"}</DetailValue>
           </Flex>
         </GridItem>
 
