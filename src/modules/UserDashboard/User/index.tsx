@@ -97,6 +97,22 @@ function UserDetail(){
   );
 
 
+
+
+  const tabs = [
+    { id: 1, name: "General Detail", type: "1" },
+    { id: 2, name: "Documents", type: "2" },
+
+    { id: 3, name: "BanK Details", type: "3" },
+    { id: 4, name: "Loans", type: "4" },
+    { id: 5, name: "Savings", type: "5" },
+
+    { id: 6, name: "App And System", type: "6" },
+  ];
+
+  const [currentTab, setCurrentTab] = useState(1);
+
+  
  
 
 
@@ -155,10 +171,31 @@ function UserDetail(){
         </GridItem>
 
 </Grid>
+<Wrapper px="6">
+  <TabContainer>
+    {tabs.map((tab) => (
+      <Tab
+        as="button"
+        active={tab.id === currentTab}
+        cursor="pointer"
+        alignItems="center"
+        position="relative"
+        justifyContent="center"
+        onClick={() => setCurrentTab(tab.id)}
+      >
+        <TabText>{tab.name}</TabText>
+
+        {tab.id === currentTab && <Line />}
+      </Tab>
+    ))}
+  </TabContainer>
+</Wrapper>
+
+
          </StyledInformationModal>
 
    <StyledInformationModal>
-
+   {currentTab === 1 && (
 <Grid templateColumn="repeat(4,1fr)" gap="32px 49px">
         <GridItem colSpan={5}>
           <Flex justifyContent="start">
@@ -365,7 +402,10 @@ function UserDetail(){
        
 
        
-      </Grid>
+      </Grid>)}
+
+      {currentTab === 2 && <>Hire me</>}
+      {currentTab === 3 && <>Hire me</>}
 
       </StyledInformationModal>
       
@@ -411,3 +451,45 @@ export const DetailValue = styled.div`
   margin:7px;
 `;
 
+
+
+
+const Line = styled.div<{ tabContainerWidth?: number | string }>`
+  border-radius: 10px 10px 0px 0px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  background-color: #39CDCC;
+  height: 4px;
+  position: absolute;
+`;
+
+const TabText = styled.span`
+  font-weight: 800;
+  font-size: 15px;
+`;
+
+const TabContainer = styled(Flex)`
+  column-gap: 22px;
+`;
+
+const Tab = styled(Flex)<{ active: boolean }>`
+  border: none;
+  background: ${(props) => (props.active ? "white" : "#fff")};
+  height: 56px;
+  width: 250px;
+  margin-top:30px;  
+  color: ${(props) => (props.active ? "#39CDCC" : "#000")};
+`;
+
+const TabNotification = styled(Flex)`
+  background: #f7685b;
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+`;
+
+const Wrapper = styled(Flex)`
+  border-bottom: 1px solid #dbdce0;
+`;
