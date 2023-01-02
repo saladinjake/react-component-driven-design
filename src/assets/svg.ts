@@ -50,9 +50,11 @@ import { ReactComponent as UserWithSavings } from "./img/svg/eusersavings.svg";
 
 import  { ReactComponent as TiersStar } from "./img/svg/tiers.svg";
 import  { ReactComponent as SearchIcon } from "./img/svg/searchIcon.svg";
+import  { ReactComponent as Logout } from "./img/svg/logout.svg";
 export const Svg = {
   AllUsers,
   SearchIcon,
+  Logout,
   TiersStar,
   ActiveUsers,
   UserWithLoan,

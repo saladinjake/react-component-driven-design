@@ -197,56 +197,56 @@ function UserDetail() {
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>FULL NAME</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>PHONE NUMBER</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Code</DetailLabel>
+                <DetailLabel>EMAIL ADDRESS</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Region</DetailLabel>
+                <DetailLabel>BVN</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>GENDER</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>MARITAL STATUS</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>CHILDREN</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>TYPE OF RESIDENCE</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
@@ -259,59 +259,54 @@ function UserDetail() {
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>LEVEL OF EDUCATION</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>EMPLOYMENT STATUS</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Code</DetailLabel>
+                <DetailLabel>SECTOR OF EMPLOYMENT</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Region</DetailLabel>
+                <DetailLabel>DURATION OF EMPLOYMENT</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>OFFICIAL EMAIL</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>MONTHLY EMAIL</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
+                <DetailLabel>LOAN REPAYMENT</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
-            <GridItem>
-              <Flex direction="column" alignItems="start">
-                <DetailLabel>Address</DetailLabel>
-                <DetailValue>{"sample"}</DetailValue>
-              </Flex>
-            </GridItem>
+          
 
             <GridItem colSpan={5}>
               <Flex justifyContent="start">
@@ -321,14 +316,21 @@ function UserDetail() {
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>TWITTER</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>FACEBOOK</DetailLabel>
+                <DetailValue>{"sample"}</DetailValue>
+              </Flex>
+            </GridItem>
+
+            <GridItem>
+              <Flex direction="column" alignItems="start">
+                <DetailLabel>INSTAGRAM</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
@@ -341,28 +343,57 @@ function UserDetail() {
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>FULL NAME</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Branch Name</DetailLabel>
+                <DetailLabel>PHONE NUMBER</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Code</DetailLabel>
+                <DetailLabel>EMAIL ADDRESS</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>
 
             <GridItem>
               <Flex direction="column" alignItems="start">
-                <DetailLabel>Region</DetailLabel>
+                <DetailLabel>RELATIONSHIP</DetailLabel>
+                <DetailValue>{"sample"}</DetailValue>
+              </Flex>
+            </GridItem>
+            <hr/>
+
+            <GridItem>
+              <Flex direction="column" alignItems="start">
+                <DetailLabel>FULL NAME</DetailLabel>
+                <DetailValue>{"sample"}</DetailValue>
+              </Flex>
+            </GridItem>
+
+            <GridItem>
+              <Flex direction="column" alignItems="start">
+                <DetailLabel>PHONE NUMBER</DetailLabel>
+                <DetailValue>{"sample"}</DetailValue>
+              </Flex>
+            </GridItem>
+
+            <GridItem>
+              <Flex direction="column" alignItems="start">
+                <DetailLabel>EMAIL ADDRESS</DetailLabel>
+                <DetailValue>{"sample"}</DetailValue>
+              </Flex>
+            </GridItem>
+
+            <GridItem>
+              <Flex direction="column" alignItems="start">
+                <DetailLabel>RELATIONSHIP</DetailLabel>
                 <DetailValue>{"sample"}</DetailValue>
               </Flex>
             </GridItem>

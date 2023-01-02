@@ -33,7 +33,7 @@ const Content = styled.button`
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: #b1c9f8;
+  color: #545F7D;
   padding: 7px;
   margin-bottom: 5px;
   transition: all 0.6s;
@@ -48,13 +48,18 @@ const Content = styled.button`
      margin-right:10px;
      font-size:16px;
   }
+  &:active{
+    border-left: 5px solid #39CDCC;
+    background: #39CDCC;
+  }
  
 
   &:hover {
-    background: #39CDCC;
+    
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
     border-radius: 5px;
-   
+    opacity:0.3;
+    border-left: 3px solid #39CDCC;
     color: #213F7D;
   }
 `;

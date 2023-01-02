@@ -23,26 +23,13 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
   const [searchValue, setSearchValue] = useState("");
   const refSideBar = useRef<HTMLDivElement>();
 
-  const {
-    Briefcase,
-    Dashboard,
-    Decision,
-    Guarantor,
-    Loan,
-    Savings,
-    Users,
-    LoanRequest,
-    Whitelist,
-    Karma,
-    FeeNPricing,
-    FeeNCharge,
-    Pref,
-    Reports,
-    SavingsProduct,
-    ServiceACC,
-    Services,
-    Settlement,
-    Transaction,
+  const { Briefcase,Dashboard,Decision,
+    Guarantor,Loan,Savings,Users,
+    LoanRequest,Whitelist,Karma,
+    FeeNPricing,FeeNCharge,Pref,
+    Reports,SavingsProduct,ServiceACC,
+    Services, Settlement,Transaction,
+    Logout
   } = Svg;
 
   const getRoleId = () =>
@@ -251,6 +238,25 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
               isLoading={false}
             />
           </Box>
+
+          <hr/>
+          <Box mt="5" mb="4">
+            <SideBarItem
+              name="Logout"
+              link="/login"
+              Icon={<Logout/>}
+              menuItem={dashboardMenuItem}
+            />
+          </Box>
+
+          <Box mt="5" mb="4">
+            <SideBarItem
+              name="V.1.20"
+              link="/login"
+              
+              menuItem={dashboardMenuItem}
+            />
+          </Box>
         </Box>
       </Wrapper>
     </StyledSidebar>
@@ -260,6 +266,7 @@ function Sidebar({ width, toggleSideBar }: SideBarProps) {
 const StyledDropdowns=styled.div`
 .dropdown-form, .dropdown-options {
   border:none;
+  margin-left:25px;
 }
 
 select {

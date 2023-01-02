@@ -28,11 +28,12 @@ function SideBarGroup(props) {
         style={{ paddingLeft: 12 }}
         alignItems="center"
         justifyContent="between"
+       
       >
         <Text
-          fontSize="13px"
-          color={showMenu ? "#40196D" : "#979797"}
-          fontWeight="600"
+          fontSize="10px"
+          color={showMenu ? "#545F7D" : "#545F7D"}
+          fontWeight="100"
         >
           {name}
         </Text>
