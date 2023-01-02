@@ -6,7 +6,9 @@ import Box from "components/shared/library/components/Box";
 import { useAuth } from "context/AuthContext";
 import styled from "styled-components";
 import { Svg } from "assets/svg";
-import {  SearchField } from "components/shared/library";
+import {  SearchField, Avatar } from "components/shared/library";
+import { useEffect, useState } from "react";
+import { StyledAvatar } from "components/shared/library/components/Avatar/Avatar.styles";
 
 const pageMap = {
   dashboard: "Dashboard",
@@ -19,6 +21,13 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   const splitLocationPathName = location.pathname.split("/");
+  const [avatarProfile, setAvatarProfile] = useState("https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg")
+
+  useEffect(() =>{
+    if(localStorage.getItem("avatar")){
+      setAvatarProfile(localStorage.getItem("avatar"))
+    }
+  },[])
 
   return (
     <Flex
@@ -67,25 +76,7 @@ const NavBar = () => {
         <Box mr="5">docs</Box>
         <Svg.NotificationBell />
         <Flex alignItems="center" ml="8">
-          <Flex
-            height="32px"
-            width="32px"
-            backgroundColor="grey"
-            alignItems="center"
-            justifyContent="center"
-            style={{ borderRadius: "100%" }}
-            mr="3"
-          >
-            <Box
-              as="img"
-              src={userProfile?.picture}
-              alt=""
-              height="100%"
-              rounded="100%"
-              cursor="pointer"
-            />
-
-          </Flex>
+        <Avatar shape="rounded" type="text" src={avatarProfile} />
           <Box mr="5">Adedeji</Box>
 
           <Svg.Chevron />

@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 export const VerticalDotMenu = ({
   handleDropdown,
   handleBlackListUser,
   handleViewDetail,
 }) => {
+  const navigate = useNavigate()
 
   function showDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -40,7 +42,7 @@ export const VerticalDotMenu = ({
             <a href="#home" onClick={handleBlackListUser}>
               Blacklist User
             </a>
-            <a href="#about" onClick={handleViewDetail}>
+            <a href="#about" onClick={() => navigate(`/manage-user/${handleViewDetail}`)}>
               View Detail
             </a>
           </div>

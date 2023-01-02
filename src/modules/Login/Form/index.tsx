@@ -67,7 +67,7 @@ function Login() {
       email: values?.email,
       password:values?.password
     }
-   
+    localStorage.setItem("avatar","https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/725.jpg")
     await authContext.login(payload);
     navigate("/dashboard", { replace: true });
      

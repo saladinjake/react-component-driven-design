@@ -246,14 +246,14 @@ function Home() {
     },
     {
       Header: "Action",
-      accessor: "",
-      Cell: (data) => (
-        <VerticalDotMenu
+      accessor: "id",
+      Cell: (data) => {
+       return <VerticalDotMenu
           handleBlackListUser={mockFunc}
           handleDropdown={mockFunc}
           handleViewDetail={data?.value}
         />
-      ),
+      }
     },
   ];
 

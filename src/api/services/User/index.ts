@@ -49,4 +49,6 @@ export const getUsersByFilter = (data, params = null, headerConfig = null) =>
 
 
 export const getUserById = (id) =>
-  postCall(`${USER_URL}/${id}`, {}, null, null).then((res) => res.data);
+  getCall(`${USER_URL}/${id}`, {}).then(
+    (res) => res.data
+  );
