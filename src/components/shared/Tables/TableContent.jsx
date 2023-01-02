@@ -47,7 +47,7 @@ export const TableContent = ({
                   setShowModalFilter(val=>!val)
                  }} id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render("Header")}
-                <span onClick={()=>{
+                <span style={{marginLeft:"10px"}} onClick={()=>{
                   setShowModalFilter(val=>!val)
                  }}>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
               </th>

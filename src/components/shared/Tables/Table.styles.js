@@ -37,8 +37,8 @@ export const TableStyle = styled.div`
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    color: #121212;
-    background: #eff1ff;
+    color: #545F7D;
+    background: #fff;
     th {
       border: 0;
     }
@@ -48,7 +48,7 @@ export const TableStyle = styled.div`
     tr {
       font-size: 13px;
       line-height: 20px;
-      color: #000000;
+      color: #545F7D;
     }
   }
 
@@ -57,14 +57,14 @@ export const TableStyle = styled.div`
     font-size: 14px;
     line-height: 21px;
     // text-transform: uppercase;
-    color: #000000;
+    color: #545F7D;
   }
 
   td {
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    color: #000000;
+    color: #545F7D;
     /* min-width: 200px; */
     max-width: 300px;
     word-wrap: break-word;
