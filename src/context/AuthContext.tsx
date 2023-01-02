@@ -1,7 +1,8 @@
-import { useReducer, createContext, useContext } from "react";
+import { useReducer, createContext, useContext, useState } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs";
 import jwt_decode from "jwt-decode";
 import * as authService from "api/services/Auth";
+import {  postRequest} from "api/apiCalls"
 
 import {
   finishAuth,
@@ -17,6 +18,9 @@ const initialState = {
   isAuth: getToken() ? true : false,
   isLoading: false,
   userProfile: null,
+  isLoggedIn: false,
+  isLoginPending: false,
+  loginError: null
 };
 
 const AuthContext = createContext({
@@ -61,6 +65,12 @@ function authReducer(state, action) {
 function AuthProvider(props) {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
+  const [internalsState, setState] = useState(initialState)
+  console.log(initialState)
+
+  
+
+
   async function loadAuthUser() {
     try {
       if (!isSessionExpired()) {
@@ -93,11 +103,13 @@ function AuthProvider(props) {
     exp: string;
   }
 
-  const login = async (dataResponse) => {
-    const decoded: IDecoded = jwt_decode(dataResponse.credential);
+  const login = async (payload) => {
+    console.log(payload)
+     const apiResponseData = await postRequest({ url:"", data :payload})
+    const decoded: IDecoded = jwt_decode(apiResponseData.credential);
     dispatch({ type: "LOGIN_START" });
 
-    const userToken = dataResponse.credential;
+    const userToken = apiResponseData.credential;
     const userProfile = {
       email: decoded.email,
       family_name: decoded.family_name,
@@ -151,9 +163,9 @@ function AuthProvider(props) {
         password,
       };
 
-      const kudaApiResponseStatus = ApiResponse.data.isSuccessful;
+      const ApiResponseStatus = ApiResponse.data.isSuccessful;
 
-      if (kudaApiResponseStatus) {
+      if (ApiResponseStatus) {
         finishAuth(userToken, user, visitorId, tokenExpiry,userProfile);
         dispatch({
           type: "LOGIN",

@@ -20,6 +20,14 @@ function Login() {
   const isLoading = authContext.isLoading;
   const isAuth = authContext.isAuth;
 
+
+
+  useEffect(() => {
+    isAuth && navigate("/dashboard");
+  }, [isAuth]);
+
+  
+
   const defaultErrorTitle = "Region creation failed";
   const defaultErrorMessage =
     "Branch creation failed due to invalid inputs or your internet connection may be unstable.";
@@ -43,6 +51,7 @@ function Login() {
     name: "",
     password: "",
   });
+  let navigate = useNavigate();
 
   const { values, handleChange, handleSubmit, invalid, errors, touched } =
     useForm({
@@ -53,7 +62,16 @@ function Login() {
       },
     });
 
-  const loginUser = () => {};
+  const loginUser = async () => {
+    const payload = {
+      email: values?.email,
+      password:values?.password
+    }
+   
+    await authContext.login(payload);
+    navigate("/dashboard", { replace: true });
+     
+  };
 
   const onCreateSuccess = (data) => {
     setShowInformationModal(false);
@@ -73,20 +91,6 @@ function Login() {
     onCreateError
   );
 
-  const onUpdateSuccess = (data) => {
-    setShowInformationModal(false);
-    setSuccessTitle("Login Successful");
-    setSuccessMessage(data.message);
-    setShowSuccessModal(true);
-  };
-
-  const onUpdateError = (error) => {
-    setErrorTitle("Login failed");
-    setErrorMessage(error.message);
-    setShowInformationModal(false);
-    setShowErrorModal(true);
-  };
-
   const handleSendToApi = () => {
     const payload = {
       ...values,
@@ -100,7 +104,7 @@ function Login() {
     }
   };
 
-  let navigate = useNavigate();
+
 
   useEffect(() => {
     isAuth && navigate("/dashboard");

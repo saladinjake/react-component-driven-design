@@ -23,7 +23,7 @@ function DefaultLayout() {
       <Suspense fallback={<Fallback />}>
         <Routes>
           <Route path="/login/*" element={<Login />} />
-          {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
+          <Route path="/" element={<Navigate to="/login" replace />} />
 
       {/* <Route element={<PrivateRoute />}>  */}
           <Route   path="/dashboard" element={<UserDashboard />} />
