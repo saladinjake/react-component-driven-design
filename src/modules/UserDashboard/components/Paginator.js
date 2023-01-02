@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-
+import styled from "styled-components";
 const LEFT_PAGE = "LEFT";
 const RIGHT_PAGE = "RIGHT";
 
@@ -122,7 +122,7 @@ class Pagination extends Component {
     const pages = this.fetchPageNumbers();
 
     return (
-      <Fragment>
+      <PaginStyles>
         <nav aria-label="Countries Pagination">
           <ul className="pagination">
             {pages.map((page, index) => {
@@ -175,11 +175,52 @@ class Pagination extends Component {
             })}
           </ul>
         </nav>
-      </Fragment>
+      </PaginStyles>
     );
   }
 }
 
 
 
+
 export default Pagination;
+
+const PaginStyles=styled.div`
+
+.current-page {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  
+  
+  
+  
+  ul.pagination {
+    margin-top: 0;
+    margin-bottom: 0;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+  }
+  ul.pagination li.page-item.active a.page-link {
+    /* color: #445565 !important; */
+    /* background-color: #e3e7eb !important; */
+    /* border-color: #ced4da !important; */
+    background:#fff;
+    border:none;
+  }
+  ul.pagination a.page-link {
+    padding: 0.75rem 1rem;
+    min-width: 3.5rem;
+    text-align: center;
+    box-shadow: none !important;
+    /* border-color: #ced4da !important; */
+    color: #545F7D;
+    font-weight: 900;
+    font-size: 1rem;
+    background:#fff;
+    border:none;
+  }
+  ul.pagination a.page-link:hover {
+    background-color: #f4f4f4;
+  }
+  
+`
