@@ -49,8 +49,9 @@ function Table(props) {
     setInitialGlobalFilterFunction,
     selectedSortColumn,
     selectedSortOrder,
-    setUserDefinedSelectedColumn
-  
+    
+    showModalFilter,
+    setShowModalFilter
   } = props;
 
   const data = useMemo(
@@ -111,6 +112,8 @@ function Table(props) {
           prepareRow={prepareRow}
           selectedSortColumn={selectedSortColumn}
           selectedSortOrder={selectedSortOrder}
+          showModalFilter={showModalFilter} 
+          setShowModalFilter={setShowModalFilter}
         />
       </div>
     </TableStyle>

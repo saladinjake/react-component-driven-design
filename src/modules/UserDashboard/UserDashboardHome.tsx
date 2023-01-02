@@ -62,6 +62,8 @@ function Home() {
   );
   const [searchField, setSearchField] = useState("");
 
+  const [showModalFilter, setShowModalFilter] = useState(false)
+
   const { data: response, isLoading } = useQuery(
     ["users", pageNumber, pageSize, sortColumn, sortOrder],
     () =>
@@ -246,6 +248,8 @@ function Home() {
           onSortColumn={handleSortColumn}
           onSearch={handleSearch}
           setInitialGlobalFilterFunction={(val) => globalFilteration(val)}
+          showModalFilter={showModalFilter} 
+          setShowModalFilter={setShowModalFilter}
         />
       </Box>
 
@@ -263,6 +267,8 @@ function Home() {
         errors={errors}
         touched={touched}
         hasError={hasError}
+        showModalFilter={showModalFilter} 
+          setShowModalFilter={setShowModalFilter}
       />
 
       <Box mt="10">

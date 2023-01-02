@@ -20,12 +20,16 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
     onResetSearch = () => {},
     values,
     handleChange,
+    showModalFilter,
+    setShowModalFilter
+    
   } = props;
 
   const [searchValue, setSearchValue] = useState("");
 
   return (
-    <StyledTableFilter>
+     <StyledTableFilter>
+      {showModalFilter && (
       <div className="filters-dropdown-container filters">
         <Box mb="3"></Box>
       <Box mb="3">
@@ -136,6 +140,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
         {children && children}
       </div>
+      )}
     </StyledTableFilter>
   );
 };

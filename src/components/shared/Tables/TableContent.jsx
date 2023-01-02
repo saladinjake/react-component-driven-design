@@ -28,12 +28,12 @@ export const TableContent = ({
   page,
   prepareRow,
   selectedSortColumn,
-  selectedSortOrder
+  selectedSortOrder,
+  showModalFilter = false,
+  setShowModalFilter
 }) => {
-  const [showModalFilter, setShowModalFilter] = useState(false)
-  const toggleFilterForm = () =>{
-    setShowModalFilter(val=>!val)
-  }
+
+ 
   return (
     <>
     <table {...getTableProps()}>
@@ -43,9 +43,13 @@ export const TableContent = ({
             {headerGroup.headers.map((column, index) => {
               return (
                 
-                 <th onClick={toggleFilterForm}  id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                 <th onClick={()=>{
+                  setShowModalFilter(val=>!val)
+                 }} id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render("Header")}
-                <span>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
+                <span onClick={()=>{
+                  setShowModalFilter(val=>!val)
+                 }}>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
               </th>
               
              
