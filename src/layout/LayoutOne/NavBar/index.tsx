@@ -27,7 +27,7 @@ const NavBar = () => {
     if(localStorage.getItem("avatar")){
       setAvatarProfile(localStorage.getItem("avatar"))
     }
-  },[])
+  },[avatarProfile])
 
   return (
     <Flex
