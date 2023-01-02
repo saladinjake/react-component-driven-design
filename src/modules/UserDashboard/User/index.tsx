@@ -32,11 +32,11 @@ import { containsItem } from "utils";
 
 
 const queryKeys = {
-  getBranchById: "user",
+  getById: "user",
  
 };
 
-const Branch  = React.memo(function Branch(){
+function UserDetail(){
   const defaultErrorTitle = "Region creation failed";
   const defaultErrorMessage =
     "Sample creation failed due to invalid inputs or your internet connection may be unstable.";
@@ -82,7 +82,7 @@ const Branch  = React.memo(function Branch(){
   const navigate = useNavigate();
 
   const { isFetching } = useQuery(
-    [queryKeys.getBranchById, id],
+    [queryKeys.getById, id],
     () => getUserById(id),
     {
       enabled: id !== "create",
@@ -117,9 +117,9 @@ const Branch  = React.memo(function Branch(){
       
     </Main>
   );
-})
+}
 
-export default Branch;
+export default UserDetail;
 
 export const StyledLabel = styled.div`
   font-size: 13.5px;

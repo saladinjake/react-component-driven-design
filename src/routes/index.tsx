@@ -6,42 +6,18 @@ import Fallback from "../views/Fallback";
 import { useQuery } from "@tanstack/react-query";
 
 
-const pageMap = {
-  "charges-management": lazy(() => import("modules/TestModule")),
-  "charges-management/:id": lazy(
-    () => import("modules/TestModule/Test")
-  ),
-};
 
-const routes = [
-  // {
-  //   path: "/dashboard",
-  //   component: lazy(() => import("modules/UserDashboard/UserDashboardHome")),
-  // },
-  // {
-  //   path: "/dashboard/manage/:id",
-  //   component: lazy(() => import("modules/UserDashboard/User")),
-  // },
- 
-  
-];
 
 const UserDashboard = lazy(() => import("../views/UserDashboard"));
 const Login = lazy(() => import("../views/Login"));
 const NotFound = lazy(() => import("../views/NotFound"));
+const UserDetail= lazy(() => import("../views/UserDetail"));
 
 
 
 function DefaultLayout() {
   const [isLoading,setIsLoading] = useState(false)
   
-
- 
-
-  const LoadingRoutes = () => {
-    return <div>Loading Routes....</div>;
-  };
-
   return (
     <ErrorBoundary>
       <Suspense fallback={<Fallback />}>
@@ -50,9 +26,10 @@ function DefaultLayout() {
           {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
 
       {/* <Route element={<PrivateRoute />}>  */}
-            <Route   path="/dashboard" element={<UserDashboard />}  />
+          <Route   path="/dashboard" element={<UserDashboard />} />
+          <Route   path="/manage-user/:id" element={<UserDetail />} />  
+            
            
-         
           {/* </Route>  */}
 
           <Route path="/not-found" element={<NotFound />} />
