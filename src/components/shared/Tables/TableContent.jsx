@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {
+  useState
+} from "react"
+import {
  IoMdFunnel
 } from "react-icons/io"
 import {
@@ -27,6 +30,10 @@ export const TableContent = ({
   selectedSortColumn,
   selectedSortOrder
 }) => {
+  const [showModalFilter, setShowModalFilter] = useState(false)
+  const toggleFilterForm = () =>{
+    setShowModalFilter(val=>!val)
+  }
   return (
     <>
     <table {...getTableProps()}>
@@ -36,7 +43,7 @@ export const TableContent = ({
             {headerGroup.headers.map((column, index) => {
               return (
                 
-                 <th  id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                 <th onClick={toggleFilterForm}  id={"tabledefined-index"+ index} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render("Header")}
                 <span>{column.isSorted? (column.isSortedDesc? <IoMdFunnel/>: <IoMdFunnel/>): <IoMdFunnel/>}</span>
               </th>

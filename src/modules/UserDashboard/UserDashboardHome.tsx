@@ -15,7 +15,7 @@ import Indicator from "components/shared/Indicator";
 import { isValidV4UUID, reGroup } from "utils";
 import { Svg } from "assets/svg";
 
-import { Success, Error } from "components/shared/Modal";
+
 import useSendToAPI from "utils/hooks/useSendToApi";
 import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";

@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "context/AuthContext";
 
-import { Success, Error, Alert } from "components/shared/Modal";
+
 import { Input, Button } from "components/shared/library";
 import validations from "./LoginTraditional/utilities/validations";
 import useForm, { hasError } from "utils/hooks/useForm";
