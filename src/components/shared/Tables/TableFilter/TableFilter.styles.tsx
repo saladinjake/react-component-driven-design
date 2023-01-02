@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TableFilter = styled.div`
   .filters {
-    width: 350px;
+    width: 280px;
     background: #fff;
     padding: 10px;
     margin: 20px;
@@ -14,6 +14,7 @@ export const TableFilter = styled.div`
     -webkit-box-shadow: 0 0 3px 0px 2px 2px rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 3px 0px 2px 2px rgba(0, 0, 0, 0.7);
     border: 2px solid #f6f6f6;
+    margin-bottom: 20px;
 
     p {
       font-size: 13px;

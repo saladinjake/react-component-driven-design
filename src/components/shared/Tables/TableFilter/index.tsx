@@ -1,6 +1,6 @@
 import { Flex, Box } from "components/shared/library";
 import React, { useState, useEffect } from "react";
-import { Select, SearchField, Grid, GridItem, Input, DatePicker } from "../../library";
+import { Select, SearchField, Grid, GridItem, Input, DatePicker, Button } from "../../library";
 import { TableFilter as StyledTableFilter } from "./TableFilter.styles";
 import TableFilterProps from "./TableFilter.types";
 
@@ -37,7 +37,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
              <Box ml="2" mb="4">Organization</Box>
               <Select
                 placeholder={"Select Organization"}
-                width="330px"
+                width="250px"
                 options={filterColumns || []}
                 onGetSelectValue={(item) => {
                   onSortColumn(item.id);
@@ -53,7 +53,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
             <Input
               required
-              width="330px"
+              width="250px"
               label="User Name"
               isLoading={false}
               name="name"
@@ -68,7 +68,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           <Flex direction="column" alignItems="start">
             <Input
               required
-              width="330px"
+              width="250px"
               label="Email"
               isLoading={false}
               name="name"
@@ -89,6 +89,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           setDate={(value) =>
             handleChange({ target: { name: "dateOfBirth", value } })
           }
+          width="250px"
         />
           </Flex>
         </Box>
@@ -100,7 +101,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           <Flex direction="column" alignItems="start">
             <Input
               required
-              width="330px"
+              width="250px"
               label="Phone Number"
               isLoading={false}
               name="name"
@@ -113,9 +114,10 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
         <Box mb="3">
           <Flex direction="column" alignItems="start">
+          <Box ml="2" mb="4">Status</Box>
             <Select
               placeholder={"Select Status"}
-              width="330px"
+              width="250px"
               options={[
                 { name: "Active", id: "asc" },
                 { name: "Blocked", id: "desc" },
@@ -130,9 +132,27 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
         <GridItem colSpan={2}>
           <Flex height="100%">
-            <div></div>
+            <div>
+              <Button
+                color="secondary"
+                variant="outline"
+                width="115px"
+                onClick={() =>   setShowModalFilter(false)}
+              >
+                Reset
+              </Button>
+            </div>
 
-            <Box ml="4"></Box>
+            <Box ml="4">
+              <Button
+                type="submit"
+                width="115px"
+                loading={false}
+                onClick={() => {}}
+              >
+                Filter
+              </Button>
+            </Box>
           </Flex>
         </GridItem>
 

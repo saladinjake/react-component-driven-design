@@ -274,6 +274,8 @@ function Home() {
           totalRows={0}
         />
       </Box>
+
+      <Box mt="10" mb="20"></Box>
     </Main>
   );
 }
