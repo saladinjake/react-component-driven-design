@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const TableFilter = styled.div`
   .filters {
-    width: 330px;
+    width: 350px;
     background: #fff;
     padding: 10px;
     margin: 20px;
     position: absolute;
-    top: 550px;
-    left: 350px;
+    top: 580px;
+    left: 360px;
     z-index: 2;
     -moz-box-shadow: 0 0 3px 0px 2px 2px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0 3px 0px 2px 2px rgba(0, 0, 0, 0.7);

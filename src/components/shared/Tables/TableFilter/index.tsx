@@ -34,10 +34,10 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
         <Box mb="3"></Box>
       <Box mb="3">
           <Flex direction="column" alignItems="start">
-          
+             <Box ml="2" mb="4">Organization</Box>
               <Select
-                placeholder={"Organization"}
-                width="300px"
+                placeholder={"Select Organization"}
+                width="330px"
                 options={filterColumns || []}
                 onGetSelectValue={(item) => {
                   onSortColumn(item.id);
@@ -53,7 +53,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
 
             <Input
               required
-              width="300px"
+              width="330px"
               label="User Name"
               isLoading={false}
               name="name"
@@ -68,7 +68,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           <Flex direction="column" alignItems="start">
             <Input
               required
-              width="300px"
+              width="330px"
               label="Email"
               isLoading={false}
               name="name"
@@ -100,7 +100,7 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
           <Flex direction="column" alignItems="start">
             <Input
               required
-              width="300px"
+              width="330px"
               label="Phone Number"
               isLoading={false}
               name="name"
@@ -114,8 +114,8 @@ const TableFilter: React.FC<TableFilterProps> = (props) => {
         <Box mb="3">
           <Flex direction="column" alignItems="start">
             <Select
-              placeholder={"Status"}
-              width="300px"
+              placeholder={"Select Status"}
+              width="330px"
               options={[
                 { name: "Active", id: "asc" },
                 { name: "Blocked", id: "desc" },

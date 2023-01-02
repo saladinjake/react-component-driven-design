@@ -64,6 +64,7 @@ const NavBar = () => {
       </Flex>
 
       <Flex height="100%" alignItems="center">
+        <Box mr="5">docs</Box>
         <Svg.NotificationBell />
         <Flex alignItems="center" ml="8">
           <Flex
@@ -82,9 +83,10 @@ const NavBar = () => {
               height="100%"
               rounded="100%"
               cursor="pointer"
-            /><p>Adedeji</p>
+            />
 
           </Flex>
+          <Box mr="5">Adedeji</Box>
 
           <Svg.Chevron />
         </Flex>
