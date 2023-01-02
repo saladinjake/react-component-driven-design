@@ -18,10 +18,12 @@ import { Svg } from "assets/svg";
 import useSendToAPI from "utils/hooks/useSendToApi";
 import { useQuery } from "@tanstack/react-query";
 import useForm, { hasError } from "utils/hooks/useForm";
-import { getUsersByFilter } from "api/services/User";
+import { getAllUsers  } from "api/services/User";
 import { IoMdFunnel } from "react-icons/io";
 import { VerticalDotMenu } from "components/shared/library";
 import validations  from "./validations"
+import { setEnvironmentData } from "worker_threads";
+import Pagination from "./components/Paginator";
 
 function Home() {
   const navigate = useNavigate();
@@ -44,8 +46,29 @@ function Home() {
   const { AllUsers, ActiveUsers, UserWithLoan, UserWithSavings } = Svg;
 
   const [initialValues, setInitialValues] = useState({
-    name: "",
+    allRecords: [],
+    currentRecord: [],
+    currentPage: null,
+    totalPages: null
   });
+
+
+  const onPageChanged = data => {
+    const { allRecords } = initialValues;
+    const { currentPage, totalPages, pageLimit } = data;
+
+    const offset = (currentPage - 1) * pageLimit;
+    const currentRecord = allRecords.slice(offset, offset + pageLimit);
+
+    setInitialValues({ 
+      ...initialValues,
+      currentPage, 
+      currentRecord, 
+      totalPages
+     });
+  };
+
+ 
 
   const filterColumns = [
     { name: "sample", id: "name" },
@@ -63,17 +86,57 @@ function Home() {
   const [searchField, setSearchField] = useState("");
 
   const [showModalFilter, setShowModalFilter] = useState(false)
+  const [allData,setAllData] = useState([])
+  const [loadFromStore,setLoadFromStore] = useState(false)
+  useEffect(()=>{
+    if(localStorage.getItem("dataStored")){
+      const prefetchedData = JSON.parse(localStorage.getItem("dataStored"))
+      setAllData(prefetchedData)
+      setLoadFromStore(true)
+    }else{
+      setLoadFromStore(false)
+    }
+  },[])
 
   const { data: response, isLoading } = useQuery(
-    ["users", pageNumber, pageSize, sortColumn, sortOrder],
+    ["", pageNumber, pageSize, sortColumn, sortOrder],
     () =>
-      getUsersByFilter({
+    getAllUsers({
         pageSize,
         pageNumber,
-        sortColumn,
-        sortOrder,
-      })
-  );
+        //sortColumn,
+        //sortOrder,
+      }),
+      {
+       //enabled:allData?.length>0,
+        onSuccess: (data) =>{
+          const profileData = data.map(user =>{
+            return {
+              ...user.profile,
+              id: user?.id,
+              email: user?.email,
+              orgName: user?.orgName,
+              phoneNumber: user?.phoneNumber,
+              createdAt: user?.createdAt
+
+            }
+          })
+          let prefetchedStore = localStorage.setItem("dataStored", JSON.stringify(profileData))
+
+          const offset = (1 - 1) * 10;
+          const currentRecord = profileData.slice(offset, offset + 10);
+
+          setAllData(profileData)
+          setLoadFromStore(true)
+          setInitialValues({ 
+            ...initialValues,
+            allRecords: profileData,
+            currentRecord
+           });
+
+        }
+  });
+  console.log(response)
 
   const Card = (props) => {
     return (
@@ -106,65 +169,29 @@ function Home() {
       },
     });
 
-  const sampleData = [
-    {
-      name: "Victor juwa",
-      email: "juwavictor@gmail.com",
-      phone: "helldd",
-      date: "never leave",
-      status: "pro",
-    },
-    {
-      name: "Victor juwa",
-      email: "juwavictor@gmail.com",
-      phone: "helldd",
-      date: "never leave",
-      status: "pro",
-    },
-    {
-      name: "Victor juwa",
-      email: "juwavictor@gmail.com",
-      phone: "helldd",
-      date: "never leave",
-      status: "pro",
-    },
-    {
-      name: "Victor juwa",
-      email: "juwavictor@gmail.com",
-      phone: "helldd",
-      date: "never leave",
-      status: "pro",
-    },
-    {
-      name: "Victor juwa",
-      email: "juwavictor@gmail.com",
-      phone: "helldd",
-      date: "never leave",
-      status: "pro",
-    },
-  ];
+
 
   const columns = [
     {
       Header: "ORGANIZATION",
-      accessor: "name",
+      accessor: "orgName",
     },
     {
       Header: "USERNAME",
-      accessor: "",
+      accessor: "firstName",
     },
 
     {
       Header: "EMAIL",
-      accessor: "",
+      accessor: "email",
     },
     {
       Header: "PHONE NUMBER",
-      accessor: "",
+      accessor: "phoneNumber",
     },
     {
       Header: "DATE JOINED",
-      accessor: "",
+      accessor: "createdAt",
     },
 
     {
@@ -250,7 +277,7 @@ function Home() {
 
       <Table
         tableColumns={columns}
-        tableData={[...sampleData]}
+        tableData={[...initialValues?.currentRecord]}
         isLoading={isLoading}
         pageSize={pageSize}
         gloBalFilter={searchField}
@@ -267,15 +294,17 @@ function Home() {
       />
 
       <Box mt="10">
-        <TablePagination
-          isLoading={isLoading}
-          pageSize={pageSize}
-          setPageSize={setPageSize}
-          pageNumber={pageNumber}
-          setPageNumber={setPageNumber}
-          totalRows={0}
+      <Pagination
+          totalRecords={100}
+          pageLimit={10}
+          pageNeighbours={1}
+          onPageChanged={onPageChanged}
         />
       </Box>
+
+      <div className="d-flex flex-row py-4 align-items-center">
+             
+            </div>
 
       <Box mt="10" mb="20"></Box>
     </Main>

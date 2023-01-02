@@ -1,15 +1,11 @@
 import { AxiosResponse } from "axios";
 import { IResponse } from "../Common.types";
-import { postCall } from "../../apiCalls";
-import {
-  CreateUserData,
-  ResetPasswordData,
-  DisableUserData,
-  UpdateUserData,
-} from "./user.types";
+import { postCall, getCall } from "../../apiCalls";
+
 import endpoints from "./endpoints";
 
 export const USER_URL = endpoints.USER_URL;
+export const USERS_URL = endpoints.USERS_URL;
 
 export interface IUser {
   tempClearPass: string;
@@ -42,12 +38,12 @@ export const getAllUsers = (
   params = null,
   headerConfig = null
 ) =>
-  postCall(`${USER_URL}/GetAll`, data, params, headerConfig).then(
+getCall(`${USERS_URL}`, data).then(
     (res) => res.data
   );
 
 export const getUsersByFilter = (data, params = null, headerConfig = null) =>
-  postCall(`${USER_URL}/sample-endpoints`, data, params, headerConfig) as Promise<
+  postCall(`${USERS_URL}`, data, params, headerConfig) as Promise<
     AxiosResponse<IResponse & { users: IUser[] }>
   >;
 
