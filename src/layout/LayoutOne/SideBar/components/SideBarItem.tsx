@@ -34,7 +34,7 @@ const Content = styled.button`
   display: flex;
   align-items: center;
   color: #b1c9f8;
-  padding: 5px;
+  padding: 7px;
   margin-bottom: 5px;
   transition: all 0.6s;
   width: 100%;
@@ -42,6 +42,7 @@ const Content = styled.button`
   background-color: transparent;
   cursor: pointer;
   font-family:"Work Sans";
+  margin-left:15px;
 
   .icon-set{
      margin-right:10px;
