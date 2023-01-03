@@ -24,11 +24,7 @@ import {
   manageLinks,
 } from "modules/UserDashboard/utilities/headerLinks";
 
-
 import { getUserById } from "api/services/User";
-
-
-
 
 const queryKeys = {
   getById: "user",
@@ -63,7 +59,6 @@ function UserDetail() {
     isActive: false,
   });
 
-  
   useEffect(() => {
     if (id === "create") {
       setEditable(true);
@@ -75,20 +70,20 @@ function UserDetail() {
 
   const navigate = useNavigate();
 
-  const {data: results,  isFetching , isLoading} = useQuery(
-    [queryKeys.getById, id],
-    () => getUserById(id),
-    {
-      enabled: id !== "create",
-      onSuccess({ data: response }) {
-        setInitialValues((initialValues) => ({
-          ...initialValues,
-        }));
-      },
-    }
-  );
+  const {
+    data: results,
+    isFetching,
+    isLoading,
+  } = useQuery([queryKeys.getById, id], () => getUserById(id), {
+    enabled: id !== "create",
+    onSuccess({ data: response }) {
+      setInitialValues((initialValues) => ({
+        ...initialValues,
+      }));
+    },
+  });
 
-  console.log(results)
+  console.log(results);
 
   const tabs = [
     { id: 1, name: "General Detail", type: "1" },
@@ -103,12 +98,8 @@ function UserDetail() {
 
   const [currentTab, setCurrentTab] = useState(1);
 
-
-
-  if(isLoading){
-    return (
-     <LoadingBoxes />
-    )
+  if (isLoading) {
+    return <LoadingBoxes />;
   }
 
   return (
@@ -134,11 +125,18 @@ function UserDetail() {
                 height: "50px",
               }}
             >
-              <Avatar shape="rounded" type="text" src={results?.profile?.avatar} />
+              <Avatar
+                shape="rounded"
+                type="text"
+                src={results?.profile?.avatar}
+              />
               <Box ml="3">
-                <DetailLabel>{results?.profile?.firstName + " "+ results?.profile?.lastName }</DetailLabel>
-                <DetailValue>{results?.accountNumber
-}</DetailValue>
+                <DetailLabel>
+                  {results?.profile?.firstName +
+                    " " +
+                    results?.profile?.lastName}
+                </DetailLabel>
+                <DetailValue>{results?.accountNumber}</DetailValue>
               </Box>
             </Flex>
           </GridItem>
@@ -169,8 +167,7 @@ function UserDetail() {
                 height: "50px",
               }}
             >
-              <DetailLabel>N{results?.accountBalance
-}</DetailLabel>
+              <DetailLabel>N{results?.accountBalance}</DetailLabel>
               <DetailValue>{"9912345678/Providus Bank"}</DetailValue>
             </Flex>
           </GridItem>
@@ -208,7 +205,11 @@ function UserDetail() {
             <GridItem>
               <Flex direction="column" alignItems="start">
                 <DetailLabel>FULL NAME</DetailLabel>
-                <DetailValue>{results?.profile?.firstName + " "+ results?.profile?.lastName }</DetailValue>
+                <DetailValue>
+                  {results?.profile?.firstName +
+                    " " +
+                    results?.profile?.lastName}
+                </DetailValue>
               </Flex>
             </GridItem>
 
@@ -277,7 +278,9 @@ function UserDetail() {
             <GridItem>
               <Flex direction="column" alignItems="start">
                 <DetailLabel>EMPLOYMENT STATUS</DetailLabel>
-                <DetailValue>{results?.education?.employmentStatus}</DetailValue>
+                <DetailValue>
+                  {results?.education?.employmentStatus}
+                </DetailValue>
               </Flex>
             </GridItem>
 
@@ -305,7 +308,11 @@ function UserDetail() {
             <GridItem>
               <Flex direction="column" alignItems="start">
                 <DetailLabel>MONTHLY INCOME</DetailLabel>
-                <DetailValue>{Array.isArray(results?.education?.monthlyIncome)? results?.education?.monthlyIncome[0]: "N/A"}</DetailValue>
+                <DetailValue>
+                  {Array.isArray(results?.education?.monthlyIncome)
+                    ? results?.education?.monthlyIncome[0]
+                    : "N/A"}
+                </DetailValue>
               </Flex>
             </GridItem>
 
@@ -315,8 +322,6 @@ function UserDetail() {
                 <DetailValue>{results?.education?.loanRepayment}</DetailValue>
               </Flex>
             </GridItem>
-
-          
 
             <GridItem colSpan={5}>
               <Flex justifyContent="start">
@@ -351,11 +356,14 @@ function UserDetail() {
               </Flex>
             </GridItem>
 
-
             <GridItem>
               <Flex direction="column" alignItems="start">
                 <DetailLabel>FULL NAME</DetailLabel>
-                <DetailValue>{results?.guarantor?.firstName+ " " +results?.guarantor?.lastName}</DetailValue>
+                <DetailValue>
+                  {results?.guarantor?.firstName +
+                    " " +
+                    results?.guarantor?.lastName}
+                </DetailValue>
               </Flex>
             </GridItem>
 
@@ -379,9 +387,7 @@ function UserDetail() {
                 <DetailValue>{"N/A"}</DetailValue>
               </Flex>
             </GridItem>
-            <hr/>
-
-            
+            <hr />
           </Grid>
         )}
 
